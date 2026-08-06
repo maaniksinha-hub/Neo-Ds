@@ -4,8 +4,8 @@ Component coverage generated from the Figma file's AI Export (JSON) node — `AI
 These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
 Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
 
-**Implemented (34):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, Legend, ChartDot) + full token foundation (colors, typography, spacing).
-**Remaining:** 74 components.
+**Implemented (35):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, Legend, ChartDot), Keyboard + full token foundation (colors, typography, spacing).
+**Remaining:** 73 components.
 
 **Note:** Data Viz/Charts core primitives are built with custom SVG (no new dependency). Still remaining: grouped/stacked bar charts, gridlines/axes, live market indicator, and several composed chart widgets.
 
@@ -272,13 +272,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > USE: y-axis-labels, value-axis, vertical-axis
 > WHEN: Vertical axis labels for charts — price values, quantities, percentages.
 > PLATFORM: Global
-
-## Keyboard (1)
-
-### `mKeyboard`
-> USE: numeric-keyboard, input-keyboard, pin-entry-keyboard
-> WHEN: Custom keyboard overlay for amount/PIN entry
-> VARIANTS: Type: "Numeric"|"Alphabetic"|"with OTP band"|"with button"
 
 ## Lists (12) — _mList already implemented_
 

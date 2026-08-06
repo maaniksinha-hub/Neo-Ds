@@ -52,9 +52,10 @@ Implemented in `src/components/`, each with a Storybook story:
 - `SidePanel` — right-anchored drawer with header/body/footer
 - `Loading` — `Spinner` (3 sizes) and `ProgressBar`
 - `Charts` — `LineChart`, `BarChart`, `Legend`, `ChartDot` (custom SVG, no charting library dependency)
+- `Keyboard` — numeric keypad, from `mKeyboard`
 - `ColorsDoc` — token reference page (Foundations/Colors in Storybook)
 
-See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~74 components documented in Figma but not yet implemented, including the more complex chart types (grouped/stacked bars, gridlines/axes, live market indicator).
+See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~73 components documented in Figma but not yet implemented, including the more complex chart types (grouped/stacked bars, gridlines/axes, live market indicator).
 
 ## Development
 

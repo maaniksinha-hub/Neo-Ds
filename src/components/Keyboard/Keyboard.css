@@ -1,0 +1,29 @@
+.ds-keyboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  width: 375px;
+  max-width: 100%;
+  background: var(--stroke-default-primary-low);
+  font-family: var(--font-body);
+}
+
+.ds-keyboard__key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  background: var(--fill-neutral-primary);
+  border: none;
+  font-size: 24px;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.ds-keyboard__key:hover {
+  background: var(--fill-neutral-hover-primary);
+}
+
+.ds-keyboard__key:active {
+  background: var(--fill-neutral-pressed-primary);
+}
