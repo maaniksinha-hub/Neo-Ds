@@ -5,6 +5,9 @@ import { Tabs } from './components/Tabs/Tabs';
 import { TextField } from './components/TextField/TextField';
 import { Separator } from './components/Separator/Separator';
 import { ColorsDoc } from './components/ColorsDoc/ColorsDoc';
+import { StockCard } from './components/StockCard/StockCard';
+import { List } from './components/List/List';
+import { ListItem } from './components/List/ListItem';
 
 const tabItems = [
   { value: 'overview', label: 'Overview' },
@@ -57,6 +60,52 @@ function App() {
       <section>
         <h2>Text field</h2>
         <TextField label="Search" supportingText="Try a stock symbol" />
+      </section>
+
+      <section>
+        <h2>Stock cards</h2>
+        <div style={{ display: 'flex', gap: 12 }}>
+          <StockCard
+            logo={<div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--fill-accent1-tertiary)' }} />}
+            name="HDFC Bank"
+            price="1,487"
+            priceDecimal=".00"
+            changeValue="-8.01"
+            changePercent="0.12%"
+            direction="down"
+            highlight
+          />
+          <StockCard
+            logo={<div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--fill-accent1-tertiary)' }} />}
+            name="Reliance"
+            price="2,940"
+            priceDecimal=".50"
+            changeValue="+12.40"
+            changePercent="0.84%"
+            direction="up"
+            variant="with-badge"
+            badgeLabel="F&O"
+          />
+          <StockCard
+            logo={<div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--fill-accent1-tertiary)' }} />}
+            name="TCS"
+            price="3,820"
+            priceDecimal=".00"
+            changeValue="+4.10"
+            changePercent="0.11%"
+            direction="up"
+            variant="insights"
+            insightsNote="Dividend announced"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>List</h2>
+        <List>
+          <ListItem title="Notifications" trailing="›" onClick={() => {}} />
+          <ListItem title="Two-factor authentication" subtitle="Add an extra layer of security" trailing="›" onClick={() => {}} divider={false} />
+        </List>
       </section>
 
       <section>

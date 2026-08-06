@@ -26,9 +26,11 @@ Implemented in `src/components/`, each with a Storybook story:
 - `Tabs` — underline tab group
 - `TextField` — floating-label input with default/error/success/disabled states
 - `Separator` — solid/dashed, default/low-emphasis
+- `StockCard` — from `gScripCards`: default / with-badge / insights variants, up/down price change
+- `List` / `ListItem` — generalized list row (leading/trailing slots, subtitle, divider) from `mList`
 - `ColorsDoc` — token reference page (Foundations/Colors in Storybook)
 
-See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~120 components documented in Figma but not yet implemented.
+See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~117 components documented in Figma but not yet implemented.
 
 ## Development
 

@@ -4,8 +4,8 @@ Component coverage generated from the Figma file's AI Export (JSON) node — `AI
 These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
 Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
 
-**Implemented:** Button, Badge, Tabs, TextField, Separator + full token foundation (colors, typography, spacing).
-**Remaining:** 119 components across 31 pages.
+**Implemented:** Button, Badge, Tabs, TextField, Separator, StockCard (from `gScripCards`), List/ListItem (generalized from `mList`) + full token foundation (colors, typography, spacing).
+**Remaining:** 117 components.
 
 ## Accordion (4)
 
@@ -151,13 +151,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Full breadcrumb navigation showing the current page location within the site hierarchy.
 > PLATFORM: Web
 
-## Cards (17)
-
-### `gScripCards`
-> USE: stock-card, scrip-card, instrument-card, ticker-card
-> WHEN: Displaying a stock/instrument as a card with name, price, change, and mini chart — used in horizontal scrollable lists, watchlist grids.
-> PLATFORM: Global
-> VARIANTS: Size, with/without chart, with/without description.
+## Cards (16) — _gScripCards already implemented_
 
 ### `mScripLarge+description`
 > USE: large-scrip-card, featured-stock-card, stock-detail-card
@@ -443,14 +437,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Custom keyboard overlay for amount/PIN entry
 > VARIANTS: Type: "Numeric"|"Alphabetic"|"with OTP band"|"with button"
 
-## Lists (13)
-
-### `mList`
-> USE: list-item, list-row, settings-row, detail-row
-> WHEN: Standard list items — settings, menus, detail key-value rows, and general-purpose vertical lists.
-> PLATFORM: Mobile
-> VARIANTS: Leading (icon/avatar/none), trailing (text/icon/switch/chevron), with/without subtitle and divider.
-> INSTEAD-OF: Use mScripList for stock-specific lists, mBalanceList for balance displays.
+## Lists (12) — _mList already implemented_
 
 ### `gWithdrawalDepositBadge`
 > USE: withdrawal-badge, deposit-badge, transaction-type-badge, fund-flow-badge
