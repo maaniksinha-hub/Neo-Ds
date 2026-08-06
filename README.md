@@ -48,9 +48,12 @@ Implemented in `src/components/`, each with a Storybook story:
 - `CoachMark` — onboarding tooltip, 4 arrow directions × 3 alignments
 - `Table` — sortable columns, left/right alignment, from `wTableCell`/`wTableHeader`
 - `BottomNav` — mobile tab bar, from `mBottomNav`
+- `Carousel` — horizontal snap-scroll with dot indicators
+- `SidePanel` — right-anchored drawer with header/body/footer
+- `Loading` — `Spinner` (3 sizes) and `ProgressBar`
 - `ColorsDoc` — token reference page (Foundations/Colors in Storybook)
 
-See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~86 components documented in Figma but not yet implemented.
+See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~81 components documented in Figma but not yet implemented. Data Viz/Charts (18 components) is intentionally on hold pending a decision on charting approach.
 
 ## Development
 

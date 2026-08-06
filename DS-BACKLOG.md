@@ -4,8 +4,10 @@ Component coverage generated from the Figma file's AI Export (JSON) node — `AI
 These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
 Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
 
-**Implemented (27):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav + full token foundation (colors, typography, spacing).
-**Remaining:** 86 components.
+**Implemented (30):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar) + full token foundation (colors, typography, spacing).
+**Remaining:** 81 components.
+
+**Note:** Data Viz/Charts (18 components) intentionally skipped pending a decision on charting approach (custom SVG vs. a library like Recharts).
 
 ## Accordion (3) — _mAccordionSmall already implemented_
 
@@ -190,32 +192,13 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > INSTEAD-OF: Use mMarketDepth for mobile.
 
-## Carousel (4)
-
-### `mCarousel`
-> USE: mobile-carousel, swipeable-cards, card-slider
-> WHEN: Horizontally swipeable card carousel — promotions, onboarding slides, feature highlights.
-> PLATFORM: Mobile
-> VARIANTS: Card count indicator, with/without auto-play.
-> INSTEAD-OF: Use wCarousel for web.
+## Carousel (1) — _mCarousel, wCarousel, gCarouselGroup already implemented_
 
 ### `gCarousel dots`
 > USE: carousel-indicator, page-dots, carousel-pagination
 > WHEN: Dot indicators showing current position within a carousel. Building block used by mCarousel and wCarousel.
 > PLATFORM: Global
 > VARIANTS: Active/inactive dot state.
-
-### `wCarousel`
-> USE: web-carousel, web-slider, web-card-carousel
-> WHEN: Horizontally scrollable content carousel on web — with arrow navigation controls.
-> PLATFORM: Web
-> VARIANTS: With/without arrow buttons, dot indicators.
-> INSTEAD-OF: Use mCarousel for mobile.
-
-### `gCarouselGroup`
-> USE: carousel-group, carousel-container, carousel-wrapper
-> WHEN: Container that groups carousel content with indicators and navigation controls.
-> PLATFORM: Global
 
 ## Chips (1) — _gChoiceChip, gActionChip already implemented_
 
@@ -460,21 +443,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Custom scrollbar for scrollable web containers — replacing default browser scrollbar with styled version.
 > PLATFORM: Web
 > VARIANTS: Orientation (vertical/horizontal), state (default/hover/active).
-
-## Side panel (2)
-
-### `wSidePanel`
-> USE: side-panel, detail-panel, slide-over, inspector-panel
-> WHEN: Right-side panel for detail views, settings, and contextual information on web — stock details, order entry, filters.
-> PLATFORM: Web
-> VARIANTS: Width, with/without header.
-> INSTEAD-OF: Use mBottomsheet for mobile overlay patterns, wModal for centered dialogs.
-
-### `wBaseSidepanelNav`
-> USE: side-panel-tab, panel-nav-item, panel-section-tab
-> WHEN: Tab navigation within a side panel — switching between detail sections. Building block within wSidePanel.
-> PLATFORM: Web
-> VARIANTS: State (default/active/hover).
 
 ## Status & Indicators (5) — _gStatusTimeline, gBaseStatusIndicatorIcon already implemented_
 
