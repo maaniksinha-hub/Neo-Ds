@@ -1,0 +1,61 @@
+.ds-appbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8px);
+  width: 375px;
+  max-width: 100%;
+  padding: var(--spacing-8px) var(--spacing-8px) var(--spacing-8px) var(--spacing-16px);
+  background: var(--canvas-default);
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+.ds-appbar__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: var(--corner-radius-8px);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.ds-appbar__back:hover {
+  background: var(--fill-neutral-hover-primary);
+}
+
+.ds-appbar__title-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4px);
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.ds-appbar__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ds-appbar__subtext {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-appbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4px);
+  flex-shrink: 0;
+}
