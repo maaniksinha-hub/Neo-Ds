@@ -1,0 +1,59 @@
+.ds-researchidea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12px);
+  width: 280px;
+  padding: var(--spacing-16px);
+  border-radius: var(--corner-radius-12px);
+  border: 1px solid var(--stroke-default-primary-low);
+  background: var(--fill-neutral-primary);
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+.ds-researchidea__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ds-researchidea__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-researchidea__prices {
+  display: flex;
+  gap: var(--spacing-24px);
+}
+
+.ds-researchidea__pricegroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ds-researchidea__pricelabel {
+  font-size: 11px;
+  color: var(--text-neutral-tertiary);
+}
+
+.ds-researchidea__pricevalue {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-researchidea__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-8px);
+  font-size: 11px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-researchidea__footer > span:not(:last-child)::after {
+  content: '·';
+  margin-left: var(--spacing-8px);
+}

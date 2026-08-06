@@ -4,8 +4,8 @@ Component coverage generated from the Figma file's AI Export (JSON) node — `AI
 These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
 Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
 
-**Implemented (35):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, Legend, ChartDot), Keyboard + full token foundation (colors, typography, spacing).
-**Remaining:** 73 components.
+**Implemented (41):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, Legend, ChartDot), Keyboard, PriceChange, TransactionBadge, ScripListItem, BalanceRow, ResearchIdeaCard, StatusCard + full token foundation (colors, typography, spacing).
+**Remaining:** 66 components.
 
 **Note:** Data Viz/Charts core primitives are built with custom SVG (no new dependency). Still remaining: grouped/stacked bar charts, gridlines/axes, live market indicator, and several composed chart widgets.
 
@@ -273,44 +273,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Vertical axis labels for charts — price values, quantities, percentages.
 > PLATFORM: Global
 
-## Lists (12) — _mList already implemented_
-
-### `gWithdrawalDepositBadge`
-> USE: withdrawal-badge, deposit-badge, transaction-type-badge, fund-flow-badge
-> WHEN: Labeling transaction type (withdrawal/deposit/transfer) in fund flow and transaction lists.
-> PLATFORM: Global
-> VARIANTS: Type (withdrawal/deposit/transfer).
-
-### `mScripList`
-> USE: stock-list-item, watchlist-row, scrip-row, ticker-list
-> WHEN: Displaying stocks in a vertical list with name, price, and change — watchlists, search results, portfolio holdings.
-> PLATFORM: Mobile
-> VARIANTS: Content density, with/without chart, with/without quantity.
-> INSTEAD-OF: Use wScripList for web, mList for non-stock list items.
-
-### `mGainLossArrow`
-> USE: gain-loss-arrow, direction-indicator, trend-arrow
-> WHEN: Showing directional movement (up/down) for price changes. Used within scrip list items and price displays.
-> PLATFORM: Mobile
-> VARIANTS: Direction (up/down) with automatic green/red coloring.
-
-### `mPriceChange%`
-> USE: price-change-percent, change-display, gain-loss-value
-> WHEN: Displaying price change as both absolute value and percentage with positive/negative color coding.
-> PLATFORM: Mobile
-> VARIANTS: Display format (percent only, absolute only, both), positive/negative/neutral states.
-
-### `mBalanceList`
-> USE: balance-list, funds-list, account-balance, wallet-row
-> WHEN: Displaying financial balances — available margin, holdings value, P&L breakdown, fund balances.
-> PLATFORM: Mobile
-> VARIANTS: With/without secondary value, positive/negative coloring, expandable detail.
-
-### `mResearchIdeas`
-> USE: research-card, idea-card, analyst-recommendation, trade-idea
-> WHEN: Displaying research ideas, analyst calls, and trade recommendations with target price and timeframe.
-> PLATFORM: Mobile
-> VARIANTS: With/without analyst info, target price, confidence level.
+## Lists (6) — _mList, gWithdrawalDepositBadge, mScripList, mGainLossArrow, mPriceChange%, mBalanceList, mResearchIdeas already implemented_
 
 ### `wScripList`
 > USE: web-stock-list, web-watchlist-row, web-scrip-row
@@ -394,13 +357,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > VARIANTS: Orientation (vertical/horizontal), state (default/hover/active).
 
-## Status & Indicators (5) — _gStatusTimeline, gBaseStatusIndicatorIcon already implemented_
-
-### `mStatusCard`
-> USE: status-card, order-status, transaction-status, progress-card
-> WHEN: Displaying status of orders, transactions, or processes — "Pending", "Executed", "Failed" with timeline.
-> PLATFORM: Mobile
-> VARIANTS: Status type (success/pending/failed/partial), with/without timeline and details.
+## Status & Indicators (4) — _mStatusCard, gStatusTimeline, gBaseStatusIndicatorIcon already implemented_
 
 ### `gBaseSupportingInfoStrip`
 > USE: info-strip, supporting-info, status-metadata

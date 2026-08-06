@@ -1,0 +1,24 @@
+.ds-balancerow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-8px) 0;
+  font-family: var(--font-body);
+}
+
+.ds-balancerow__label {
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-balancerow__values {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-8px);
+}
+
+.ds-balancerow__value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}

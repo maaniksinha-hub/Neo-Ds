@@ -1,0 +1,79 @@
+.ds-statuscard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16px);
+  width: 320px;
+  padding: var(--spacing-16px);
+  border-radius: var(--corner-radius-12px);
+  border: 1px solid var(--stroke-default-primary-low);
+  background: var(--fill-neutral-primary);
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+.ds-statuscard__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-8px);
+}
+
+.ds-statuscard__headertext {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 auto;
+}
+
+.ds-statuscard__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-statuscard__subtitle {
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-statuscard__badge {
+  flex-shrink: 0;
+  padding: 2px var(--spacing-8px);
+  border-radius: var(--corner-radius-rounded);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.ds-statuscard__badge--success { background: var(--fill-positive-tertiary); color: var(--text-positive-primary); }
+.ds-statuscard__badge--failed { background: var(--fill-negative-tertiary); color: var(--text-negative-primary); }
+.ds-statuscard__badge--pending,
+.ds-statuscard__badge--partial { background: var(--fill-warning-tertiary); color: var(--text-warning-primary); }
+
+.ds-statuscard__infostrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-16px);
+  padding-top: var(--spacing-12px);
+  border-top: 1px solid var(--stroke-default-primary-low);
+}
+
+.ds-statuscard__infoitem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ds-statuscard__infolabel {
+  font-size: 11px;
+  color: var(--text-neutral-tertiary);
+}
+
+.ds-statuscard__infovalue {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-statuscard__timeline {
+  padding-top: var(--spacing-12px);
+  border-top: 1px solid var(--stroke-default-primary-low);
+}

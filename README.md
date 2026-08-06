@@ -53,9 +53,15 @@ Implemented in `src/components/`, each with a Storybook story:
 - `Loading` — `Spinner` (3 sizes) and `ProgressBar`
 - `Charts` — `LineChart`, `BarChart`, `Legend`, `ChartDot` (custom SVG, no charting library dependency)
 - `Keyboard` — numeric keypad, from `mKeyboard`
+- `PriceChange` — arrow + value/percent, positive/negative/neutral, from `mGainLossArrow`/`mPriceChange%`
+- `TransactionBadge` — deposit/withdrawal/transfer pill, from `gWithdrawalDepositBadge`
+- `ScripListItem` — stock watchlist row with optional chart/quantity, from `mScripList`
+- `BalanceRow` — label/value row for margin, holdings, P&L, from `mBalanceList`
+- `ResearchIdeaCard` — analyst call with target price and confidence, from `mResearchIdeas`
+- `StatusCard` — order/transaction status with info strip and timeline, from `mStatusCard`
 - `ColorsDoc` — token reference page (Foundations/Colors in Storybook)
 
-See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~73 components documented in Figma but not yet implemented, including the more complex chart types (grouped/stacked bars, gridlines/axes, live market indicator).
+See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~66 components documented in Figma but not yet implemented, including the more complex chart types (grouped/stacked bars, gridlines/axes, live market indicator) and several domain-specific cards/lists.
 
 ## Development
 

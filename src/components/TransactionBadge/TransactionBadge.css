@@ -1,0 +1,25 @@
+.ds-txnbadge {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 var(--spacing-8px);
+  border-radius: var(--corner-radius-rounded);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.ds-txnbadge--deposit {
+  background: var(--fill-positive-tertiary);
+  color: var(--text-positive-primary);
+}
+
+.ds-txnbadge--withdrawal {
+  background: var(--fill-negative-tertiary);
+  color: var(--text-negative-primary);
+}
+
+.ds-txnbadge--transfer {
+  background: var(--fill-accent1-tertiary);
+  color: var(--text-accent1-primary);
+}

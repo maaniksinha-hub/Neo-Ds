@@ -1,0 +1,70 @@
+.ds-scriplistitem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12px);
+  width: 100%;
+  padding: var(--spacing-12px) 0;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+.ds-scriplistitem--clickable {
+  cursor: pointer;
+}
+
+.ds-scriplistitem--clickable:hover {
+  background: var(--fill-neutral-hover-primary);
+}
+
+.ds-scriplistitem__logo {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-scriplistitem__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ds-scriplistitem__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ds-scriplistitem__subtitle,
+.ds-scriplistitem__quantity {
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-scriplistitem__chart {
+  flex-shrink: 0;
+}
+
+.ds-scriplistitem__price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.ds-scriplistitem__pricevalue {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
