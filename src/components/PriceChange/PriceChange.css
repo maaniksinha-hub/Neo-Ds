@@ -19,7 +19,7 @@
   color: var(--text-neutral-secondary);
 }
 
-.ds-pricechange__arrow--down {
+.ds-pricechange__arrow--up {
   transform: rotate(180deg);
 }
 

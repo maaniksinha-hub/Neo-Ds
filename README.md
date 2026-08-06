@@ -59,9 +59,13 @@ Implemented in `src/components/`, each with a Storybook story:
 - `BalanceRow` — label/value row for margin, holdings, P&L, from `mBalanceList`
 - `ResearchIdeaCard` — analyst call with target price and confidence, from `mResearchIdeas`
 - `StatusCard` — order/transaction status with info strip and timeline, from `mStatusCard`
+- `IndexStrip` — horizontal market index ticker, from `mIndexStrip`/`wIndexStrip`
+- `IndiceCard` — single index card with mini chart, from `mIndiceCard`
+- `IconCardWidget` — icon+label shortcut card, from `mIconCardWidget`
+- `OrderDetails` — full order/trade summary view, from `mOrderDetails`/`wOrderDetails`
 - `ColorsDoc` — token reference page (Foundations/Colors in Storybook)
 
-See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~66 components documented in Figma but not yet implemented, including the more complex chart types (grouped/stacked bars, gridlines/axes, live market indicator) and several domain-specific cards/lists.
+See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~60 components documented in Figma but not yet implemented, including the more complex chart types (grouped/stacked bars, gridlines/axes, live market indicator) and several domain-specific cards/lists.
 
 ## Development
 

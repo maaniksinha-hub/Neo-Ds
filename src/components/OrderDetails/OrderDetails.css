@@ -1,0 +1,79 @@
+.ds-orderdetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16px);
+  width: 360px;
+  padding: var(--spacing-16px);
+  border-radius: var(--corner-radius-12px);
+  border: 1px solid var(--stroke-default-primary-low);
+  background: var(--fill-neutral-primary);
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+.ds-orderdetails__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-8px);
+  padding-bottom: var(--spacing-16px);
+  border-bottom: 1px solid var(--stroke-default-primary-low);
+}
+
+.ds-orderdetails__headertext {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 auto;
+}
+
+.ds-orderdetails__scripname {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-orderdetails__ordertype {
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-orderdetails__status {
+  flex-shrink: 0;
+  padding: 2px var(--spacing-8px);
+  border-radius: var(--corner-radius-rounded);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.ds-orderdetails__status--completed { background: var(--fill-positive-tertiary); color: var(--text-positive-primary); }
+.ds-orderdetails__status--failed { background: var(--fill-negative-tertiary); color: var(--text-negative-primary); }
+.ds-orderdetails__status--in-process,
+.ds-orderdetails__status--yet-to-start { background: var(--fill-warning-tertiary); color: var(--text-warning-primary); }
+
+.ds-orderdetails__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12px);
+  margin: 0;
+}
+
+.ds-orderdetails__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-12px);
+  margin: 0;
+}
+
+.ds-orderdetails__rowlabel {
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-orderdetails__rowvalue {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+  margin: 0;
+  text-align: right;
+}

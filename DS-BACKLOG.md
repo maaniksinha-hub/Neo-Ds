@@ -4,8 +4,8 @@ Component coverage generated from the Figma file's AI Export (JSON) node — `AI
 These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
 Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
 
-**Implemented (41):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, Legend, ChartDot), Keyboard, PriceChange, TransactionBadge, ScripListItem, BalanceRow, ResearchIdeaCard, StatusCard + full token foundation (colors, typography, spacing).
-**Remaining:** 66 components.
+**Implemented (45):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, Legend, ChartDot), Keyboard, PriceChange, TransactionBadge, ScripListItem, BalanceRow, ResearchIdeaCard, StatusCard, IndexStrip, IndiceCard, IconCardWidget, OrderDetails + full token foundation (colors, typography, spacing).
+**Remaining:** 60 components.
 
 **Note:** Data Viz/Charts core primitives are built with custom SVG (no new dependency). Still remaining: grouped/stacked bar charts, gridlines/axes, live market indicator, and several composed chart widgets.
 
@@ -96,7 +96,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > VARIANTS: State (collapsed/expanded/hover).
 
-## Cards (16) — _gScripCards already implemented_
+## Cards (12) — _gScripCards, wIndexStrip, mIconCardWidget, mIndexStrip, mIndiceCard already implemented_
 
 ### `mScripLarge+description`
 > USE: large-scrip-card, featured-stock-card, stock-detail-card
@@ -136,13 +136,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > VARIANTS: Display style (table/chart).
 > INSTEAD-OF: Use wMarketDepth for web.
 
-### `wIndexStrip`
-> USE: web-index-strip, web-market-ticker, web-index-bar
-> WHEN: Horizontal ticker strip showing market indices on web — typically below the top navigation.
-> PLATFORM: Web
-> VARIANTS: Index count, expanded/compact display.
-> INSTEAD-OF: Use mIndexStrip for mobile.
-
 ### `wIndexSelector`
 > USE: web-index-selector, index-dropdown, market-index-picker
 > WHEN: Dropdown selector for choosing which market index to display — NIFTY 50, SENSEX, NIFTY Bank etc.
@@ -165,25 +158,9 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Displaying stock screener results or pre-built screening criteria as selectable cards.
 > PLATFORM: Mobile
 
-### `mIconCardWidget`
-> USE: icon-card-widget, feature-card, shortcut-card
-> WHEN: Feature entry points displayed as icon+label cards — home screen widgets and quick-access grids.
-> PLATFORM: Mobile
-
 ### `mRedirectionCard`
 > USE: redirection-card, promo-card, discovery-card, deep-link-card
 > WHEN: Promotional or discovery cards that redirect to a feature or external page. Cards with a clear CTA destination.
-> PLATFORM: Mobile
-
-### `mIndexStrip`
-> USE: index-ticker, market-index-strip, index-bar
-> WHEN: Horizontal strip showing major market indices (NIFTY, SENSEX) with live prices and change.
-> PLATFORM: Mobile
-> INSTEAD-OF: Use wIndexStrip for the web variant.
-
-### `mIndiceCard`
-> USE: index-card, market-index-card, benchmark-card
-> WHEN: Individual market index displayed as a card with price, change, and mini chart.
 > PLATFORM: Mobile
 
 ### `wMarketDepth`
@@ -357,7 +334,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > VARIANTS: Orientation (vertical/horizontal), state (default/hover/active).
 
-## Status & Indicators (4) — _mStatusCard, gStatusTimeline, gBaseStatusIndicatorIcon already implemented_
+## Status & Indicators (2) — _mStatusCard, gStatusTimeline, gBaseStatusIndicatorIcon, mOrderDetails, wOrderDetails already implemented_
 
 ### `gBaseSupportingInfoStrip`
 > USE: info-strip, supporting-info, status-metadata
@@ -370,18 +347,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Connecting line between status steps in gStatusTimeline. Building block.
 > PLATFORM: Global
 > VARIANTS: State (completed/pending) affecting color.
-
-### `mOrderDetails`
-> USE: order-detail-view, trade-confirmation, order-summary
-> WHEN: Full order details screen — showing order status, price, quantity, timestamps, and supporting information.
-> PLATFORM: Mobile
-> INSTEAD-OF: Use wOrderDetails for web.
-
-### `wOrderDetails`
-> USE: web-order-detail, web-trade-confirmation, web-order-summary
-> WHEN: Full order details on web — same content as mOrderDetails in web layout.
-> PLATFORM: Web
-> INSTEAD-OF: Use mOrderDetails for mobile.
 
 ## Table (2) — _wTableCell, wTableHeader already implemented_
 

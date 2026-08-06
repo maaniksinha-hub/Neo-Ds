@@ -1,0 +1,34 @@
+.ds-iconcardwidget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8px);
+  width: 88px;
+  padding: var(--spacing-16px) var(--spacing-8px);
+  border-radius: var(--corner-radius-12px);
+  border: 1px solid var(--stroke-default-primary-low);
+  background: var(--fill-neutral-primary);
+  font-family: var(--font-body);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.ds-iconcardwidget:hover {
+  background: var(--fill-neutral-hover-primary);
+}
+
+.ds-iconcardwidget__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--text-accent1-primary);
+}
+
+.ds-iconcardwidget__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+  text-align: center;
+}

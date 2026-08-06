@@ -1,0 +1,31 @@
+.ds-indexstrip {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-24px);
+  overflow-x: auto;
+  padding: var(--spacing-12px) 0;
+  font-family: var(--font-body);
+  scrollbar-width: none;
+}
+
+.ds-indexstrip::-webkit-scrollbar {
+  display: none;
+}
+
+.ds-indexstrip__item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-8px);
+  flex-shrink: 0;
+}
+
+.ds-indexstrip__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-indexstrip__value {
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}
