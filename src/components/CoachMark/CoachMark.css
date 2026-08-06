@@ -1,0 +1,93 @@
+.ds-coachmark {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 343px;
+  background: var(--fill-neutral-inverse-primary);
+  border-radius: var(--corner-radius-12px);
+  overflow: hidden;
+  font-family: var(--font-body);
+}
+
+.ds-coachmark__image {
+  width: 100%;
+  height: 150px;
+  background: var(--fill-neutral-inverse-secondary, rgba(255, 255, 255, 0.08));
+}
+
+.ds-coachmark__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8px);
+  padding: var(--spacing-16px);
+}
+
+.ds-coachmark__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-inverse-primary);
+}
+
+.ds-coachmark__body {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-inverse-secondary, var(--text-neutral-tertiary));
+}
+
+.ds-coachmark__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--spacing-4px);
+}
+
+.ds-coachmark__step {
+  font-size: 12px;
+  color: var(--text-inverse-secondary, var(--text-neutral-tertiary));
+}
+
+.ds-coachmark__actions {
+  display: flex;
+  gap: var(--spacing-16px);
+  margin-left: auto;
+}
+
+.ds-coachmark__skip,
+.ds-coachmark__next {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.ds-coachmark__skip {
+  color: var(--text-inverse-secondary, var(--text-neutral-tertiary));
+}
+
+.ds-coachmark__next {
+  color: var(--text-inverse-primary);
+}
+
+.ds-coachmark__arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--fill-neutral-inverse-primary);
+  transform: rotate(45deg);
+}
+
+.ds-coachmark--arrow-bottom .ds-coachmark__arrow { bottom: -6px; left: 50%; margin-left: -6px; }
+.ds-coachmark--arrow-top .ds-coachmark__arrow { top: -6px; left: 50%; margin-left: -6px; }
+.ds-coachmark--arrow-left .ds-coachmark__arrow { left: -6px; top: 50%; margin-top: -6px; }
+.ds-coachmark--arrow-right .ds-coachmark__arrow { right: -6px; top: 50%; margin-top: -6px; }
+
+.ds-coachmark--align-start.ds-coachmark--arrow-top .ds-coachmark__arrow,
+.ds-coachmark--align-start.ds-coachmark--arrow-bottom .ds-coachmark__arrow { left: 24px; margin-left: 0; }
+
+.ds-coachmark--align-end.ds-coachmark--arrow-top .ds-coachmark__arrow,
+.ds-coachmark--align-end.ds-coachmark--arrow-bottom .ds-coachmark__arrow { left: auto; right: 24px; margin-left: 0; }
