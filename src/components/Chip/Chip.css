@@ -1,0 +1,60 @@
+.ds-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4px);
+  height: 34px;
+  padding: var(--spacing-8px) var(--spacing-16px);
+  border-radius: var(--corner-radius-rounded);
+  border: 1px solid var(--stroke-default-primary);
+  background: var(--fill-neutral-transparent-primary, transparent);
+  color: var(--text-neutral-secondary-high);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ds-chip:hover:not(:disabled) {
+  background: var(--fill-neutral-hover-primary);
+}
+
+.ds-chip:active:not(:disabled) {
+  background: var(--fill-neutral-pressed-primary);
+}
+
+.ds-chip--selected.ds-chip--default {
+  background: var(--fill-accent1-tertiary);
+  border-color: var(--stroke-accent1-primary);
+  color: var(--text-neutral-primary);
+}
+
+.ds-chip--selected.ds-chip--buy {
+  background: var(--fill-positive-primary);
+  border-color: var(--fill-positive-primary);
+  color: var(--text-inverse-primary);
+}
+
+.ds-chip--selected.ds-chip--sell {
+  background: var(--fill-accent3-primary);
+  border-color: var(--fill-accent3-primary);
+  color: var(--text-inverse-primary);
+}
+
+.ds-chip--action {
+  border-radius: var(--corner-radius-rounded);
+}
+
+.ds-chip:disabled {
+  cursor: not-allowed;
+  color: var(--text-neutral-tertiary);
+  border-color: var(--stroke-default-primary-low);
+  background: transparent;
+}
+
+.ds-chip__icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
