@@ -8,6 +8,10 @@ import { ColorsDoc } from './components/ColorsDoc/ColorsDoc';
 import { StockCard } from './components/StockCard/StockCard';
 import { List } from './components/List/List';
 import { ListItem } from './components/List/ListItem';
+import { LineChart } from './components/Charts/LineChart';
+import { BarChart } from './components/Charts/BarChart';
+import { Legend } from './components/Charts/Legend';
+import { ChartDot } from './components/Charts/ChartDot';
 
 const tabItems = [
   { value: 'overview', label: 'Overview' },
@@ -106,6 +110,45 @@ function App() {
           <ListItem title="Notifications" trailing="›" onClick={() => {}} />
           <ListItem title="Two-factor authentication" subtitle="Add an extra layer of security" trailing="›" onClick={() => {}} divider={false} />
         </List>
+      </section>
+
+      <section>
+        <h2>Charts</h2>
+        <div style={{ display: 'flex', gap: 24, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+          <div>
+            <p style={{ fontSize: 12, color: 'var(--text-neutral-secondary)' }}>Line (positive)</p>
+            <LineChart values={[162, 165, 163, 168, 170, 167, 172, 175, 173, 178]} direction="positive" width={280} height={100} />
+          </div>
+          <div>
+            <p style={{ fontSize: 12, color: 'var(--text-neutral-secondary)' }}>Bar</p>
+            <BarChart
+              height={100}
+              bars={[
+                { label: 'Mon', value: 40 },
+                { label: 'Tue', value: 65 },
+                { label: 'Wed', value: 30 },
+                { label: 'Thu', value: 80, selected: true },
+              ]}
+            />
+          </div>
+          <div>
+            <p style={{ fontSize: 12, color: 'var(--text-neutral-secondary)' }}>Legend</p>
+            <Legend
+              stacked
+              items={[
+                { label: 'Promoters', value: '52.3%', color: 'var(--fill-accent1-primary)' },
+                { label: 'FII', value: '18.1%', color: 'var(--fill-positive-primary)' },
+              ]}
+            />
+          </div>
+          <div>
+            <p style={{ fontSize: 12, color: 'var(--text-neutral-secondary)' }}>Chart dot</p>
+            <div style={{ display: 'flex', gap: 16 }}>
+              <ChartDot color="positive" pulse />
+              <ChartDot color="negative" pulse />
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>

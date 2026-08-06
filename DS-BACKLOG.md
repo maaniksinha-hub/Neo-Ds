@@ -4,10 +4,10 @@ Component coverage generated from the Figma file's AI Export (JSON) node — `AI
 These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
 Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
 
-**Implemented (30):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar) + full token foundation (colors, typography, spacing).
-**Remaining:** 81 components.
+**Implemented (34):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, Legend, ChartDot) + full token foundation (colors, typography, spacing).
+**Remaining:** 74 components.
 
-**Note:** Data Viz/Charts (18 components) intentionally skipped pending a decision on charting approach (custom SVG vs. a library like Recharts).
+**Note:** Data Viz/Charts core primitives are built with custom SVG (no new dependency). Still remaining: grouped/stacked bar charts, gridlines/axes, live market indicator, and several composed chart widgets.
 
 ## Accordion (3) — _mAccordionSmall already implemented_
 
@@ -209,33 +209,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > VARIANTS: State (default/selected/disabled), with/without icon.
 > INSTEAD-OF: Use gChoiceChip for the global/shared variant.
 
-## Data Viz. / Charts (18)
-
-### `gBaseLegend`
-> USE: chart-legend-item, legend-entry, data-series-label
-> WHEN: Individual legend entry showing color dot + label for a data series. Building block for gLegendGroup.
-> PLATFORM: Global
-> VARIANTS: Color dot style, with/without value.
-
-### `gLegendGroup`
-> USE: chart-legend, legend-bar, data-legend, series-legend
-> WHEN: Group of legend entries for multi-series charts — typically placed above or below the chart.
-> PLATFORM: Global
-> VARIANTS: Layout (horizontal/vertical), item count.
-
-### `gLineNegative`
-> USE: negative-line-chart, loss-line, red-line-chart
-> WHEN: Line chart segment showing negative/loss price movement — colored red.
-> PLATFORM: Global
-> VARIANTS: With/without area fill.
-> INSTEAD-OF: Use gLinePositive for positive/gain segments.
-
-### `gLinePositive`
-> USE: positive-line-chart, gain-line, green-line-chart
-> WHEN: Line chart segment showing positive/gain price movement — colored green.
-> PLATFORM: Global
-> VARIANTS: With/without area fill.
-> INSTEAD-OF: Use gLineNegative for negative/loss segments.
+## Data Viz. / Charts (11) — _gBaseLegend, gLegendGroup, gLineNegative, gLinePositive, gBaseChartIndicator, gChartIndicator, gBaseVerticalBar already implemented_
 
 ### `gLineChartSkeletonLoader`
 > USE: chart-skeleton, chart-loader, chart-placeholder
@@ -254,23 +228,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Showing current market status with label (e.g. "Market Open", "Market Closed") — typically in top nav or index strip.
 > PLATFORM: Global
 > VARIANTS: State (live/closed/pre-market).
-
-### `gBaseChartIndicator`
-> USE: chart-data-point, chart-dot, data-marker
-> WHEN: Data point marker on a chart line — building block used within chart compositions.
-> PLATFORM: Global
-> VARIANTS: Color (positive/negative).
-
-### `gChartIndicator`
-> USE: chart-indicator, current-price-marker, chart-crosshair
-> WHEN: Interactive indicator showing the current/selected price point on a chart with crosshair lines.
-> PLATFORM: Global
-> VARIANTS: Type (dot/crosshair/line), color.
-
-### `gBaseVerticalBar`
-> USE: bar-chart-bar, vertical-bar, column-bar
-> WHEN: Single vertical bar in a bar chart. Building block for grouped and stacked bar charts.
-> PLATFORM: Global
 
 ### `gGridlines`
 > USE: chart-gridlines, chart-grid, axis-gridlines
