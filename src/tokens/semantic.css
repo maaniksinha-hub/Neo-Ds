@@ -1,0 +1,488 @@
+:root {
+  /* Canvas/Default — Primary app background. Use for full-screen surfaces and page-level containers. */
+  --canvas-default: var(--color-neutral-0);
+  /* Fill/Neutral/Primary — Surface 1 — cards, containers, and elevated surfaces above the canvas. */
+  --fill-neutral-primary: var(--color-neutral-0);
+  /* Fill/Neutral/Secondary — Surface 2 — secondary containers, static icon backgrounds, and subtle differentiators. */
+  --fill-neutral-secondary: var(--color-neutral-100);
+  /* Fill/Neutral/Tertiary — Surface 3 — disabled state fills, skeleton loaders, and lowest-emphasis backgrounds. */
+  --fill-neutral-tertiary: var(--color-neutral-200);
+  /* Fill/Neutral/Hover/Primary — Hover state for Primary neutral surfaces (cards, containers). */
+  --fill-neutral-hover-primary: var(--color-neutral-100);
+  /* Fill/Neutral/Hover/Secondary — Hover state for Secondary neutral surfaces. */
+  --fill-neutral-hover-secondary: var(--color-neutral-200);
+  /* Fill/Neutral/Hover/Tertiary — Hover state for Tertiary neutral surfaces. Reserved for future use. */
+  --fill-neutral-hover-tertiary: var(--color-neutral-300);
+  /* Fill/Neutral/Pressed/Primary — Pressed/active state for Primary neutral surfaces. */
+  --fill-neutral-pressed-primary: var(--color-neutral-200);
+  /* Fill/Neutral Inverse/Primary — Dark fill on light mode, light on dark. Use for high-contrast surfaces like tooltips, snackbars, and inverted CTAs. */
+  --fill-neutral-inverse-primary: var(--color-neutral-1000);
+  /* Fill/Neutral Inverse/Secondary — Secondary inverse surface. Use for less prominent inverted elements. */
+  --fill-neutral-inverse-secondary: var(--color-neutral-500);
+  /* Fill/Neutral/Pressed/Secondary — Pressed/active state for Secondary neutral surfaces. */
+  --fill-neutral-pressed-secondary: var(--color-neutral-300);
+  /* Fill/Neutral Inverse/Hover/Primary — Hover state for Primary inverse surfaces. */
+  --fill-neutral-inverse-hover-primary: var(--color-neutral-900);
+  /* Fill/Neutral Inverse/Hover/Secondary — Hover state for Secondary inverse surfaces. */
+  --fill-neutral-inverse-hover-secondary: var(--color-neutral-600);
+  /* Fill/Neutral/Pressed/Tertiary — Pressed/active state for Tertiary neutral surfaces. Reserved for structural consistency. */
+  --fill-neutral-pressed-tertiary: var(--color-neutral-400);
+  /* Fill/Neutral Inverse/Pressed/Primary — Pressed state for Primary inverse surfaces. */
+  --fill-neutral-inverse-pressed-primary: var(--color-neutral-800);
+  /* Fill/Neutral Inverse/Pressed/Secondary — Pressed state for Secondary inverse surfaces. */
+  --fill-neutral-inverse-pressed-secondary: var(--color-neutral-700);
+  /* Fill/Accent1/Primary — Primary brand color fill. Use for primary CTAs, active tabs, and key interactive elements. */
+  --fill-accent1-primary: var(--color-blue-700);
+  /* Fill/Accent1/Secondary — Lighter brand fill. Use for secondary buttons, selected chips, and soft accent backgrounds. */
+  --fill-accent1-secondary: var(--color-blue-300);
+  /* Fill/Accent1/Tertiary — Lightest brand tint. Use for selected card backgrounds, notification badges, and subtle brand presence. */
+  --fill-accent1-tertiary: var(--color-blue-200);
+  /* Fill/Accent1/Hover/Primary — Hover state for primary brand buttons and interactive elements. */
+  --fill-accent1-hover-primary: var(--color-blue-600);
+  /* Fill/Accent1/Hover/Secondary — Hover state for secondary brand surfaces. */
+  --fill-accent1-hover-secondary: var(--color-blue-400);
+  /* Fill/Accent1/Hover/Tertiary — Hover state for tertiary brand surfaces. */
+  --fill-accent1-hover-tertiary: var(--color-blue-300);
+  /* Fill/Accent1/Pressed/Primary — Pressed state for primary brand CTAs. */
+  --fill-accent1-pressed-primary: var(--color-blue-800);
+  /* Fill/Accent1/Pressed/Secondary — Pressed state for secondary brand elements. */
+  --fill-accent1-pressed-secondary: var(--color-blue-500);
+  /* Fill/Accent1/Pressed/Tertiary — Pressed state for tertiary brand surfaces. */
+  --fill-accent1-pressed-tertiary: var(--color-blue-400);
+  /* Fill/Accent2/Primary — Secondary accent fill. Use for category differentiation, MTF/options indicators, and alternate brand moments. */
+  --fill-accent2-primary: var(--color-purple-700);
+  /* Fill/Accent2/Secondary — Lighter secondary accent. Use for tags, labels, and category badges. */
+  --fill-accent2-secondary: var(--color-purple-400);
+  /* Fill/Accent2/Tertiary — Lightest secondary accent tint. Use for subtle category backgrounds. */
+  --fill-accent2-tertiary: var(--color-purple-200);
+  /* Fill/Accent3/Primary — Tertiary accent fill. Use for additional category or instrument-type differentiation. */
+  --fill-accent3-primary: var(--color-orange-600);
+  /* Fill/Accent3/Secondary — Lighter tertiary accent for secondary emphasis. */
+  --fill-accent3-secondary: var(--color-orange-400);
+  /* Fill/Accent3/Tertiary — Lightest tertiary accent tint for subtle backgrounds. */
+  --fill-accent3-tertiary: var(--color-orange-200);
+  /* Fill/Accent3/Hover/Primary — Hover state for primary Accent3 elements. */
+  --fill-accent3-hover-primary: var(--color-orange-500);
+  /* Fill/Accent3/Hover/Secondary — Hover state for secondary Accent3 elements. */
+  --fill-accent3-hover-secondary: var(--color-orange-500);
+  /* Fill/Accent3/Hover/Tertiary — Hover state for tertiary Accent3 surfaces. */
+  --fill-accent3-hover-tertiary: var(--color-orange-300);
+  /* Fill/Accent3/Pressed/Primary — Pressed state for primary Accent3 elements. */
+  --fill-accent3-pressed-primary: var(--color-orange-700);
+  /* Fill/Accent3/Pressed/Secondary — Pressed state for secondary Accent3 elements. */
+  --fill-accent3-pressed-secondary: var(--color-orange-600);
+  /* Fill/Accent3/Pressed/Tertiary — Pressed state for tertiary Accent3 surfaces. */
+  --fill-accent3-pressed-tertiary: var(--color-orange-400);
+  /* Fill/Negative/Primary — Negative/error fill. Use for loss indicators, destructive actions, and sell buttons. */
+  --fill-negative-primary: var(--color-red-600);
+  /* Fill/Warning/Primary — Warning fill. Use for pending states, caution indicators, and attention-required elements. */
+  --fill-warning-primary: var(--color-yellow-500);
+  /* Fill/Negative/Secondary — Lighter negative fill for error states and loss backgrounds. */
+  --fill-negative-secondary: var(--color-red-400);
+  /* Fill/Negative/Tertiary — Lightest negative tint. Use for subtle error backgrounds and negative sentiment areas. */
+  --fill-negative-tertiary: var(--color-red-200);
+  /* Fill/Neutral/Transparent/Primary — Fully transparent fill. Use for ghost buttons or transparent overlays. */
+  --fill-neutral-transparent-primary: var(--color-transparent-0);
+  /* Fill/Neutral/Transparent/Secondary — Semi-transparent neutral fill for subtle overlays and backdrops. */
+  --fill-neutral-transparent-secondary: var(--color-transparent-100);
+  /* Fill/Neutral/Transparent/Tertiary — Low-opacity transparent fill for layered backgrounds. */
+  --fill-neutral-transparent-tertiary: var(--color-transparent-200);
+  /* Fill/Accent2/Hover/Primary — Hover state for primary Accent2 elements. */
+  --fill-accent2-hover-primary: var(--color-purple-600);
+  /* Fill/Accent2/Hover/Secondary — Hover state for secondary Accent2 elements. */
+  --fill-accent2-hover-secondary: var(--color-purple-500);
+  /* Fill/Accent2/Hover/Tertiary — Hover state for tertiary Accent2 surfaces. */
+  --fill-accent2-hover-tertiary: var(--color-purple-300);
+  /* Fill/Accent2/Pressed/Primary — Pressed state for primary Accent2 elements. */
+  --fill-accent2-pressed-primary: var(--color-purple-500);
+  /* Fill/Accent2/Pressed/Secondary — Pressed state for secondary Accent2 elements. */
+  --fill-accent2-pressed-secondary: var(--color-purple-300);
+  /* Fill/Accent2/Pressed/Tertiary — Pressed state for tertiary Accent2 surfaces. */
+  --fill-accent2-pressed-tertiary: var(--color-purple-400);
+  /* Stroke/Default/Primary — Default border for cards, dividers, input fields, and selectable containers in default state. */
+  --stroke-default-primary: var(--color-neutral-300);
+  /* Stroke/Default/Secondary — Higher emphasis border. Use for hover states of inputs, chips, and interactive containers. */
+  --stroke-default-secondary: var(--color-neutral-500);
+  /* Stroke/Default/Tertiary — Highest emphasis neutral border. Use for selected/focused inputs, active chips, and high-emphasis outlines. */
+  --stroke-default-tertiary: var(--color-neutral-900);
+  /* Stroke/Default/Primary Low — Subtle divider stroke. Use for low-emphasis separators and inner dividers within cards. */
+  --stroke-default-primary-low: var(--color-neutral-200);
+  /* Fill/Warning/Secondary — Lighter warning fill for secondary caution indicators. */
+  --fill-warning-secondary: var(--color-yellow-400);
+  /* Fill/Warning/Tertiary — Lightest warning tint for subtle caution backgrounds. */
+  --fill-warning-tertiary: var(--color-yellow-100);
+  /* Stroke/Negative/Primary — Error/loss border. Use for validation errors, negative state outlines, and sell-side elements. */
+  --stroke-negative-primary: var(--color-red-600);
+  /* Stroke/Negative/Secondary — Medium negative border for secondary error indication. */
+  --stroke-negative-secondary: var(--color-red-300);
+  /* Stroke/Negative/Tertiary — Lightest negative border for subtle error backgrounds. */
+  --stroke-negative-tertiary: var(--color-red-200);
+  /* Text/Neutral/Primary — Primary text color. Use for headings, body text, and all high-emphasis readable content. */
+  --text-neutral-primary: var(--color-neutral-900);
+  /* Text/Neutral/Secondary — Secondary text color. Use for supporting text, descriptions, and medium-emphasis labels. */
+  --text-neutral-secondary: var(--color-neutral-600);
+  /* Text/Neutral/Tertiary — Tertiary text color. Use for placeholders, disabled text, captions, and low-emphasis content. */
+  --text-neutral-tertiary: var(--color-neutral-400);
+  /* Text/Neutral/Secondary High — Slightly higher emphasis than Secondary. Use for subtitles and semi-prominent labels. */
+  --text-neutral-secondary-high: var(--color-neutral-700);
+  /* Text/Inverse/Primary — Inverse text for use on colored/dark surfaces (accent buttons, tooltips, snackbars). */
+  --text-inverse-primary: var(--color-neutral-0);
+  /* Text/Inverse/Secondary — Secondary inverse text. Use for supporting content on colored surfaces. */
+  --text-inverse-secondary: var(--color-neutral-0);
+  /* Text/Accent1/Primary — Brand-colored text. Use for links, actionable labels, and primary brand emphasis. */
+  --text-accent1-primary: var(--color-blue-700);
+  /* Text/Accent1/Secondary — Medium brand text. Use for secondary links and interactive labels. */
+  --text-accent1-secondary: var(--color-blue-600);
+  /* Text/Accent1/Tertiary — Lightest brand text. Use for subtle brand-tinted labels and metadata. */
+  --text-accent1-tertiary: var(--color-blue-500);
+  /* Text/Positive/Primary — Positive/profit text. Use for gain values, success messages, and buy-side amounts. */
+  --text-positive-primary: var(--color-green-800);
+  /* Text/Positive/Secondary — Medium positive text for secondary gain indicators. */
+  --text-positive-secondary: var(--color-green-700);
+  /* Text/Positive/Tertiary — Lightest positive text for subtle success labels. */
+  --text-positive-tertiary: var(--color-green-600);
+  /* Text/Negative/Primary — Negative/loss text. Use for loss values, error messages, and sell-side amounts. */
+  --text-negative-primary: var(--color-red-600);
+  /* Text/Negative/Secondary — Medium negative text for secondary loss indicators. */
+  --text-negative-secondary: var(--color-red-500);
+  /* Text/Negative/Tertiary — Lightest negative text for subtle error labels. */
+  --text-negative-tertiary: var(--color-red-400);
+  /* Text/Accent2/Primary — Secondary accent text for category labels and differentiation. */
+  --text-accent2-primary: var(--color-purple-700);
+  /* Text/Accent 3/Primary — Tertiary accent text for instrument-type labels (e.g., PUT indicators). */
+  --text-accent-3-primary: var(--color-orange-600);
+  /* Text/Accent2/Secondary — Medium secondary accent text for supporting category content. */
+  --text-accent2-secondary: var(--color-purple-600);
+  /* Icon/Default/Primary — Primary icon color. Use for navigation icons, action icons, and high-emphasis glyphs. */
+  --icon-default-primary: var(--color-neutral-900);
+  /* Text/Accent2/Tertiary — Lightest secondary accent text for subtle metadata. */
+  --text-accent2-tertiary: var(--color-purple-500);
+  /* Icon/Default/Secondary High — Slightly higher emphasis than Secondary. Use for semi-prominent utility icons. */
+  --icon-default-secondary-high: var(--color-neutral-700);
+  /* Icon/Default/Secondary — Secondary icon color. Use for supporting icons, metadata indicators, and medium-emphasis glyphs. */
+  --icon-default-secondary: var(--color-neutral-600);
+  /* Icon/Default/Tertiary — Tertiary icon color. Use for disabled icons, decorative glyphs, and lowest-emphasis indicators. */
+  --icon-default-tertiary: var(--color-neutral-400);
+  /* Icon/Positive/Primary — Positive/profit icon. Use for gain arrows, success checkmarks, and buy indicators. */
+  --icon-positive-primary: var(--color-green-800);
+  /* Icon/Positive/Secondary — Medium positive icon. Reserved for future use. */
+  --icon-positive-secondary: var(--color-green-400);
+  /* Icon/Positive/Tertiary — Lightest positive icon. Reserved for future use. */
+  --icon-positive-tertiary: var(--color-green-200);
+  /* Icon/Negative/Primary — Negative/loss icon. Use for loss arrows, error indicators, and sell indicators. */
+  --icon-negative-primary: var(--color-red-600);
+  /* Icon/Accent1/Primary — Brand-colored icon. Use for active navigation items, selected states, and primary brand indicators. */
+  --icon-accent1-primary: var(--color-blue-700);
+  /* Icon/Accent2/Primary — Secondary accent icon for category indicators. */
+  --icon-accent2-primary: var(--color-purple-700);
+  /* Icon/Accent1/Secondary — Medium brand icon for secondary interactive states. */
+  --icon-accent1-secondary: var(--color-blue-400);
+  /* Icon/Accent2/Secondary — Medium secondary accent icon. */
+  --icon-accent2-secondary: var(--color-purple-400);
+  /* Icon/Accent 3/Primary — Tertiary accent icon for instrument-type indicators. */
+  --icon-accent-3-primary: var(--color-orange-600);
+  /* Icon/Accent 3/Secondary — Medium tertiary accent icon. */
+  --icon-accent-3-secondary: var(--color-orange-400);
+  /* Icon/Accent 3/Tertiary — Lightest tertiary accent icon. */
+  --icon-accent-3-tertiary: var(--color-orange-200);
+  /* Icon/Inverse/Primary — Inverse icon for use on colored/dark surfaces (accent buttons, banners). */
+  --icon-inverse-primary: var(--color-neutral-0);
+  /* Icon/Inverse/Secondary — Secondary inverse icon for supporting content on colored surfaces. */
+  --icon-inverse-secondary: var(--color-neutral-0);
+  /* Icon/Accent1/Tertiary — Lightest brand icon for subtle brand presence. */
+  --icon-accent1-tertiary: var(--color-blue-300);
+  /* Stroke/Accent1/Primary — Brand-colored border. Use for selected states, active inputs, and primary emphasis outlines. */
+  --stroke-accent1-primary: var(--color-blue-700);
+  /* Stroke/Accent1/Secondary — Medium brand border. Use for secondary interactive element outlines. */
+  --stroke-accent1-secondary: var(--color-blue-400);
+  /* Stroke/Accent1/Tertiary — Lightest brand border. Use for subtle brand-tinted outlines and decorative borders. */
+  --stroke-accent1-tertiary: var(--color-blue-300);
+  /* Stroke/Accent1/Focus — Focus ring color. Use exclusively for keyboard focus indicators on interactive elements. */
+  --stroke-accent1-focus: var(--color-blue-700);
+  /* Gradient base/Blue — Base blue for gradient compositions. Use with gradient paint styles. */
+  --gradient-base-blue: var(--color-blue-200);
+  /* Gradient base/Dark blue — Dark blue anchor for gradient compositions. */
+  --gradient-base-dark-blue: var(--color-blue-400);
+  /* Gradient base/White surface 0 — White gradient base matching Canvas/Default for seamless fades. */
+  --gradient-base-white-surface-0: var(--color-neutral-0);
+  /* Gradient base/White surface 1 — White gradient base matching Fill/Neutral/Primary for card fades. */
+  --gradient-base-white-surface-1: var(--color-neutral-0);
+  /* Gradient base/Red — Red gradient base for negative/loss gradient effects. */
+  --gradient-base-red: var(--color-red-200);
+  /* Gradient base/Light Green — Light green gradient base for positive/gain gradient effects. */
+  --gradient-base-light-green: var(--color-green-200);
+  /* Gradient base/Grey stroke — Grey gradient base for subtle border gradients. */
+  --gradient-base-grey-stroke: var(--color-neutral-300);
+  /* Gradient base/Yellow — Yellow gradient base for warning gradient effects. */
+  --gradient-base-yellow: var(--color-yellow-200);
+  /* Scrim/Scrim Fill — Modal overlay fill. Use for bottom sheet scrims, dialog backdrops, and focus-lock overlays. */
+  --scrim-scrim-fill: var(--color-scrim);
+  /* Info Graphics/Price chart/Pulse Green — Lighter green for animated pulse/glow on positive price movement. */
+  --info-graphics-price-chart-pulse-green: var(--color-green-400);
+  /* Info Graphics/Price chart/Green — Standard green for positive price lines and gain areas on charts. */
+  --info-graphics-price-chart-green: var(--color-green-800);
+  /* Info Graphics/Price chart/Red — Standard red for negative price lines and loss areas on charts. */
+  --info-graphics-price-chart-red: var(--color-red-600);
+  /* Info Graphics/Price chart/Pulse Red — Lighter red for animated pulse/glow on negative price movement. */
+  --info-graphics-price-chart-pulse-red: var(--color-red-200);
+  /* Info Graphics/Price chart/Tooltip line — Crosshair/guideline color for chart tooltips. */
+  --info-graphics-price-chart-tooltip-line: var(--color-neutral-400);
+  /* Info Graphics/Price chart/Tooltip bg — Background fill for chart tooltip containers. */
+  --info-graphics-price-chart-tooltip-bg: var(--color-neutral-900);
+  /* Info Graphics/Price chart/Pulse Blue — Lighter blue for animated pulse/glow on neutral price indicators. */
+  --info-graphics-price-chart-pulse-blue: var(--color-blue-400);
+  /* Info Graphics/Price chart/Blue — Standard blue for neutral/index price lines on charts. */
+  --info-graphics-price-chart-blue: var(--color-blue-700);
+  /* Info Graphics/Price chart/Pulse Purple — Lighter purple for animated pulse/glow on secondary indicators. */
+  --info-graphics-price-chart-pulse-purple: var(--color-purple-300);
+  /* Info Graphics/Price chart/Purple — Standard purple for secondary data series on charts. */
+  --info-graphics-price-chart-purple: var(--color-purple-700);
+  /* Info Graphics/Chart/Legend 0 — Chart legend color slot 0 — first data series in multi-line/bar charts. */
+  --info-graphics-chart-legend-0: var(--color-blue-300);
+  /* Info Graphics/Chart/Legend 1 — Chart legend color slot 1 — second data series. */
+  --info-graphics-chart-legend-1: var(--color-blue-400);
+  /* Info Graphics/Chart/Legend 2 — Chart legend color slot 2 — third data series. */
+  --info-graphics-chart-legend-2: var(--color-blue-600);
+  /* Info Graphics/Chart/Legend 3 — Chart legend color slot 3 — fourth data series. */
+  --info-graphics-chart-legend-3: var(--color-blue-700);
+  /* Info Graphics/Chart/Legend 4 — Chart legend color slot 4 — fifth data series. */
+  --info-graphics-chart-legend-4: var(--color-blue-900);
+  /* Fill/Negative/Hover/Primary — Hover state for primary negative elements (sell buttons, destructive CTAs). */
+  --fill-negative-hover-primary: var(--color-red-500);
+  /* Fill/Negative/Hover/Secondary — Hover state for secondary negative surfaces. */
+  --fill-negative-hover-secondary: var(--color-red-500);
+  /* Fill/Negative/Hover/Tertiary — Hover state for tertiary negative surfaces. */
+  --fill-negative-hover-tertiary: var(--color-red-300);
+  /* Fill/Negative/Pressed/Primary — Pressed state for primary negative elements. */
+  --fill-negative-pressed-primary: var(--color-red-700);
+  /* Fill/Negative/Pressed/Secondary — Pressed state for secondary negative elements. */
+  --fill-negative-pressed-secondary: var(--color-red-600);
+  /* Fill/Positive/Primary — Positive/success fill. Use for profit indicators, success states, and buy actions. */
+  --fill-positive-primary: var(--color-green-700);
+  /* Fill/Positive/Secondary — Lighter positive fill for secondary success indicators and gain backgrounds. */
+  --fill-positive-secondary: var(--color-green-400);
+  /* Fill/Positive/Tertiary — Lightest positive tint. Use for subtle success backgrounds and positive sentiment areas. */
+  --fill-positive-tertiary: var(--color-green-200);
+  /* Fill/Positive/Hover/Primary — Hover state for primary positive elements (buy buttons, success CTAs). */
+  --fill-positive-hover-primary: var(--color-green-600);
+  /* Fill/Positive/Hover/Secondary — Hover state for secondary positive surfaces. */
+  --fill-positive-hover-secondary: var(--color-green-500);
+  /* Fill/Positive/Hover/Tertiary — Hover state for tertiary positive surfaces. */
+  --fill-positive-hover-tertiary: var(--color-green-300);
+  /* Fill/Positive/Pressed/Primary — Pressed state for primary positive elements. */
+  --fill-positive-pressed-primary: var(--color-green-900);
+  /* Fill/Negative/Pressed/Tertiary — Pressed state for tertiary negative surfaces. */
+  --fill-negative-pressed-tertiary: var(--color-red-400);
+  /* Fill/Positive/Pressed/Secondary — Pressed state for secondary positive surfaces. */
+  --fill-positive-pressed-secondary: var(--color-green-600);
+  /* Fill/Positive/Pressed/Tertiary — Pressed state for tertiary positive surfaces. */
+  --fill-positive-pressed-tertiary: var(--color-green-400);
+  /* Stroke/Positive/Primary — Success/profit border. Use for positive state outlines, gain indicators, and buy-side elements. */
+  --stroke-positive-primary: var(--color-green-700);
+  /* Stroke/Positive/Secondary — Medium positive border. Reserved for future use. */
+  --stroke-positive-secondary: var(--color-green-300);
+  /* Stroke/Positive/Tertiary — Lightest positive border. Reserved for future use. */
+  --stroke-positive-tertiary: var(--color-green-200);
+  /* Fill/Warning/Hover/Primary — Hover state for primary warning elements. */
+  --fill-warning-hover-primary: var(--color-yellow-400);
+  /* Fill/Warning/Hover/Secondary — Hover state for secondary warning surfaces. */
+  --fill-warning-hover-secondary: var(--color-yellow-500);
+  /* Fill/Warning/Hover/Tertiary — Hover state for tertiary warning surfaces. */
+  --fill-warning-hover-tertiary: var(--color-yellow-200);
+  /* Fill/Warning/Pressed/Primary — Pressed state for primary warning elements. */
+  --fill-warning-pressed-primary: var(--color-yellow-700);
+  /* Fill/Warning/Pressed/Secondary — Pressed state for secondary warning surfaces. */
+  --fill-warning-pressed-secondary: var(--color-yellow-600);
+  /* Fill/Warning/Pressed/Tertiary — Pressed state for tertiary warning surfaces. */
+  --fill-warning-pressed-tertiary: var(--color-yellow-300);
+  /* Stroke/Warning/Primary — Warning border. Use for caution states and pending indicators. */
+  --stroke-warning-primary: var(--color-yellow-500);
+  /* Stroke/Warning/Secondary — Medium warning border for secondary caution outlines. */
+  --stroke-warning-secondary: var(--color-yellow-300);
+  /* Stroke/Warning/Tertiary — Lightest warning border for subtle attention indicators. */
+  --stroke-warning-tertiary: var(--color-yellow-200);
+  /* Text/Warning/Primary — Warning text for caution messages and pending state labels. */
+  --text-warning-primary: var(--color-yellow-700);
+  /* Text/Warning/Secondary — Medium warning text for secondary caution content. */
+  --text-warning-secondary: var(--color-yellow-500);
+  /* Text/Warning/Tertiary — Lightest warning text for subtle attention labels. */
+  --text-warning-tertiary: var(--color-yellow-200);
+  /* Icon/Warning/Primary — Warning icon for caution and pending state indicators. */
+  --icon-warning-primary: var(--color-yellow-700);
+  /* Stroke/Accent3/Primary — Tertiary accent border for category/instrument differentiation. */
+  --stroke-accent3-primary: var(--color-orange-600);
+  /* Stroke/Accent3/Secondary — Medium tertiary accent border. */
+  --stroke-accent3-secondary: var(--color-orange-300);
+  /* Stroke/Accent3/Tertiary — Lightest tertiary accent border for subtle differentiation. */
+  --stroke-accent3-tertiary: var(--color-orange-200);
+  /* Text/Strike colors/CALL — Text color for CALL option strike prices. */
+  --text-strike-colors-call: var(--color-blue-700);
+  /* Text/Strike colors/PUT — Text color for PUT option strike prices. */
+  --text-strike-colors-put: var(--color-orange-600);
+  /* Text/Strike colors/FUT — Text color for Futures contract strike prices. */
+  --text-strike-colors-fut: var(--color-yellow-700);
+}
+
+:root[data-theme="dark"] {
+  --canvas-default: var(--color-dark-neutral-0);
+  --fill-neutral-primary: var(--color-dark-neutral-100);
+  --fill-neutral-secondary: var(--color-dark-neutral-200);
+  --fill-neutral-tertiary: var(--color-dark-neutral-400);
+  --fill-neutral-hover-primary: var(--color-dark-neutral-200);
+  --fill-neutral-hover-secondary: var(--color-dark-neutral-300);
+  --fill-neutral-hover-tertiary: var(--color-dark-neutral-500);
+  --fill-neutral-pressed-primary: var(--color-dark-neutral-300);
+  --fill-neutral-inverse-primary: var(--color-dark-neutral-1000);
+  --fill-neutral-inverse-secondary: var(--color-dark-neutral-500);
+  --fill-neutral-pressed-secondary: var(--color-dark-neutral-400);
+  --fill-neutral-inverse-hover-primary: var(--color-dark-neutral-900);
+  --fill-neutral-inverse-hover-secondary: var(--color-dark-neutral-600);
+  --fill-neutral-pressed-tertiary: var(--color-dark-neutral-500);
+  --fill-neutral-inverse-pressed-primary: var(--color-dark-neutral-800);
+  --fill-neutral-inverse-pressed-secondary: var(--color-dark-neutral-700);
+  --fill-accent1-primary: var(--color-blue-600);
+  --fill-accent1-secondary: var(--color-blue-800);
+  --fill-accent1-tertiary: var(--color-blue-1000);
+  --fill-accent1-hover-primary: var(--color-blue-500);
+  --fill-accent1-hover-secondary: var(--color-blue-700);
+  --fill-accent1-hover-tertiary: var(--color-blue-900);
+  --fill-accent1-pressed-primary: var(--color-blue-400);
+  --fill-accent1-pressed-secondary: var(--color-blue-400);
+  --fill-accent1-pressed-tertiary: var(--color-blue-800);
+  --fill-accent2-primary: var(--color-purple-500);
+  --fill-accent2-secondary: var(--color-purple-300);
+  --fill-accent2-tertiary: var(--color-purple-1000);
+  --fill-accent3-primary: var(--color-orange-700);
+  --fill-accent3-secondary: var(--color-orange-300);
+  --fill-accent3-tertiary: var(--color-orange-1000);
+  --fill-accent3-hover-primary: var(--color-orange-500);
+  --fill-accent3-hover-secondary: var(--color-orange-400);
+  --fill-accent3-hover-tertiary: var(--color-orange-800);
+  --fill-accent3-pressed-primary: var(--color-orange-700);
+  --fill-accent3-pressed-secondary: var(--color-orange-500);
+  --fill-accent3-pressed-tertiary: var(--color-orange-700);
+  --fill-negative-primary: var(--color-red-600);
+  --fill-warning-primary: var(--color-yellow-400);
+  --fill-negative-secondary: var(--color-red-400);
+  --fill-negative-tertiary: var(--color-red-900);
+  --fill-neutral-transparent-primary: var(--color-transparent-0);
+  --fill-neutral-transparent-secondary: var(--color-transparent-100);
+  --fill-neutral-transparent-tertiary: var(--color-transparent-200);
+  --fill-accent2-hover-primary: var(--color-purple-400);
+  --fill-accent2-hover-secondary: var(--color-purple-500);
+  --fill-accent2-hover-tertiary: var(--color-purple-800);
+  --fill-accent2-pressed-primary: var(--color-purple-300);
+  --fill-accent2-pressed-secondary: var(--color-purple-400);
+  --fill-accent2-pressed-tertiary: var(--color-purple-600);
+  --stroke-default-primary: var(--color-dark-neutral-400);
+  --stroke-default-secondary: var(--color-dark-neutral-600);
+  --stroke-default-tertiary: var(--color-dark-neutral-900);
+  --stroke-default-primary-low: var(--color-dark-neutral-300);
+  --fill-warning-secondary: var(--color-yellow-900);
+  --fill-warning-tertiary: var(--color-yellow-1000);
+  --stroke-negative-primary: var(--color-red-500);
+  --stroke-negative-secondary: var(--color-red-800);
+  --stroke-negative-tertiary: var(--color-red-900);
+  --text-neutral-primary: var(--color-dark-neutral-1000);
+  --text-neutral-secondary: var(--color-dark-neutral-800);
+  --text-neutral-tertiary: var(--color-dark-neutral-600);
+  --text-neutral-secondary-high: var(--color-dark-neutral-900);
+  --text-inverse-primary: var(--color-neutral-0);
+  --text-inverse-secondary: var(--color-dark-neutral-0);
+  --text-accent1-primary: var(--color-blue-600);
+  --text-accent1-secondary: var(--color-blue-700);
+  --text-accent1-tertiary: var(--color-blue-800);
+  --text-positive-primary: var(--color-green-600);
+  --text-positive-secondary: var(--color-green-700);
+  --text-positive-tertiary: var(--color-green-800);
+  --text-negative-primary: var(--color-red-500);
+  --text-negative-secondary: var(--color-red-600);
+  --text-negative-tertiary: var(--color-red-800);
+  --text-accent2-primary: var(--color-purple-500);
+  --text-accent-3-primary: var(--color-orange-500);
+  --text-accent2-secondary: var(--color-purple-600);
+  --icon-default-primary: var(--color-dark-neutral-1000);
+  --text-accent2-tertiary: var(--color-purple-700);
+  --icon-default-secondary-high: var(--color-dark-neutral-800);
+  --icon-default-secondary: var(--color-dark-neutral-700);
+  --icon-default-tertiary: var(--color-dark-neutral-500);
+  --icon-positive-primary: var(--color-green-600);
+  --icon-positive-secondary: var(--color-green-700);
+  --icon-positive-tertiary: var(--color-green-800);
+  --icon-negative-primary: var(--color-red-500);
+  --icon-accent1-primary: var(--color-blue-600);
+  --icon-accent2-primary: var(--color-purple-500);
+  --icon-accent1-secondary: var(--color-blue-800);
+  --icon-accent2-secondary: var(--color-purple-300);
+  --icon-accent-3-primary: var(--color-orange-500);
+  --icon-accent-3-secondary: var(--color-orange-300);
+  --icon-accent-3-tertiary: var(--color-orange-1000);
+  --icon-inverse-primary: var(--color-neutral-0);
+  --icon-inverse-secondary: var(--color-dark-neutral-0);
+  --icon-accent1-tertiary: var(--color-blue-900);
+  --stroke-accent1-primary: var(--color-blue-600);
+  --stroke-accent1-secondary: var(--color-blue-700);
+  --stroke-accent1-tertiary: var(--color-blue-900);
+  --stroke-accent1-focus: var(--color-blue-600);
+  --gradient-base-blue: var(--color-blue-1000);
+  --gradient-base-dark-blue: var(--color-blue-900);
+  --gradient-base-white-surface-0: var(--color-dark-neutral-0);
+  --gradient-base-white-surface-1: var(--color-dark-neutral-100);
+  --gradient-base-red: var(--color-red-900);
+  --gradient-base-light-green: var(--color-green-1000);
+  --gradient-base-grey-stroke: var(--color-dark-neutral-300);
+  --gradient-base-yellow: var(--color-yellow-1000);
+  --scrim-scrim-fill: var(--color-scrim-dark-mode);
+  --info-graphics-price-chart-pulse-green: var(--color-green-800);
+  --info-graphics-price-chart-green: var(--color-green-700);
+  --info-graphics-price-chart-red: var(--color-red-500);
+  --info-graphics-price-chart-pulse-red: var(--color-red-900);
+  --info-graphics-price-chart-tooltip-line: var(--color-dark-neutral-400);
+  --info-graphics-price-chart-tooltip-bg: var(--color-dark-neutral-1000);
+  --info-graphics-price-chart-pulse-blue: var(--color-blue-800);
+  --info-graphics-price-chart-blue: var(--color-blue-600);
+  --info-graphics-price-chart-pulse-purple: var(--color-purple-900);
+  --info-graphics-price-chart-purple: var(--color-purple-600);
+  --info-graphics-chart-legend-0: var(--color-blue-600);
+  --info-graphics-chart-legend-1: var(--color-blue-500);
+  --info-graphics-chart-legend-2: var(--color-blue-400);
+  --info-graphics-chart-legend-3: var(--color-blue-300);
+  --info-graphics-chart-legend-4: var(--color-blue-200);
+  --fill-negative-hover-primary: var(--color-red-500);
+  --fill-negative-hover-secondary: var(--color-red-300);
+  --fill-negative-hover-tertiary: var(--color-red-800);
+  --fill-negative-pressed-primary: var(--color-red-700);
+  --fill-negative-pressed-secondary: var(--color-red-500);
+  --fill-positive-primary: var(--color-green-800);
+  --fill-positive-secondary: var(--color-green-700);
+  --fill-positive-tertiary: var(--color-green-900);
+  --fill-positive-hover-primary: var(--color-green-700);
+  --fill-positive-hover-secondary: var(--color-green-600);
+  --fill-positive-hover-tertiary: var(--color-green-800);
+  --fill-positive-pressed-primary: var(--color-green-900);
+  --fill-negative-pressed-tertiary: var(--color-red-700);
+  --fill-positive-pressed-secondary: var(--color-green-500);
+  --fill-positive-pressed-tertiary: var(--color-green-700);
+  --stroke-positive-primary: var(--color-green-600);
+  --stroke-positive-secondary: var(--color-green-700);
+  --stroke-positive-tertiary: var(--color-green-900);
+  --fill-warning-hover-primary: var(--color-yellow-500);
+  --fill-warning-hover-secondary: var(--color-yellow-400);
+  --fill-warning-hover-tertiary: var(--color-yellow-900);
+  --fill-warning-pressed-primary: var(--color-yellow-500);
+  --fill-warning-pressed-secondary: var(--color-yellow-400);
+  --fill-warning-pressed-tertiary: var(--color-yellow-300);
+  --stroke-warning-primary: var(--color-yellow-400);
+  --stroke-warning-secondary: var(--color-yellow-700);
+  --stroke-warning-tertiary: var(--color-yellow-900);
+  --text-warning-primary: var(--color-yellow-400);
+  --text-warning-secondary: var(--color-yellow-600);
+  --text-warning-tertiary: var(--color-yellow-900);
+  --icon-warning-primary: var(--color-yellow-400);
+  --stroke-accent3-primary: var(--color-orange-700);
+  --stroke-accent3-secondary: var(--color-orange-800);
+  --stroke-accent3-tertiary: var(--color-orange-1000);
+  --text-strike-colors-call: var(--color-blue-500);
+  --text-strike-colors-put: var(--color-orange-500);
+  --text-strike-colors-fut: var(--color-yellow-400);
+}

@@ -1,0 +1,151 @@
+:root {
+  /* Spacing/0px — Zero spacing. Use to collapse gaps between elements (no space). */
+  --spacing-0px: 0px;
+  /* Spacing/2px — Micro spacing. Use for tight inline gaps, icon-to-badge offsets, and hairline separations. */
+  --spacing-2px: 2px;
+  /* Spacing/4px — Extra-small spacing. Use for icon-to-label gaps, tight list padding, and compact element internals. */
+  --spacing-4px: 4px;
+  /* Spacing/8px — Small spacing. Use for internal component padding, compact card padding, and tight section gaps. */
+  --spacing-8px: 8px;
+  /* Spacing/12px — Medium-small spacing. Use for list item padding, input field padding, and button internal spacing. */
+  --spacing-12px: 12px;
+  /* Spacing/16px — Base spacing. Use for standard card padding, section gaps, and default content margins. */
+  --spacing-16px: 20px;
+  /* Spacing/20px — Medium spacing. Use for comfortable padding between grouped content. */
+  --spacing-20px: 24px;
+  /* Spacing/24px — Large spacing. Use for section separators, generous card padding, and content block gaps. */
+  --spacing-24px: 32px;
+  /* Spacing/32px — Extra-large spacing. Use for major section breaks and screen-level content padding. */
+  --spacing-32px: 40px;
+  /* Spacing/40px — 2XL spacing. Use for large section gaps and generous whitespace between content areas. */
+  --spacing-40px: 48px;
+  /* Spacing/48px — 3XL spacing. Use for page-level section spacing and major visual breaks. */
+  --spacing-48px: 64px;
+  /* Spacing/56px — 4XL spacing. Use for hero sections and dramatic content separation. */
+  --spacing-56px: 72px;
+  /* Spacing/64px — 5XL spacing. Use for major page-level spacing on web layouts. */
+  --spacing-64px: 80px;
+  /* Spacing/80px — 6XL spacing. Use for web hero spacing and maximum content separation. */
+  --spacing-80px: 96px;
+  /* Spacing/120px — 7XL spacing. Use for extra-large web section padding and dramatic whitespace. */
+  --spacing-120px: 160px;
+  /* Corner Radius/Rounded — Fully rounded (pill shape). Use for pill buttons, tags, chips, and circular avatars. */
+  --corner-radius-rounded: 100px;
+  /* Corner Radius/24px — Large radius. Use for bottom sheets, modals, and large container rounding. */
+  --corner-radius-24px: 24px;
+  /* Font Size/64px — Font size token: 64px. Bind to text layers instead of hardcoding. */
+  --font-size-64px: 72px;
+  /* Corner Radius/12px — Medium radius. Use for cards, input fields, and standard container rounding. */
+  --corner-radius-12px: 12px;
+  /* Corner Radius/8px — Small radius. Use for buttons, small cards, and subtle rounding on compact elements. */
+  --corner-radius-8px: 8px;
+  /* Font Size/56px — Font size token: 56px. Bind to text layers instead of hardcoding. */
+  --font-size-56px: 64px;
+  /* Corner Radius/4px — Minimal radius. Use for tags, badges, table cells, and barely-rounded containers. */
+  --corner-radius-4px: 4px;
+  /* Font Size/48px — Font size token: 48px. Bind to text layers instead of hardcoding. */
+  --font-size-48px: 56px;
+  /* Font Size/40px — Font size token: 40px. Bind to text layers instead of hardcoding. */
+  --font-size-40px: 48px;
+  /* Font Size/32px — Font size token: 32px. Bind to text layers instead of hardcoding. */
+  --font-size-32px: 36px;
+  /* Font Size/28px — Font size token: 28px. Bind to text layers instead of hardcoding. */
+  --font-size-28px: 32px;
+  /* Font Size/24px — Font size token: 24px. Bind to text layers instead of hardcoding. */
+  --font-size-24px: 28px;
+  /* Font Size/20px — Font size token: 20px. Bind to text layers instead of hardcoding. */
+  --font-size-20px: 22px;
+  /* Font Size/18px — Font size token: 18px. Bind to text layers instead of hardcoding. */
+  --font-size-18px: 18px;
+  /* Font Size/16px — Font size token: 16px. Bind to text layers instead of hardcoding. */
+  --font-size-16px: 16px;
+  /* Font Size/15px — Font size token: 15px. Bind to text layers instead of hardcoding. */
+  --font-size-15px: 15px;
+  /* Font Size/14px — Font size token: 14px. Bind to text layers instead of hardcoding. */
+  --font-size-14px: 14px;
+  /* Font Size/12px — Font size token: 12px. Bind to text layers instead of hardcoding. */
+  --font-size-12px: 12px;
+  /* Font Size/11px — Font size token: 11px. Bind to text layers instead of hardcoding. */
+  --font-size-11px: 11px;
+  /* Font Size/10px — Font size token: 10px. Bind to text layers instead of hardcoding. */
+  --font-size-10px: 10px;
+  /* Padding/4px — USE: Tight padding for compact elements like badges and chips PLATFORM: Mobile=4px, Web=4px */
+  --padding-4px: 4px;
+  /* Padding/8px — USE: Small padding for list items and tight containers PLATFORM: Mobile=8px, Web=8px */
+  --padding-8px: 8px;
+  /* Padding/12px — USE: Standard inner padding for cards and input fields PLATFORM: Mobile=12px, Web=12px */
+  --padding-12px: 12px;
+  /* Padding/16px — USE: Default screen-edge padding on mobile (20px on web) PLATFORM: Mobile=16px, Web=20px */
+  --padding-16px: 20px;
+  /* Padding/20px — USE: Section padding inside scrollable content frames PLATFORM: Mobile=20px, Web=24px */
+  --padding-20px: 24px;
+  /* Padding/24px — USE: Large section padding and modal internal padding PLATFORM: Mobile=24px, Web=32px */
+  --padding-24px: 32px;
+  /* Padding/32px — USE: Extra-large padding for hero sections and feature cards PLATFORM: Mobile=32px, Web=40px */
+  --padding-32px: 40px;
+  /* Width/Mobile Screen — USE: Standard mobile screen width (iPhone 14/15 Pro) PLATFORM: Mobile=375px, Web=375px */
+  --width-mobile-screen: 375px;
+  /* Width/Content Max — USE: Maximum content width (screen minus edge padding) PLATFORM: Mobile=343px, Web=1200px */
+  --width-content-max: 1200px;
+  /* Width/Side Panel — USE: Web side panel / navigation rail width PLATFORM: Mobile=0px, Web=320px */
+  --width-side-panel: 320px;
+  /* Width/Bottom Sheet — USE: Bottom sheet container width PLATFORM: Mobile=375px, Web=480px */
+  --width-bottom-sheet: 480px;
+  /* Height/Status Bar — USE: Mobile status bar height (not used on web) PLATFORM: Mobile=44px, Web=0px */
+  --height-status-bar: 0px;
+  /* Height/App Bar — USE: App bar / top navigation height PLATFORM: Mobile=56px, Web=64px */
+  --height-app-bar: 64px;
+  /* Height/Bottom Nav — USE: Mobile bottom navigation bar height (not used on web) PLATFORM: Mobile=105px, Web=0px */
+  --height-bottom-nav: 0px;
+  /* Height/Tab Bar — USE: Tab bar height for line/pill tabs PLATFORM: Mobile=40px, Web=48px */
+  --height-tab-bar: 48px;
+  /* Height/Button Group CTA — USE: Bottom CTA button group height (Buy/Sell) PLATFORM: Mobile=97px, Web=80px */
+  --height-button-group-cta: 80px;
+  /* Height/List Row — USE: Standard list row minimum height PLATFORM: Mobile=56px, Web=48px */
+  --height-list-row: 48px;
+  /* Height/Search Bar — USE: Search input bar height with padding PLATFORM: Mobile=76px, Web=56px */
+  --height-search-bar: 56px;
+  /* Breakpoint/Mobile — USE: Mobile breakpoint (fixed width) PLATFORM: Reference value — same across modes */
+  --breakpoint-mobile: 375px;
+  /* Breakpoint/Tablet — USE: Tablet breakpoint threshold PLATFORM: Reference value — same across modes */
+  --breakpoint-tablet: 768px;
+  /* Breakpoint/Desktop — USE: Desktop breakpoint threshold PLATFORM: Reference value — same across modes */
+  --breakpoint-desktop: 1024px;
+  /* Breakpoint/Wide — USE: Wide desktop breakpoint (full dashboard) PLATFORM: Reference value — same across modes */
+  --breakpoint-wide: 1440px;
+}
+
+:root[data-platform="mobile"] {
+  --spacing-16px: 16px;
+  --spacing-20px: 20px;
+  --spacing-24px: 24px;
+  --spacing-32px: 32px;
+  --spacing-40px: 40px;
+  --spacing-48px: 48px;
+  --spacing-56px: 56px;
+  --spacing-64px: 64px;
+  --spacing-80px: 80px;
+  --spacing-120px: 120px;
+  --font-size-64px: 64px;
+  --font-size-56px: 56px;
+  --font-size-48px: 48px;
+  --font-size-40px: 40px;
+  --font-size-32px: 32px;
+  --font-size-28px: 28px;
+  --font-size-24px: 24px;
+  --font-size-20px: 20px;
+  --padding-16px: 16px;
+  --padding-20px: 20px;
+  --padding-24px: 24px;
+  --padding-32px: 32px;
+  --width-content-max: 343px;
+  --width-side-panel: 0px;
+  --width-bottom-sheet: 375px;
+  --height-status-bar: 44px;
+  --height-app-bar: 56px;
+  --height-bottom-nav: 105px;
+  --height-tab-bar: 40px;
+  --height-button-group-cta: 97px;
+  --height-list-row: 56px;
+  --height-search-bar: 76px;
+}

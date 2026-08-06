@@ -1,0 +1,8 @@
+:root {
+  /* Heading — Font family token for headings. Bind to heading text layers for consistent typeface across the system. */
+  --font-heading: "Inter", sans-serif;
+  /* Body — Font family token for body text. Bind to paragraph and description text layers. */
+  --font-body: "Inter", sans-serif;
+  /* Hero Text — Font family token for hero/display text. Use for large promotional headlines and splash screens. */
+  --font-hero-text: "Crimson Pro", sans-serif;
+}

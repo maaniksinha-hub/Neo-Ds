@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "./tokens/primitives.css";
+@import "./tokens/semantic.css";
+@import "./tokens/typography.css";
+@import "./tokens/numeric.css";
+
+@theme inline {
+  --color-canvas-default: var(--canvas-default);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-hero-text: var(--font-hero-text);
+}
+
+:root {
+  color-scheme: light dark;
+  font-family: var(--font-body);
+  color: var(--fill-neutral-inverse-primary, var(--color-neutral-1000));
+  background: var(--canvas-default);
+}
+
+body {
+  margin: 0;
+}

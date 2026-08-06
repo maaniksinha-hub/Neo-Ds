@@ -1,0 +1,68 @@
+.ds-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4px);
+  border-radius: var(--corner-radius-8px);
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.ds-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.ds-button__icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Sizes */
+.ds-button--32px { height: 32px; padding: var(--spacing-8px) var(--spacing-16px); font-size: 12px; }
+.ds-button--36px { height: 36px; padding: var(--spacing-8px) var(--spacing-16px); font-size: 14px; }
+.ds-button--44px { height: 44px; padding: var(--spacing-12px) var(--spacing-16px); font-size: 14px; }
+.ds-button--52px { height: 52px; padding: var(--spacing-16px); font-size: 14px; }
+
+/* Solid variant */
+.ds-button--solid { color: var(--text-inverse-primary); }
+.ds-button--solid.ds-button--primary { background: var(--fill-accent1-primary); }
+.ds-button--solid.ds-button--primary:hover { background: var(--fill-accent1-hover-primary); }
+.ds-button--solid.ds-button--primary:active { background: var(--fill-accent1-pressed-primary); }
+.ds-button--solid.ds-button--positive { background: var(--fill-positive-primary); }
+.ds-button--solid.ds-button--positive:hover { background: var(--fill-positive-hover-primary); }
+.ds-button--solid.ds-button--positive:active { background: var(--fill-positive-pressed-primary); }
+.ds-button--solid.ds-button--negative { background: var(--fill-negative-primary); }
+.ds-button--solid.ds-button--negative:hover { background: var(--fill-negative-hover-primary); }
+.ds-button--solid.ds-button--negative:active { background: var(--fill-negative-pressed-primary); }
+.ds-button--solid.ds-button--sell-cta { background: var(--fill-accent3-primary); }
+.ds-button--solid.ds-button--sell-cta:hover { background: var(--fill-accent3-hover-primary); }
+.ds-button--solid.ds-button--sell-cta:active { background: var(--fill-accent3-pressed-primary); }
+
+/* Outline variant */
+.ds-button--outline { background: transparent; }
+.ds-button--outline.ds-button--primary { color: var(--text-accent1-primary); border-color: var(--text-accent1-primary); }
+.ds-button--outline.ds-button--primary:hover { background: var(--fill-accent1-tertiary); }
+.ds-button--outline.ds-button--positive { color: var(--fill-positive-primary); border-color: var(--fill-positive-primary); }
+.ds-button--outline.ds-button--positive:hover { background: var(--fill-positive-tertiary); }
+.ds-button--outline.ds-button--negative { color: var(--fill-negative-primary); border-color: var(--fill-negative-primary); }
+.ds-button--outline.ds-button--negative:hover { background: var(--fill-negative-tertiary); }
+.ds-button--outline.ds-button--sell-cta { color: var(--fill-accent3-primary); border-color: var(--fill-accent3-primary); }
+.ds-button--outline.ds-button--sell-cta:hover { background: var(--fill-accent3-tertiary); }
+
+/* Text variant */
+.ds-button--text { background: transparent; padding-left: var(--spacing-8px); padding-right: var(--spacing-8px); }
+.ds-button--text.ds-button--primary { color: var(--text-accent1-primary); }
+.ds-button--text.ds-button--primary:hover { background: var(--fill-accent1-tertiary); }
+.ds-button--text.ds-button--positive { color: var(--fill-positive-primary); }
+.ds-button--text.ds-button--positive:hover { background: var(--fill-positive-tertiary); }
+.ds-button--text.ds-button--negative { color: var(--fill-negative-primary); }
+.ds-button--text.ds-button--negative:hover { background: var(--fill-negative-tertiary); }
+.ds-button--text.ds-button--sell-cta { color: var(--fill-accent3-primary); }
+.ds-button--text.ds-button--sell-cta:hover { background: var(--fill-accent3-tertiary); }

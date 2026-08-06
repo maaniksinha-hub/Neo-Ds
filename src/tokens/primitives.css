@@ -1,0 +1,180 @@
+:root {
+  /* Transparent/0 — Fully transparent. Use via semantic aliases only — never apply directly. */
+  --color-transparent-0: rgba(255,255,255,0.00);
+  /* Transparent/100 — Near-transparent tint. Use via semantic aliases only. */
+  --color-transparent-100: rgba(238,240,243,0.52);
+  /* Transparent/200 — Light transparent tint. Use via semantic aliases only. */
+  --color-transparent-200: rgba(111,119,135,0.12);
+  /* Neutral/0 — White (#FFFFFF). Base of the neutral ramp — lightest value. */
+  --color-neutral-0: rgba(255,255,255,1.00);
+  /* Neutral/100 — Near-white neutral. Subtle background differentiation. */
+  --color-neutral-100: rgba(247,248,250,1.00);
+  /* Neutral/200 — Very light grey. Secondary surface tint. */
+  --color-neutral-200: rgba(238,240,243,1.00);
+  /* Neutral/300 — Light grey. Tertiary surface and disabled fills. */
+  --color-neutral-300: rgba(227,230,234,1.00);
+  /* Neutral/400 — Mid-light grey. Borders and subtle dividers. */
+  --color-neutral-400: rgba(184,190,201,1.00);
+  /* Neutral/500 — Medium grey. Placeholder text and low-emphasis content. */
+  --color-neutral-500: rgba(154,162,177,1.00);
+  /* Neutral/600 — Mid-dark grey. Tertiary text and icons. */
+  --color-neutral-600: rgba(111,119,135,1.00);
+  /* Neutral/700 — Dark grey. Secondary text and icons. */
+  --color-neutral-700: rgba(75,81,96,1.00);
+  /* Neutral/800 — Very dark grey. High-emphasis secondary content. */
+  --color-neutral-800: rgba(47,52,64,1.00);
+  /* Neutral/900 — Near-black. Primary text on light backgrounds. */
+  --color-neutral-900: rgba(27,31,38,1.00);
+  /* Neutral/1000 — Black (#000000 or near). Highest contrast value. */
+  --color-neutral-1000: rgba(14,17,22,1.00);
+  /* Dark Neutral/0 — Dark mode base surface — darkest value in the dark ramp. */
+  --color-dark-neutral-0: rgba(12,15,18,1.00);
+  /* Dark Neutral/100 — Dark mode slightly elevated surface. */
+  --color-dark-neutral-100: rgba(18,22,27,1.00);
+  /* Dark Neutral/200 — Dark mode secondary surface. */
+  --color-dark-neutral-200: rgba(23,27,34,1.00);
+  /* Dark Neutral/300 — Dark mode tertiary surface. */
+  --color-dark-neutral-300: rgba(30,36,44,1.00);
+  /* Dark Neutral/400 — Dark mode border and divider value. */
+  --color-dark-neutral-400: rgba(38,45,54,1.00);
+  /* Dark Neutral/500 — Dark mode mid-value for disabled states. */
+  --color-dark-neutral-500: rgba(50,57,68,1.00);
+  /* Dark Neutral/600 — Dark Neutral 600. Mid-dark shade. Dark-mode neutral surface and text ramp. Use via semantic aliases only. */
+  --color-dark-neutral-600: rgba(68,76,89,1.00);
+  /* Dark Neutral/700 — Dark Neutral 700. Dark shade. Dark-mode neutral surface and text ramp. Use via semantic aliases only. */
+  --color-dark-neutral-700: rgba(90,99,114,1.00);
+  /* Dark Neutral/800 — Dark Neutral 800. Very dark shade. Dark-mode neutral surface and text ramp. Use via semantic aliases only. */
+  --color-dark-neutral-800: rgba(122,131,146,1.00);
+  /* Dark Neutral/900 — Dark Neutral 900. Deepest shade. Dark-mode neutral surface and text ramp. Use via semantic aliases only. */
+  --color-dark-neutral-900: rgba(165,173,186,1.00);
+  /* Dark Neutral/1000 — Dark Neutral 1000. Darkest value. Dark-mode neutral surface and text ramp. Use via semantic aliases only. */
+  --color-dark-neutral-1000: rgba(210,215,223,1.00);
+  /* Green/100 — Green 100. Lightest tint. Positive/gain states. Use via semantic aliases only. */
+  --color-green-100: rgba(252,254,253,1.00);
+  /* Green/200 — Green 200. Very light tint. Positive/gain states. Use via semantic aliases only. */
+  --color-green-200: rgba(233,249,238,1.00);
+  /* Green/300 — Green 300. Light shade. Positive/gain states. Use via semantic aliases only. */
+  --color-green-300: rgba(204,235,215,1.00);
+  /* Green/400 — Green 400. Mid-light shade. Positive/gain states. Use via semantic aliases only. */
+  --color-green-400: rgba(180,223,196,1.00);
+  /* Green/500 — Green 500. Medium shade. Positive/gain states. Use via semantic aliases only. */
+  --color-green-500: rgba(146,206,172,1.00);
+  /* Green/600 — Green 600. Mid-dark shade. Positive/gain states. Use via semantic aliases only. */
+  --color-green-600: rgba(91,185,140,1.00);
+  /* Green/700 — Green 700. Dark shade. Positive/gain states. Use via semantic aliases only. */
+  --color-green-700: rgba(41,151,100,1.00);
+  /* Green/800 — Green 800. Very dark shade. Positive/gain states. Use via semantic aliases only. */
+  --color-green-800: rgba(24,121,78,1.00);
+  /* Green/900 — Green 900. Deepest shade. Positive/gain states. Use via semantic aliases only. */
+  --color-green-900: rgba(22,68,48,1.00);
+  /* Green/1000 — Green 1000. Darkest value. Positive/gain states. Use via semantic aliases only. */
+  --color-green-1000: rgba(15,36,25,1.00);
+  /* Red/100 — Red 100. Lightest tint. Negative/loss states. Use via semantic aliases only. */
+  --color-red-100: rgba(255,252,252,1.00);
+  /* Red/200 — Red 200. Very light tint. Negative/loss states. Use via semantic aliases only. */
+  --color-red-200: rgba(255,239,239,1.00);
+  /* Red/300 — Red 300. Light shade. Negative/loss states. Use via semantic aliases only. */
+  --color-red-300: rgba(252,204,206,1.00);
+  /* Red/400 — Red 400. Mid-light shade. Negative/loss states. Use via semantic aliases only. */
+  --color-red-400: rgba(248,169,172,1.00);
+  /* Red/500 — Red 500. Medium shade. Negative/loss states. Use via semantic aliases only. */
+  --color-red-500: rgba(242,119,124,1.00);
+  /* Red/600 — Red 600. Mid-dark shade. Negative/loss states. Use via semantic aliases only. */
+  --color-red-600: rgba(205,43,49,1.00);
+  /* Red/700 — Red 700. Dark shade. Negative/loss states. Use via semantic aliases only. */
+  --color-red-700: rgba(178,35,40,1.00);
+  /* Red/800 — Red 800. Very dark shade. Negative/loss states. Use via semantic aliases only. */
+  --color-red-800: rgba(122,34,37,1.00);
+  /* Red/900 — Red 900. Deepest shade. Negative/loss states. Use via semantic aliases only. */
+  --color-red-900: rgba(66,13,15,1.00);
+  /* Red/1000 — Red 1000. Darkest value. Negative/loss states. Use via semantic aliases only. */
+  --color-red-1000: rgba(42,6,7,1.00);
+  /* Blue/100 — Blue 100. Lightest tint. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-100: rgba(252,253,255,1.00);
+  /* Blue/200 — Blue 200. Very light tint. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-200: rgba(242,246,255,1.00);
+  /* Blue/300 — Blue 300. Light shade. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-300: rgba(224,237,255,1.00);
+  /* Blue/400 — Blue 400. Mid-light shade. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-400: rgba(194,214,255,1.00);
+  /* Blue/500 — Blue 500. Medium shade. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-500: rgba(111,152,240,1.00);
+  /* Blue/600 — Blue 600. Mid-dark shade. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-600: rgba(61,111,227,1.00);
+  /* Blue/700 — Blue 700. Dark shade. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-700: rgba(0,90,210,1.00);
+  /* Blue/800 — Blue 800. Very dark shade. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-800: rgba(16,46,115,1.00);
+  /* Blue/900 — Blue 900. Deepest shade. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-900: rgba(14,39,95,1.00);
+  /* Blue/1000 — Blue 1000. Darkest value. Brand accent and informational states. Use via semantic aliases only. */
+  --color-blue-1000: rgba(10,27,64,1.00);
+  /* Purple/100 — Purple 100. Lightest tint. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-100: rgba(253,252,255,1.00);
+  /* Purple/200 — Purple 200. Very light tint. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-200: rgba(244,243,255,1.00);
+  /* Purple/300 — Purple 300. Light shade. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-300: rgba(210,206,251,1.00);
+  /* Purple/400 — Purple 400. Mid-light shade. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-400: rgba(184,179,244,1.00);
+  /* Purple/500 — Purple 500. Medium shade. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-500: rgba(159,150,241,1.00);
+  /* Purple/600 — Purple 600. Mid-dark shade. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-600: rgba(122,99,235,1.00);
+  /* Purple/700 — Purple 700. Dark shade. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-700: rgba(77,4,213,1.00);
+  /* Scrim — Overlay scrim color for light mode. Use via semantic aliases only. */
+  --color-scrim: rgba(14,17,22,0.60);
+  /* Scrim dark mode — Overlay scrim color for dark mode. Use via semantic aliases only. */
+  --color-scrim-dark-mode: rgba(48,51,55,0.60);
+  /* Badge — Badge background fill. Use via semantic aliases only. */
+  --color-badge: In news;
+  /* Purple/800 — Purple 800. Very dark shade. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-800: rgba(66,7,185,1.00);
+  /* Purple/900 — Purple 900. Deepest shade. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-900: rgba(37,41,90,1.00);
+  /* Purple/1000 — Purple 1000. Darkest value. Secondary accent and decorative uses. Use via semantic aliases only. */
+  --color-purple-1000: rgba(23,26,58,1.00);
+  /* Yellow/100 — Yellow 100. Lightest tint. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-100: rgba(255,249,237,1.00);
+  /* Yellow/200 — Yellow 200. Very light tint. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-200: rgba(255,242,214,1.00);
+  /* Yellow/300 — Yellow 300. Light shade. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-300: rgba(255,228,176,1.00);
+  /* Yellow/400 — Yellow 400. Mid-light shade. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-400: rgba(255,208,128,1.00);
+  /* Yellow/500 — Yellow 500. Medium shade. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-500: rgba(255,184,77,1.00);
+  /* Yellow/600 — Yellow 600. Mid-dark shade. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-600: rgba(226,138,31,1.00);
+  /* Yellow/700 — Yellow 700. Dark shade. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-700: rgba(173,86,5,1.00);
+  /* Yellow/800 — Yellow 800. Very dark shade. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-800: rgba(138,67,4,1.00);
+  /* Yellow/900 — Yellow 900. Deepest shade. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-900: rgba(97,48,3,1.00);
+  /* Yellow/1000 — Yellow 1000. Darkest value. Warning and caution states. Use via semantic aliases only. */
+  --color-yellow-1000: rgba(63,31,2,1.00);
+  /* Orange/100 — Orange 100. Lightest tint. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-100: rgba(255,244,237,1.00);
+  /* Orange/200 — Orange 200. Very light tint. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-200: rgba(255,230,214,1.00);
+  /* Orange/300 — Orange 300. Light shade. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-300: rgba(255,201,168,1.00);
+  /* Orange/400 — Orange 400. Mid-light shade. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-400: rgba(255,162,107,1.00);
+  /* Orange/500 — Orange 500. Medium shade. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-500: rgba(255,122,51,1.00);
+  /* Orange/600 — Orange 600. Mid-dark shade. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-600: rgba(227,80,2,1.00);
+  /* Orange/700 — Orange 700. Dark shade. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-700: rgba(200,68,0,1.00);
+  /* Orange/800 — Orange 800. Very dark shade. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-800: rgba(163,56,0,1.00);
+  /* Orange/900 — Orange 900. Deepest shade. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-900: rgba(122,42,0,1.00);
+  /* Orange/1000 — Orange 1000. Darkest value. Alert and attention states. Use via semantic aliases only. */
+  --color-orange-1000: rgba(54,23,7,1.00);
+  /* Boolean — Boolean state token. Internal use only. */
+  --color-boolean: True;
+}

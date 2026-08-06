@@ -1,0 +1,98 @@
+.ds-textfield {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 343px;
+}
+
+.ds-textfield__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8px);
+  width: 100%;
+  border: 1px solid var(--stroke-default-primary);
+  border-radius: 8px;
+  background: var(--fill-neutral-transparent-primary);
+  padding: 0 var(--spacing-16px);
+}
+
+.ds-textfield--56px .ds-textfield__control { height: 56px; }
+.ds-textfield--48px .ds-textfield__control { height: 48px; }
+
+.ds-textfield__input {
+  flex: 1 0 0;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-body);
+  color: var(--text-neutral-primary);
+  font-size: 16px;
+}
+
+.ds-textfield--48px .ds-textfield__input { font-size: 14px; }
+
+.ds-textfield__label {
+  position: absolute;
+  left: var(--spacing-16px);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-neutral-tertiary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  pointer-events: none;
+  transition: top 0.15s ease, font-size 0.15s ease, background 0.15s ease, padding 0.15s ease;
+}
+
+.ds-textfield--48px .ds-textfield__label { font-size: 14px; }
+
+.ds-textfield__control:focus-within .ds-textfield__label,
+.ds-textfield__input:not(:placeholder-shown) ~ .ds-textfield__label {
+  top: 0;
+  font-size: 12px;
+  background: var(--fill-neutral-primary);
+  padding: 0 var(--spacing-4px);
+  color: var(--text-neutral-secondary);
+}
+
+.ds-textfield__control:hover:not(:focus-within) {
+  border-color: var(--stroke-default-secondary);
+}
+
+.ds-textfield__control:focus-within {
+  border-color: var(--stroke-default-tertiary);
+}
+
+.ds-textfield__icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-textfield__supporting {
+  margin: 0;
+  padding: var(--spacing-4px) var(--spacing-16px) 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+/* Status */
+.ds-textfield--error .ds-textfield__control { border-color: var(--stroke-negative-primary); }
+.ds-textfield--error .ds-textfield__control:focus-within .ds-textfield__label,
+.ds-textfield--error .ds-textfield__input:not(:placeholder-shown) ~ .ds-textfield__label { color: var(--text-negative-primary); }
+.ds-textfield--error .ds-textfield__supporting { color: var(--text-negative-primary); }
+
+.ds-textfield--success .ds-textfield__control { border-color: var(--stroke-positive-primary); }
+.ds-textfield--success .ds-textfield__control:focus-within .ds-textfield__label,
+.ds-textfield--success .ds-textfield__input:not(:placeholder-shown) ~ .ds-textfield__label { color: var(--text-positive-primary); }
+.ds-textfield--success .ds-textfield__supporting { color: var(--text-positive-primary); }
+
+/* Disabled */
+.ds-textfield--disabled .ds-textfield__control { border-color: var(--stroke-default-primary-low); }
+.ds-textfield--disabled .ds-textfield__input,
+.ds-textfield--disabled .ds-textfield__label,
+.ds-textfield--disabled .ds-textfield__supporting { color: var(--text-neutral-tertiary); }

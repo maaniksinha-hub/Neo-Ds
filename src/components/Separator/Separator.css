@@ -1,0 +1,14 @@
+.ds-separator {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  border: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.ds-separator--solid { border-top-style: solid; }
+.ds-separator--dashed { border-top-style: dashed; }
+
+.ds-separator--default { border-top-color: var(--stroke-default-primary); }
+.ds-separator--low-emp { border-top-color: var(--stroke-default-primary-low); }
