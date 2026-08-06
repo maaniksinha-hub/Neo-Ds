@@ -1,0 +1,6 @@
+.ds-scrim {
+  position: fixed;
+  inset: 0;
+  background: var(--scrim-scrim-fill);
+  z-index: 100;
+}
