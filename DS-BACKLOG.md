@@ -4,10 +4,10 @@ Component coverage generated from the Figma file's AI Export (JSON) node — `AI
 These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
 Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
 
-**Implemented:** Button, Badge, Tabs, TextField, Separator, StockCard (from `gScripCards`), List/ListItem (generalized from `mList`) + full token foundation (colors, typography, spacing).
-**Remaining:** 117 components.
+**Implemented (19):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar + full token foundation (colors, typography, spacing).
+**Remaining:** 98 components.
 
-## Accordion (4)
+## Accordion (3) — _mAccordionSmall already implemented_
 
 ### `mAccordionBig`
 > USE: section-accordion, large-accordion, section-header-collapse
@@ -15,12 +15,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Mobile
 > VARIANTS: State (collapsed/expanded).
 > INSTEAD-OF: Use mAccordionSmall for body-level content like FAQs.
-
-### `mAccordionSmall`
-> USE: collapsible-section, expandable-details, FAQ-item
-> WHEN: Content that can be expanded/collapsed to save vertical space
-> VARIANTS: State: "Collapsed"|"Expanded"
-> TEXT: Title via child text nodes
 
 ### `mAccordionContainerBig`
 > USE: section-accordion-container, accordion-with-card, contained-accordion
@@ -36,7 +30,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > VARIANTS: State (collapsed/expanded).
 > INSTEAD-OF: Use mAccordionSmall for borderless body accordions, mAccordionContainerBig for section-level contained accordions.
 
-## App Bars (5)
+## App Bars (4) — _mBaseAppBar already implemented_
 
 ### `mTopNav`
 > USE: top-navigation, status-bar-with-nav, page-header
@@ -44,13 +38,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > INSTEAD OF: Status bar + custom nav frame
 > VARIANTS: "Default" | "Title and description below"
 > TEXT: Title set via findOne(TEXT where chars === "Label").characters
-
-### `mBaseAppBar`
-> USE: page-title-bar, screen-header, stock-detail-bar
-> WHEN: Page needs a dedicated title bar separate from mTopNav (detail screens, titled pages)
-> INSTEAD OF: Frame + back button + title text + action icons
-> VARIANTS: Type: "Homepage"|"Title+CTA"|"Title+icons"|"Title+subtext & CTA"|"with LTP"
-> PROPS: Title#200:143
 
 ### `wTopNav`
 > USE: web-top-navigation, web-header, web-page-bar
@@ -69,28 +56,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Top of every mobile screen to show system status (time, battery, signal). Base layer only — always used within mTopNav.
 > PLATFORM: Mobile
 
-## Avatar (2)
-
-### `gAvatarProfile`
-> USE: user-avatar, profile-picture, initials-circle, account-avatar
-> WHEN: Displaying user identity — profile photo or initials fallback. Used in navigation, account sections, and social features.
-> PLATFORM: Global
-> VARIANTS: Type (photo/initials), Size (S/M/L/XL).
-
-### `gAvatarCompany`
-> USE: company-avatar, company-logo, entity-icon, brand-circle
-> WHEN: Displaying company or institutional identity — company logos in stock lists, fund houses, broker logos.
-> PLATFORM: Global
-> INSTEAD-OF: Use gAvatarProfile for user/person avatars.
-
-## Banners (3)
-
-### `mTopBanner`
-> USE: top-banner, promo-banner, announcement-banner, alert-banner
-> WHEN: Page-level announcements, promotions, or alerts at the top of mobile screens — dismissible.
-> PLATFORM: Mobile
-> VARIANTS: Type (info/promo/warning), with/without CTA and dismiss.
-> INSTEAD-OF: Use mToast for temporary feedback, mBottomBanner for bottom-positioned banners.
+## Banners (2) — _mTopBanner already implemented_
 
 ### `mBottomBanner`
 > USE: bottom-banner, sticky-banner, bottom-promo
@@ -127,29 +93,13 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Mobile
 > VARIANTS: With/without header, expandable/static.
 
-## Breadcrumb (4)
-
-### `wBreadcrumbSeparator`
-> USE: breadcrumb-separator, breadcrumb-arrow, path-divider
-> WHEN: Separator between breadcrumb items — chevron or slash. Building block within wBreadcrumbGroup.
-> PLATFORM: Web
-
-### `wBreadcrumbItem`
-> USE: breadcrumb-item, breadcrumb-link, path-segment
-> WHEN: Individual clickable item in a breadcrumb trail — represents one level of navigation hierarchy.
-> PLATFORM: Web
-> VARIANTS: State (default/hover/current), current item is non-clickable.
+## Breadcrumb (1) — _wBreadcrumbSeparator, wBreadcrumbItem, wBreadcrumbGroup already implemented_
 
 ### `wBreadcrumbOverflow`
 > USE: breadcrumb-overflow, breadcrumb-ellipsis, collapsed-breadcrumbs
 > WHEN: Collapsed middle breadcrumb items when the path is too long — shows "..." that expands on click.
 > PLATFORM: Web
 > VARIANTS: State (collapsed/expanded/hover).
-
-### `wBreadcrumbGroup`
-> USE: breadcrumb-trail, breadcrumb-nav, navigation-path
-> WHEN: Full breadcrumb navigation showing the current page location within the site hierarchy.
-> PLATFORM: Web
 
 ## Cards (16) — _gScripCards already implemented_
 
@@ -274,29 +224,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Container that groups carousel content with indicators and navigation controls.
 > PLATFORM: Global
 
-## Checkboxes (1)
-
-### `gCheckbox`
-> USE: checkbox, check-box, multi-select, toggle-check
-> WHEN: Multiple selection from a list of options, or toggling a single boolean preference.
-> PLATFORM: Global
-> VARIANTS: State (unchecked/checked/indeterminate), Size (S/M), disabled variants.
-> INSTEAD-OF: Use gRadioButton for single-selection from options, gSwitch for on/off toggles.
-
-## Chips (3)
-
-### `gChoiceChip`
-> USE: choice-chip, filter-chip, selection-chip, tag-selector
-> WHEN: Selecting one or more options from a horizontal set — filters, categories, time ranges.
-> PLATFORM: Global
-> VARIANTS: State (default/selected/disabled), Size, with/without icon.
-> INSTEAD-OF: Use gRadioButton for vertical single-select lists, gPillTabGroup for navigation-style tabs.
-
-### `gActionChip`
-> USE: action-chip, quick-action, shortcut-chip
-> WHEN: Triggering quick actions inline — "Add to watchlist", "Share", "Compare". Actions, not selections.
-> PLATFORM: Global
-> INSTEAD-OF: Use gChoiceChip for selection/filtering, gTextButton for text-only actions.
+## Chips (1) — _gChoiceChip, gActionChip already implemented_
 
 ### `mChoiceChip`
 > USE: mobile-choice-chip, mobile-filter-chip, mobile-selection-chip
@@ -588,24 +516,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > VARIANTS: State (default, hover, active, disabled), with/without icon and badge.
 
-## Note (1)
-
-### `mNote`
-> USE: inline-note, info-note, contextual-message, inline-alert
-> WHEN: Persistent inline messages providing context, tips, or warnings within content — not dismissible like toasts.
-> PLATFORM: Mobile
-> VARIANTS: Type (info/warning/success/error/neutral), with/without icon and CTA.
-> INSTEAD-OF: Use mToast for temporary dismissible feedback.
-
-## Radio button (1)
-
-### `gRadioButton`
-> USE: radio-button, radio-select, single-choice
-> WHEN: Single selection from a mutually exclusive set of options.
-> PLATFORM: Global
-> VARIANTS: State (unselected/selected), Size (S/M), disabled variants.
-> INSTEAD-OF: Use gCheckbox for multi-selection, gChoiceChip for inline choice groups.
-
 ## Scrim (1)
 
 ### `gScrim`
@@ -622,14 +532,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > VARIANTS: Orientation (vertical/horizontal), state (default/hover/active).
 
-## Search (1)
-
-### `gSearchBar`
-> USE: search-input, search-bar, search-field, global-search
-> WHEN: Search entry point — top of lists, watchlists, and discovery screens.
-> PLATFORM: Global
-> VARIANTS: State (default/focused/filled), with/without filter icon, voice search, cancel button.
-
 ## Side panel (2)
 
 ### `wSidePanel`
@@ -645,7 +547,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > VARIANTS: State (default/active/hover).
 
-## Status & Indicators (7)
+## Status & Indicators (5) — _gStatusTimeline, gBaseStatusIndicatorIcon already implemented_
 
 ### `mStatusCard`
 > USE: status-card, order-status, transaction-status, progress-card
@@ -658,18 +560,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Horizontal strip of supplementary information below a status card — timestamps, reference numbers, amounts.
 > PLATFORM: Global
 > VARIANTS: With/without icon prefix.
-
-### `gStatusTimeline`
-> USE: status-timeline, progress-steps, order-progress, step-tracker
-> WHEN: Multi-step progress visualization — order lifecycle (placed → confirmed → executed), KYC steps.
-> PLATFORM: Global
-> VARIANTS: Step count, completed/active/pending step states.
-
-### `gBaseStatusIndicatorIcon`
-> USE: status-icon, step-indicator, progress-dot
-> WHEN: Individual status step icon within gStatusTimeline — checkmark, dot, or error icon per step.
-> PLATFORM: Global
-> VARIANTS: State (completed/active/pending/error).
 
 ### `gBaseStatusTrack`
 > USE: status-track, progress-line, timeline-connector
@@ -688,15 +578,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Full order details on web — same content as mOrderDetails in web layout.
 > PLATFORM: Web
 > INSTEAD-OF: Use mOrderDetails for mobile.
-
-## Switch (1)
-
-### `gSwitch`
-> USE: toggle-switch, on-off-toggle, boolean-toggle
-> WHEN: Toggling a setting or preference on/off with immediate effect.
-> PLATFORM: Global
-> VARIANTS: State (off/on), disabled variants.
-> INSTEAD-OF: Use gCheckbox for form-based boolean fields that submit with a button.
 
 ## Table (4)
 
@@ -726,14 +607,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > VARIANTS: State (ascending/descending/none).
 
-## Toast (2)
-
-### `mToast`
-> USE: toast, snackbar, notification-toast, feedback-message
-> WHEN: Temporary feedback messages — success, error, info, warning notifications that auto-dismiss.
-> PLATFORM: Mobile
-> VARIANTS: Type (success/error/warning/info/neutral), with/without action button and icon.
-> INSTEAD-OF: Use wToast for web, mNote for persistent inline messages.
+## Toast (1) — _mToast already implemented_
 
 ### `wToast`
 > USE: web-toast, web-snackbar, web-notification-toast
@@ -742,7 +616,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > VARIANTS: Type (success/error/warning/info/neutral), with/without action button.
 > INSTEAD-OF: Use mToast for mobile, wBanner for persistent page-level messages.
 
-## Tooltips (3)
+## Tooltips (2) — _gTooltip already implemented_
 
 ### `gChartTooltip`
 > USE: chart-tooltip, data-tooltip, hover-tooltip, price-tooltip
@@ -750,13 +624,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Global
 > VARIANTS: Content type (single value/multi-line/OHLC), with/without crosshair.
 > INSTEAD-OF: Use gTooltip for general UI tooltips not tied to charts.
-
-### `gTooltip`
-> USE: tooltip, info-tooltip, help-tooltip, hover-tip
-> WHEN: Providing supplementary information on hover — explaining icons, truncated text, or unfamiliar terms.
-> PLATFORM: Global
-> VARIANTS: Position (top/bottom/left/right), with/without arrow.
-> INSTEAD-OF: Use gChartTooltip for data visualization tooltips, gCoachMark for onboarding guidance.
 
 ### `gLowEmphasisTooltip`
 > USE: subtle-tooltip, light-tooltip, secondary-tooltip
