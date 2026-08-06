@@ -4,8 +4,8 @@ Component coverage generated from the Figma file's AI Export (JSON) node — `AI
 These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
 Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
 
-**Implemented (19):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar + full token foundation (colors, typography, spacing).
-**Remaining:** 98 components.
+**Implemented (27):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav + full token foundation (colors, typography, spacing).
+**Remaining:** 86 components.
 
 ## Accordion (3) — _mAccordionSmall already implemented_
 
@@ -72,14 +72,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > VARIANTS: Type (info/warning), with/without dismiss.
 > INSTEAD-OF: Use wToast for temporary feedback messages.
 
-## Bottom Sheets (3)
-
-### `mBottomsheet`
-> USE: bottom-sheet, modal-sheet, action-sheet, drawer
-> WHEN: Overlay panel sliding up from the bottom — confirmations, options, detail views, forms.
-> PLATFORM: Mobile
-> VARIANTS: Height (half/full screen), with/without handle.
-> INSTEAD-OF: Use wModal for web overlay patterns, wSidePanel for web side drawers.
+## Bottom Sheets (2) — _mBottomsheet already implemented_
 
 ### `mBaseBottomsheetHeader`
 > USE: bottomsheet-header, sheet-title-bar, drawer-header
@@ -233,15 +226,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > VARIANTS: State (default/selected/disabled), with/without icon.
 > INSTEAD-OF: Use gChoiceChip for the global/shared variant.
 
-## Coach mark (1)
-
-### `gCoachMark`
-> USE: coach-mark, onboarding-tooltip, feature-callout, spotlight
-> WHEN: Highlighting a UI element during onboarding or feature introduction — "Tap here to add stocks".
-> PLATFORM: Global
-> VARIANTS: Arrow position (top/bottom/left/right), with/without step indicator, with/without dismiss.
-> INSTEAD-OF: Use gTooltip for contextual info tooltips, not onboarding.
-
 ## Data Viz. / Charts (18)
 
 ### `gBaseLegend`
@@ -349,15 +333,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Vertical axis labels for charts — price values, quantities, percentages.
 > PLATFORM: Global
 
-## Dropdown (1)
-
-### `wDropdown`
-> USE: dropdown, select, dropdown-field, combo-box
-> WHEN: Selection from a predefined list of options — form selects, filter dropdowns, sort-by controls.
-> PLATFORM: Web
-> VARIANTS: State (default/open/selected/disabled), with/without search.
-> INSTEAD-OF: Use gRadioButton for inline visible single-select.
-
 ## Keyboard (1)
 
 ### `mKeyboard`
@@ -449,23 +424,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Full-page error or empty state — network failures, no results, empty lists. Shows illustration + message + retry CTA.
 > PLATFORM: Mobile
 
-## Menu (4)
-
-### `wMenuItem`
-> USE: menu-item, dropdown-item, context-menu-item
-> WHEN: Individual selectable item within a dropdown menu or context menu.
-> PLATFORM: Web
-> VARIANTS: State (default/hover/active/disabled), with/without icon, with/without keyboard shortcut.
-
-### `wMenuTitle`
-> USE: menu-title, menu-section-header, dropdown-header
-> WHEN: Non-interactive section title within a dropdown menu — groups related menu items.
-> PLATFORM: Web
-
-### `wMenuGroup`
-> USE: menu-group, menu-section, dropdown-section
-> WHEN: Group of related menu items with optional title separator.
-> PLATFORM: Web
+## Menu (1) — _wMenuItem, wMenuTitle, wMenuGroup already implemented_
 
 ### `wMenuPopup`
 > USE: dropdown-menu, context-menu, popup-menu, action-menu
@@ -473,35 +432,13 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > VARIANTS: Size (auto/small/medium/large), position.
 
-## Modal (2)
-
-### `wModal`
-> USE: web-modal, dialog, popup, confirmation-dialog
-> WHEN: Centered overlay dialog on web — confirmations, alerts, forms, and critical actions requiring user decision.
-> PLATFORM: Web
-> VARIANTS: Size, with/without footer actions.
-> INSTEAD-OF: Use mBottomsheet for mobile overlays, wSidePanel for non-blocking side panels.
-
-### `wModalHeader`
-> USE: modal-header, dialog-title, popup-header
-> WHEN: Header area within wModal — title, subtitle, close button. Building block.
-> PLATFORM: Web
-> VARIANTS: With/without subtitle and close button.
-
-## Navigation (4)
+## Navigation (3) — _mBottomNav already implemented_
 
 ### `mBaseBottomNav`
 > USE: bottom-nav-base, tab-bar-item, nav-icon
 > WHEN: Building block for mBottomNav. Not intended for standalone use.
 > PLATFORM: Mobile
 > INSTEAD-OF: Use mBottomNav for the complete bottom navigation bar.
-
-### `mBottomNav`
-> USE: bottom-navigation, tab-bar, main-nav
-> WHEN: Primary navigation at bottom of mobile screens. Always present on main app screens.
-> PLATFORM: Mobile
-> VARIANTS: Active tab selection (Home, Search, Portfolio, Orders, More).
-> INSTEAD-OF: Use wSideNav for web navigation.
 
 ### `wSideNav`
 > USE: side-navigation, left-nav, web-nav-menu
@@ -515,14 +452,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Individual navigation item within wSideNav. Building block — not for standalone use.
 > PLATFORM: Web
 > VARIANTS: State (default, hover, active, disabled), with/without icon and badge.
-
-## Scrim (1)
-
-### `gScrim`
-> USE: scrim, overlay, backdrop, dimmer
-> WHEN: Semi-transparent overlay behind modals, bottom sheets, and side panels — dims background content.
-> PLATFORM: Global
-> VARIANTS: Opacity levels (standard/heavy).
 
 ## Scrollbar (1)
 
@@ -579,7 +508,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Web
 > INSTEAD-OF: Use mOrderDetails for mobile.
 
-## Table (4)
+## Table (2) — _wTableCell, wTableHeader already implemented_
 
 ### `mTableCell`
 > USE: table-cell, data-cell, grid-cell
@@ -587,19 +516,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Mobile
 > VARIANTS: Type (header/text), alignment (left/right).
 > INSTEAD-OF: Use wTableCell for web tables.
-
-### `wTableCell`
-> USE: web-table-cell, web-data-cell, web-grid-cell
-> WHEN: Individual cell within a web data table — text, numbers, status indicators.
-> PLATFORM: Web
-> VARIANTS: Type (header/text/status), alignment (left/right/center), with/without sort indicator.
-> INSTEAD-OF: Use mTableCell for mobile tables.
-
-### `wTableHeader`
-> USE: web-table-header, column-header, table-heading
-> WHEN: Header row cell for web data tables — column labels with optional sort controls.
-> PLATFORM: Web
-> VARIANTS: With/without sort indicator.
 
 ### `wTableSort`
 > USE: table-sort-icon, column-sort, sort-indicator

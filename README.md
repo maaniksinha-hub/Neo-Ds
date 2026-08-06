@@ -40,9 +40,17 @@ Implemented in `src/components/`, each with a Storybook story:
 - `Breadcrumb` — nav trail with current-page state
 - `StatusIndicator` — timeline/step status (yet-to-start/in-process/completed/failed)
 - `AppBar` — back/title/subtext/actions/CTA header, from `mBaseAppBar`
+- `Scrim` — modal/sheet backdrop overlay
+- `Modal` — centered dialog with header/body/footer
+- `BottomSheet` — default/fullscreen, drag handle
+- `Dropdown` — native select styled with tokens
+- `Menu` — grouped menu popup with titles and separators
+- `CoachMark` — onboarding tooltip, 4 arrow directions × 3 alignments
+- `Table` — sortable columns, left/right alignment, from `wTableCell`/`wTableHeader`
+- `BottomNav` — mobile tab bar, from `mBottomNav`
 - `ColorsDoc` — token reference page (Foundations/Colors in Storybook)
 
-See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~98 components documented in Figma but not yet implemented.
+See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~86 components documented in Figma but not yet implemented.
 
 ## Development
 

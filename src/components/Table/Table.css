@@ -1,0 +1,52 @@
+.ds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+}
+
+.ds-table__header {
+  padding: var(--spacing-8px) var(--spacing-12px);
+  background: var(--fill-neutral-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-neutral-secondary);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.ds-table__header--right { text-align: right; }
+
+.ds-table__header-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4px);
+}
+
+.ds-table__header--right .ds-table__header-inner {
+  flex-direction: row-reverse;
+}
+
+.ds-table__sort-icon {
+  color: var(--text-neutral-tertiary);
+  transition: transform 0.15s ease;
+}
+
+.ds-table__sort-icon--ascending { color: var(--text-neutral-primary); }
+.ds-table__sort-icon--descending { color: var(--text-neutral-primary); transform: rotate(180deg); }
+
+.ds-table__row {
+  border-bottom: 1px solid var(--stroke-default-primary-low);
+}
+
+.ds-table__row:hover {
+  background: var(--fill-neutral-hover-primary);
+}
+
+.ds-table__cell {
+  padding: var(--spacing-12px);
+  font-size: 14px;
+  color: var(--text-neutral-primary);
+  text-align: left;
+}
+
+.ds-table__cell--right { text-align: right; }

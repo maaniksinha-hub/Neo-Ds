@@ -1,0 +1,38 @@
+.ds-bottomnav {
+  display: flex;
+  align-items: center;
+  width: 375px;
+  max-width: 100%;
+  background: var(--canvas-default);
+  border-top: 1px solid var(--stroke-default-primary-low);
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+.ds-bottomnav__tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4px);
+  flex: 1 0 0;
+  padding: var(--spacing-8px) 0;
+  background: transparent;
+  border: none;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+}
+
+.ds-bottomnav__tab--selected {
+  color: var(--text-accent1-primary);
+}
+
+.ds-bottomnav__icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+}
+
+.ds-bottomnav__label {
+  font-size: 11px;
+  font-weight: 500;
+}
