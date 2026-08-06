@@ -1,0 +1,37 @@
+.ds-livemarket {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8px);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ds-livemarket__dot {
+  position: relative;
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.ds-livemarket--live .ds-livemarket__dot { background: var(--fill-positive-primary); }
+.ds-livemarket--closed .ds-livemarket__dot { background: var(--fill-negative-primary); }
+.ds-livemarket--pre-market .ds-livemarket__dot { background: var(--fill-warning-primary); }
+
+.ds-livemarket--live .ds-livemarket__label { color: var(--text-positive-primary); }
+.ds-livemarket--closed .ds-livemarket__label { color: var(--text-negative-primary); }
+.ds-livemarket--pre-market .ds-livemarket__label { color: var(--text-warning-primary); }
+
+.ds-livemarket__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--fill-positive-primary);
+  animation: ds-livemarket-pulse 1.6s ease-out infinite;
+}
+
+@keyframes ds-livemarket-pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2.5); opacity: 0; }
+}

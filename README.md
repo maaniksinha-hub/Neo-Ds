@@ -63,9 +63,12 @@ Implemented in `src/components/`, each with a Storybook story:
 - `IndiceCard` — single index card with mini chart, from `mIndiceCard`
 - `IconCardWidget` — icon+label shortcut card, from `mIconCardWidget`
 - `OrderDetails` — full order/trade summary view, from `mOrderDetails`/`wOrderDetails`
+- `SideNav` — web left navigation, expanded/collapsed, from `wSideNav`/`wBaseSideNav`
+- `LiveMarketIndicator` — market open/closed/pre-market status dot, from `gLiveMarketIndicator`
+- `Charts.GroupedBarChart` / `Charts.StackedBarChart` — multi-series and composition bar charts
 - `ColorsDoc` — token reference page (Foundations/Colors in Storybook)
 
-See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~60 components documented in Figma but not yet implemented, including the more complex chart types (grouped/stacked bars, gridlines/axes, live market indicator) and several domain-specific cards/lists.
+See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~51 components documented in Figma but not yet implemented, mostly chart axis/gridline internals and niche domain-specific cards/lists.
 
 ## Development
 

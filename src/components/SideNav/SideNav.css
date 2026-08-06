@@ -1,0 +1,85 @@
+.ds-sidenav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 240px;
+  padding: var(--spacing-12px);
+  background: var(--fill-neutral-primary);
+  border-right: 1px solid var(--stroke-default-primary-low);
+  box-sizing: border-box;
+}
+
+.ds-sidenav--collapsed {
+  width: 64px;
+  align-items: center;
+}
+
+.ds-sidenav__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12px);
+  height: 40px;
+  padding: 0 var(--spacing-12px);
+  border: none;
+  border-radius: var(--corner-radius-8px);
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.ds-sidenav--collapsed .ds-sidenav__item {
+  justify-content: center;
+  padding: 0;
+  width: 40px;
+}
+
+.ds-sidenav__item:hover {
+  background: var(--fill-neutral-hover-primary);
+  color: var(--text-neutral-primary);
+}
+
+.ds-sidenav__item--active {
+  background: var(--fill-accent1-tertiary);
+  color: var(--text-accent1-primary);
+  font-weight: 500;
+}
+
+.ds-sidenav__item--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.ds-sidenav__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.ds-sidenav__label {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ds-sidenav__badge {
+  flex-shrink: 0;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: var(--corner-radius-rounded);
+  background: var(--fill-negative-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

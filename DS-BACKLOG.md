@@ -4,10 +4,10 @@ Component coverage generated from the Figma file's AI Export (JSON) node — `AI
 These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
 Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
 
-**Implemented (45):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, Legend, ChartDot), Keyboard, PriceChange, TransactionBadge, ScripListItem, BalanceRow, ResearchIdeaCard, StatusCard, IndexStrip, IndiceCard, IconCardWidget, OrderDetails + full token foundation (colors, typography, spacing).
-**Remaining:** 60 components.
+**Implemented (49):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, GroupedBarChart, StackedBarChart, Legend, ChartDot), Keyboard, PriceChange, TransactionBadge, ScripListItem, BalanceRow, ResearchIdeaCard, StatusCard, IndexStrip, IndiceCard, IconCardWidget, OrderDetails, SideNav, LiveMarketIndicator + full token foundation (colors, typography, spacing).
+**Remaining:** 51 components.
 
-**Note:** Data Viz/Charts core primitives are built with custom SVG (no new dependency). Still remaining: grouped/stacked bar charts, gridlines/axes, live market indicator, and several composed chart widgets.
+**Note:** Data Viz/Charts core primitives are built with custom SVG (no new dependency). Still remaining: gridlines/axis labels and a couple of composed chart widgets.
 
 ## Accordion (3) — _mAccordionSmall already implemented_
 
@@ -186,7 +186,7 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > VARIANTS: State (default/selected/disabled), with/without icon.
 > INSTEAD-OF: Use gChoiceChip for the global/shared variant.
 
-## Data Viz. / Charts (11) — _gBaseLegend, gLegendGroup, gLineNegative, gLinePositive, gBaseChartIndicator, gChartIndicator, gBaseVerticalBar already implemented_
+## Data Viz. / Charts (5) — _gBaseLegend, gLegendGroup, gLineNegative, gLinePositive, gBaseLiveMarketIndicator, gLiveMarketIndicator, gBaseChartIndicator, gChartIndicator, gBaseVerticalBar, gBaseGroupedVerticalBars, gBaseHorizontalStackedBarChart, gHorizontalStackedBarChart, mIndicatorDot already implemented_
 
 ### `gLineChartSkeletonLoader`
 > USE: chart-skeleton, chart-loader, chart-placeholder
@@ -194,51 +194,17 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > PLATFORM: Global
 > VARIANTS: Size (small/medium/large).
 
-### `gBaseLiveMarketIndicator`
-> USE: market-status-dot, live-indicator-dot, market-open-close
-> WHEN: Small status dot showing market state (open/closed/pre-market). Building block for gLiveMarketIndicator.
-> PLATFORM: Global
-> VARIANTS: State (live/closed/pre-market), color (green/red/grey), with/without pulse.
-
-### `gLiveMarketIndicator`
-> USE: live-market-indicator, market-status-bar, trading-status
-> WHEN: Showing current market status with label (e.g. "Market Open", "Market Closed") — typically in top nav or index strip.
-> PLATFORM: Global
-> VARIANTS: State (live/closed/pre-market).
-
 ### `gGridlines`
 > USE: chart-gridlines, chart-grid, axis-gridlines
 > WHEN: Background gridlines for charts — horizontal lines that help read values off the Y-axis.
 > PLATFORM: Global
 > VARIANTS: Density (sparse/medium/dense).
 
-### `gBaseGroupedVerticalBars`
-> USE: grouped-bar-chart, multi-bar, comparison-bars
-> WHEN: Grouped vertical bars comparing multiple data series side by side at each data point.
-> PLATFORM: Global
-> VARIANTS: Bar count (2/3/4), with/without labels.
-
-### `gBaseHorizontalStackedBarChart`
-> USE: stacked-bar-base, horizontal-bar-segment
-> WHEN: Individual segment within a horizontal stacked bar chart. Building block for gHorizontalStackedBarChart.
-> PLATFORM: Global
-
-### `gHorizontalStackedBarChart`
-> USE: horizontal-stacked-bar, composition-bar, proportional-bar
-> WHEN: Showing proportional composition — portfolio allocation, sector distribution, category breakdown.
-> PLATFORM: Global
-> INSTEAD-OF: Use gBaseGroupedVerticalBars for comparing absolute values across categories.
-
 ### `gLineChartMix`
 > USE: mixed-line-chart, multi-series-chart, comparison-chart
 > WHEN: Displaying multiple data series on a single line chart with different visual treatments (solid, dashed, area fill).
 > PLATFORM: Global
 > INSTEAD-OF: Use single gLinePositive/gLineNegative for one-series charts.
-
-### `mIndicatorDot`
-> USE: chart-dot, data-point-marker, current-value-indicator
-> WHEN: Marking the current or selected data point on a line chart.
-> PLATFORM: Mobile
 
 ### `mX-Axis`
 > USE: x-axis-labels, time-axis, horizontal-axis
@@ -304,27 +270,6 @@ Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma 
 > WHEN: Floating menu triggered by a button click or right-click — contains wMenuItems grouped by wMenuGroups.
 > PLATFORM: Web
 > VARIANTS: Size (auto/small/medium/large), position.
-
-## Navigation (3) — _mBottomNav already implemented_
-
-### `mBaseBottomNav`
-> USE: bottom-nav-base, tab-bar-item, nav-icon
-> WHEN: Building block for mBottomNav. Not intended for standalone use.
-> PLATFORM: Mobile
-> INSTEAD-OF: Use mBottomNav for the complete bottom navigation bar.
-
-### `wSideNav`
-> USE: side-navigation, left-nav, web-nav-menu
-> WHEN: Primary navigation on web. Always visible on the left side of the layout.
-> PLATFORM: Web
-> VARIANTS: Expanded/collapsed states, active section highlighting.
-> INSTEAD-OF: Use mBottomNav for mobile navigation.
-
-### `wBaseSideNav`
-> USE: side-nav-item, nav-menu-item, nav-link
-> WHEN: Individual navigation item within wSideNav. Building block — not for standalone use.
-> PLATFORM: Web
-> VARIANTS: State (default, hover, active, disabled), with/without icon and badge.
 
 ## Scrollbar (1)
 

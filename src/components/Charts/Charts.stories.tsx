@@ -3,6 +3,8 @@ import { LineChart } from './LineChart';
 import { BarChart } from './BarChart';
 import { Legend } from './Legend';
 import { ChartDot } from './ChartDot';
+import { StackedBarChart } from './StackedBarChart';
+import { GroupedBarChart } from './GroupedBarChart';
 
 const meta = {
   title: 'Components/Charts',
@@ -44,6 +46,33 @@ export const LegendDefault: Story = {
         { label: 'Promoters', value: '52.3%', color: 'var(--fill-accent1-primary)' },
         { label: 'FII', value: '18.1%', color: 'var(--fill-positive-primary)' },
         { label: 'Public', value: '29.6%', color: 'var(--fill-accent3-primary)' },
+      ]}
+    />
+  ),
+};
+
+export const StackedBar: Story = {
+  render: () => (
+    <div style={{ width: 300 }}>
+      <StackedBarChart
+        segments={[
+          { label: 'Promoters', value: 52.3, color: 'var(--fill-accent1-primary)' },
+          { label: 'FII', value: 18.1, color: 'var(--fill-positive-primary)' },
+          { label: 'Public', value: 29.6, color: 'var(--fill-accent3-primary)' },
+        ]}
+      />
+    </div>
+  ),
+};
+
+export const GroupedBar: Story = {
+  render: () => (
+    <GroupedBarChart
+      height={180}
+      groups={[
+        { label: 'Q1', bars: [{ value: 40, color: 'var(--fill-accent1-primary)' }, { value: 55, color: 'var(--fill-positive-primary)' }] },
+        { label: 'Q2', bars: [{ value: 65, color: 'var(--fill-accent1-primary)' }, { value: 48, color: 'var(--fill-positive-primary)' }] },
+        { label: 'Q3', bars: [{ value: 30, color: 'var(--fill-accent1-primary)', selected: true }, { value: 60, color: 'var(--fill-positive-primary)' }] },
       ]}
     />
   ),
