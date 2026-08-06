@@ -1,0 +1,62 @@
+.ds-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12px);
+  width: 100%;
+  max-width: 375px;
+  padding: var(--spacing-16px);
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+
+.ds-banner--default {
+  background: var(--fill-accent1-tertiary);
+  border-color: var(--stroke-accent1-tertiary, var(--stroke-accent1-primary));
+}
+
+.ds-banner--negative {
+  background: var(--fill-negative-tertiary);
+  border-color: var(--stroke-negative-tertiary, var(--stroke-negative-primary));
+}
+
+.ds-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8px);
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.ds-banner__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-banner--negative .ds-banner__title {
+  color: var(--text-negative-primary);
+}
+
+.ds-banner__subtext {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-banner__actions {
+  display: flex;
+  gap: var(--spacing-16px);
+  flex-wrap: wrap;
+}
+
+.ds-banner__media {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+}

@@ -1,0 +1,31 @@
+.ds-tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 164px;
+  padding: var(--spacing-4px) var(--spacing-8px);
+  background: var(--info-graphics-price-chart-tooltip-bg);
+  border-radius: var(--corner-radius-4px);
+  font-family: var(--font-body);
+}
+
+.ds-tooltip__text {
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--text-inverse-secondary);
+  text-align: center;
+}
+
+.ds-tooltip__arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--info-graphics-price-chart-tooltip-bg);
+  transform: rotate(45deg);
+}
+
+.ds-tooltip--bottom .ds-tooltip__arrow { bottom: -4px; left: 50%; margin-left: -4px; }
+.ds-tooltip--top .ds-tooltip__arrow { top: -4px; left: 50%; margin-left: -4px; }
+.ds-tooltip--left .ds-tooltip__arrow { left: -4px; top: 50%; margin-top: -4px; }
+.ds-tooltip--right .ds-tooltip__arrow { right: -4px; top: 50%; margin-top: -4px; }
