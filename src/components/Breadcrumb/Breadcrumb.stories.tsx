@@ -15,3 +15,10 @@ export const Default: Story = {
     items: [{ label: 'Home' }, { label: 'Stocks' }, { label: 'Tata Steel' }],
   },
 };
+
+export const Overflow: Story = {
+  args: {
+    items: [{ label: 'Home' }, { label: 'Markets' }, { label: 'Stocks' }, { label: 'Steel sector' }, { label: 'Tata Steel' }],
+    maxVisible: 3,
+  },
+};

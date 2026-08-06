@@ -1,0 +1,24 @@
+.ds-autosuggestion {
+  display: flex;
+  gap: var(--spacing-8px);
+  padding: var(--spacing-8px) var(--spacing-12px);
+  background: var(--fill-neutral-secondary);
+  border-top: 1px solid var(--stroke-default-primary-low);
+  overflow-x: auto;
+  font-family: var(--font-body);
+}
+
+.ds-autosuggestion__item {
+  flex-shrink: 0;
+  padding: 6px var(--spacing-12px);
+  border-radius: var(--corner-radius-8px);
+  border: none;
+  background: var(--fill-neutral-primary);
+  font-size: 13px;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.ds-autosuggestion__item:hover {
+  background: var(--fill-neutral-hover-primary);
+}

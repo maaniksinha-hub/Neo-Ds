@@ -65,10 +65,27 @@ Implemented in `src/components/`, each with a Storybook story:
 - `OrderDetails` — full order/trade summary view, from `mOrderDetails`/`wOrderDetails`
 - `SideNav` — web left navigation, expanded/collapsed, from `wSideNav`/`wBaseSideNav`
 - `LiveMarketIndicator` — market open/closed/pre-market status dot, from `gLiveMarketIndicator`
-- `Charts.GroupedBarChart` / `Charts.StackedBarChart` — multi-series and composition bar charts
+- `Charts.GroupedBarChart` / `Charts.StackedBarChart` / `Charts.MultiLineChart` — multi-series and composition bar/line charts
+- `Charts.Gridlines` / `Charts.AxisLabels` / `Charts.ChartSkeleton` / `Charts.ChartTooltip` — chart building blocks
+- `AccordionGroup` — bordered container wrapping multiple `Accordion` items
+- `TopNav` — web header with logo, nav links, search, market strip
+- `ScripName` — clickable stock name link with exchange/sector tags
+- `StatusBar` — decorative iOS-style status bar for mobile mockups
+- `BottomBanner` — sticky bottom-anchored promo banner
+- `InfoCard` — structured key-value card, expandable
+- `NewsCard` / `ReelCard` — news headline row and vertical video card
+- `MarketDepth` — bid/ask order book with proportional bars
+- `ScripIcon` — small instrument icon with exchange badge overlay
+- `IndexSelector` — dropdown for choosing a market index
+- `CollectionCard` — basket/screener/redirection promo card
+- `PageErrorState` — full-page error/empty state with retry CTA
+- `Scrollbar` — styled custom scrollbar wrapper
+- `HomeIndicator` — iOS home indicator bar
+- `AutoSuggestion` — predictive-text suggestion strip above the keyboard
+- `BrowserFrame` / `TaskBar` — presentation chrome for wrapping mockups
 - `ColorsDoc` — token reference page (Foundations/Colors in Storybook)
 
-See [DS-BACKLOG.md](./DS-BACKLOG.md) for the remaining ~51 components documented in Figma but not yet implemented, mostly chart axis/gridline internals and niche domain-specific cards/lists.
+**All 117 components documented in the Figma file are now covered** — see [DS-BACKLOG.md](./DS-BACKLOG.md) for the full coverage map (64 implemented components plus prop-level variants and platform-reuse notes for the rest).
 
 ## Development
 

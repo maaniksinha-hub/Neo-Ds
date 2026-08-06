@@ -1,0 +1,20 @@
+.ds-homeindicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+}
+
+.ds-homeindicator__bar {
+  width: 134px;
+  height: 5px;
+  border-radius: var(--corner-radius-rounded);
+}
+
+.ds-homeindicator--neutral .ds-homeindicator__bar {
+  background: var(--text-neutral-primary);
+}
+
+.ds-homeindicator--black .ds-homeindicator__bar {
+  background: #fff;
+}

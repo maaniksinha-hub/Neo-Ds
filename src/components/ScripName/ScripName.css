@@ -1,0 +1,38 @@
+.ds-scripname {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--spacing-8px);
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.ds-scripname:hover .ds-scripname__name {
+  color: var(--text-accent1-primary);
+  text-decoration: underline;
+}
+
+.ds-scripname--small .ds-scripname__name { font-size: 13px; }
+.ds-scripname--medium .ds-scripname__name { font-size: 15px; }
+.ds-scripname--large .ds-scripname__name { font-size: 20px; }
+
+.ds-scripname__name {
+  font-weight: 500;
+}
+
+.ds-scripname__exchange {
+  font-size: 11px;
+  padding: 1px 5px;
+  border-radius: var(--corner-radius-4px);
+  background: var(--fill-neutral-secondary);
+  color: var(--text-neutral-secondary);
+}
+
+.ds-scripname__sector {
+  font-size: 12px;
+  color: var(--text-neutral-tertiary);
+}

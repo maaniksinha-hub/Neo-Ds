@@ -31,6 +31,15 @@
   color: var(--text-neutral-primary);
 }
 
+.ds-accordion--big .ds-accordion__title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ds-accordion--big .ds-accordion__content {
+  font-size: 14px;
+}
+
 .ds-accordion__chevron {
   display: inline-flex;
   align-items: center;

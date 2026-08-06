@@ -2,12 +2,15 @@ import { useState, type ReactNode } from 'react';
 import './Accordion.css';
 
 export type AccordionEmphasis = 'plain' | 'contained';
+export type AccordionSize = 'small' | 'big';
 
 export interface AccordionProps {
   title: string;
   children: ReactNode;
   defaultExpanded?: boolean;
   emphasis?: AccordionEmphasis;
+  /** "big" is a section-level accordion for grouping primary content areas; "small" (default) suits body-level content like FAQs */
+  size?: AccordionSize;
   className?: string;
 }
 
@@ -19,10 +22,16 @@ function ChevronDown() {
   );
 }
 
-export function Accordion({ title, children, defaultExpanded = false, emphasis = 'plain', className }: AccordionProps) {
+export function Accordion({ title, children, defaultExpanded = false, emphasis = 'plain', size = 'small', className }: AccordionProps) {
   const [expanded, setExpanded] = useState(defaultExpanded);
 
-  const classes = ['ds-accordion', `ds-accordion--${emphasis}`, expanded && 'ds-accordion--expanded', className]
+  const classes = [
+    'ds-accordion',
+    `ds-accordion--${emphasis}`,
+    `ds-accordion--${size}`,
+    expanded && 'ds-accordion--expanded',
+    className,
+  ]
     .filter(Boolean)
     .join(' ');
 

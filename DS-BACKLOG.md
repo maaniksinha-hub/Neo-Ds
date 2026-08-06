@@ -1,358 +1,161 @@
-# Neo-DS Backlog
-
-Component coverage generated from the Figma file's AI Export (JSON) node — `AI Export — Full Design System JSON`.
-These components are documented in Figma with real variant/prop data but have not yet been implemented in code.
-Each entry's `USE` / `WHEN` / `VARIANTS` guidance comes directly from the Figma component description.
-
-**Implemented (49):** Button, Badge, Tabs, TextField, Separator, StockCard, List/ListItem, Checkbox, RadioButton, Switch, Chip, Avatar, Accordion, Tooltip, Toast, Banner, SearchBar, Note, Breadcrumb, StatusIndicator, AppBar, Scrim, Modal, BottomSheet, Dropdown, Menu, CoachMark, Table, BottomNav, Carousel, SidePanel, Loading (Spinner/ProgressBar), Charts (LineChart, BarChart, GroupedBarChart, StackedBarChart, Legend, ChartDot), Keyboard, PriceChange, TransactionBadge, ScripListItem, BalanceRow, ResearchIdeaCard, StatusCard, IndexStrip, IndiceCard, IconCardWidget, OrderDetails, SideNav, LiveMarketIndicator + full token foundation (colors, typography, spacing).
-**Remaining:** 51 components.
-
-**Note:** Data Viz/Charts core primitives are built with custom SVG (no new dependency). Still remaining: gridlines/axis labels and a couple of composed chart widgets.
-
-## Accordion (3) — _mAccordionSmall already implemented_
-
-### `mAccordionBig`
-> USE: section-accordion, large-accordion, section-header-collapse
-> WHEN: Section-level accordion for grouping and structuring primary content areas. Use for major content sections that can be expanded/collapsed.
-> PLATFORM: Mobile
-> VARIANTS: State (collapsed/expanded).
-> INSTEAD-OF: Use mAccordionSmall for body-level content like FAQs.
-
-### `mAccordionContainerBig`
-> USE: section-accordion-container, accordion-with-card, contained-accordion
-> WHEN: Section-level accordion within a card/container with visual boundary. Groups primary content with a contained look.
-> PLATFORM: Mobile
-> VARIANTS: State (collapsed/expanded).
-> INSTEAD-OF: Use mAccordionBig for borderless section accordions, mAccordionContainerSmall for body-level contained accordions.
-
-### `mAccordionContainerSmall`
-> USE: body-accordion-container, faq-container, contained-faq-item
-> WHEN: Body-level accordion within a card/container — FAQs, supporting details with contained styling and low visual emphasis.
-> PLATFORM: Mobile
-> VARIANTS: State (collapsed/expanded).
-> INSTEAD-OF: Use mAccordionSmall for borderless body accordions, mAccordionContainerBig for section-level contained accordions.
-
-## App Bars (4) — _mBaseAppBar already implemented_
-
-### `mTopNav`
-> USE: top-navigation, status-bar-with-nav, page-header
-> WHEN: Always first element in any screen. Provides system status bar + back navigation + title + action icons
-> INSTEAD OF: Status bar + custom nav frame
-> VARIANTS: "Default" | "Title and description below"
-> TEXT: Title set via findOne(TEXT where chars === "Label").characters
-
-### `wTopNav`
-> USE: web-top-navigation, web-header, web-page-bar
-> WHEN: Top of every web page. Provides page context, navigation, search, market information, and primary actions.
-> PLATFORM: Web
-> VARIANTS: State controls search/default modes, market strip visibility.
-
-### `wScripName`
-> USE: web-scrip-name, clickable-stock-name, stock-link
-> WHEN: Clickable stock/scrip name that navigates to stock detail page. Supports hover and active states for web interaction.
-> PLATFORM: Web
-> VARIANTS: Size, with/without exchange tag, with/without sector label.
-
-### `mStatusBar`
-> USE: status-bar, system-bar, ios-status-bar
-> WHEN: Top of every mobile screen to show system status (time, battery, signal). Base layer only — always used within mTopNav.
-> PLATFORM: Mobile
-
-## Banners (2) — _mTopBanner already implemented_
-
-### `mBottomBanner`
-> USE: bottom-banner, sticky-banner, bottom-promo
-> WHEN: Persistent promotional or action banner anchored to the bottom of mobile screens.
-> PLATFORM: Mobile
-> VARIANTS: With/without CTA button.
-> INSTEAD-OF: Use mTopBanner for top-positioned banners.
-
-### `wBanner`
-> USE: web-banner, web-announcement, web-alert-bar
-> WHEN: Page-level announcements and alerts on web — market status, maintenance notices, promotions.
-> PLATFORM: Web
-> VARIANTS: Type (info/warning), with/without dismiss.
-> INSTEAD-OF: Use wToast for temporary feedback messages.
-
-## Bottom Sheets (2) — _mBottomsheet already implemented_
-
-### `mBaseBottomsheetHeader`
-> USE: bottomsheet-header, sheet-title-bar, drawer-header
-> WHEN: Header area within a bottom sheet — title, subtitle, close button. Building block within mBottomsheet.
-> PLATFORM: Mobile
-> VARIANTS: With/without subtitle, close button, action button.
-
-### `mBaseInfoCard`
-> USE: info-card, detail-card, key-value-card
-> WHEN: Card displaying structured key-value information — order details, transaction summaries.
-> PLATFORM: Mobile
-> VARIANTS: With/without header, expandable/static.
-
-## Breadcrumb (1) — _wBreadcrumbSeparator, wBreadcrumbItem, wBreadcrumbGroup already implemented_
-
-### `wBreadcrumbOverflow`
-> USE: breadcrumb-overflow, breadcrumb-ellipsis, collapsed-breadcrumbs
-> WHEN: Collapsed middle breadcrumb items when the path is too long — shows "..." that expands on click.
-> PLATFORM: Web
-> VARIANTS: State (collapsed/expanded/hover).
-
-## Cards (12) — _gScripCards, wIndexStrip, mIconCardWidget, mIndexStrip, mIndiceCard already implemented_
-
-### `mScripLarge+description`
-> USE: large-scrip-card, featured-stock-card, stock-detail-card
-> WHEN: Featured or highlighted stock display with extended description and larger chart.
-> PLATFORM: Mobile
-> VARIANTS: With/without description text.
-> INSTEAD-OF: Use gScripCards for standard compact stock cards.
-
-### `mActionIcon`
-> USE: action-icon-card, quick-action-icon, feature-shortcut
-> WHEN: Grid of icon-based shortcuts — "IPO", "Mutual Funds", "SIP". Typically in a scrollable icon grid on home screens.
-> PLATFORM: Mobile
-> VARIANTS: Size, with/without label text.
-
-### `mScripicons`
-> USE: stock-icon, instrument-icon, exchange-icon
-> WHEN: Small icon representation of a stock or instrument — used within lists and compact card layouts.
-> PLATFORM: Mobile
-> VARIANTS: With/without exchange badge overlay.
-
-### `mNews`
-> USE: news-card, article-card, news-item, headline-card
-> WHEN: Displaying news articles and headlines — news feed, stock-specific news sections.
-> PLATFORM: Mobile
-> VARIANTS: With/without thumbnail image.
-
-### `mReels`
-> USE: reels-card, video-card, short-video-card
-> WHEN: Vertical video/reels content cards for financial education or market commentary.
-> PLATFORM: Mobile
-> VARIANTS: With/without progress indicator.
-
-### `mMarketDepth`
-> USE: market-depth, order-book, bid-ask-table, level2-data
-> WHEN: Market depth visualization showing bid and ask price levels with quantities — stock detail screens.
-> PLATFORM: Mobile
-> VARIANTS: Display style (table/chart).
-> INSTEAD-OF: Use wMarketDepth for web.
-
-### `wIndexSelector`
-> USE: web-index-selector, index-dropdown, market-index-picker
-> WHEN: Dropdown selector for choosing which market index to display — NIFTY 50, SENSEX, NIFTY Bank etc.
-> PLATFORM: Web
-> VARIANTS: State (default/open/selected), item count.
-
-### `mScrip+description`
-> USE: scrip-description-card, stock-info-card
-> WHEN: Stock card with description text for research and discovery contexts.
-> PLATFORM: Mobile
-> INSTEAD-OF: Use gScripCards for compact cards without descriptions.
-
-### `mBasketCard`
-> USE: basket-card, stock-basket, portfolio-basket, curated-list
-> WHEN: Displaying curated stock baskets or thematic portfolios — "Tech Giants", "Dividend Picks".
-> PLATFORM: Mobile
-
-### `mScreenerCard`
-> USE: screener-card, filter-result-card, stock-screener
-> WHEN: Displaying stock screener results or pre-built screening criteria as selectable cards.
-> PLATFORM: Mobile
-
-### `mRedirectionCard`
-> USE: redirection-card, promo-card, discovery-card, deep-link-card
-> WHEN: Promotional or discovery cards that redirect to a feature or external page. Cards with a clear CTA destination.
-> PLATFORM: Mobile
-
-### `wMarketDepth`
-> USE: web-market-depth, web-order-book, web-bid-ask
-> WHEN: Full market depth (order book) visualization on web — bid/ask levels with quantities and prices.
-> PLATFORM: Web
-> INSTEAD-OF: Use mMarketDepth for mobile.
-
-## Carousel (1) — _mCarousel, wCarousel, gCarouselGroup already implemented_
-
-### `gCarousel dots`
-> USE: carousel-indicator, page-dots, carousel-pagination
-> WHEN: Dot indicators showing current position within a carousel. Building block used by mCarousel and wCarousel.
-> PLATFORM: Global
-> VARIANTS: Active/inactive dot state.
-
-## Chips (1) — _gChoiceChip, gActionChip already implemented_
-
-### `mChoiceChip`
-> USE: mobile-choice-chip, mobile-filter-chip, mobile-selection-chip
-> WHEN: Mobile-specific choice chip with touch-optimized sizing.
-> PLATFORM: Mobile
-> VARIANTS: State (default/selected/disabled), with/without icon.
-> INSTEAD-OF: Use gChoiceChip for the global/shared variant.
-
-## Data Viz. / Charts (5) — _gBaseLegend, gLegendGroup, gLineNegative, gLinePositive, gBaseLiveMarketIndicator, gLiveMarketIndicator, gBaseChartIndicator, gChartIndicator, gBaseVerticalBar, gBaseGroupedVerticalBars, gBaseHorizontalStackedBarChart, gHorizontalStackedBarChart, mIndicatorDot already implemented_
-
-### `gLineChartSkeletonLoader`
-> USE: chart-skeleton, chart-loader, chart-placeholder
-> WHEN: Placeholder skeleton while chart data is loading. Maintains layout space and signals incoming content.
-> PLATFORM: Global
-> VARIANTS: Size (small/medium/large).
-
-### `gGridlines`
-> USE: chart-gridlines, chart-grid, axis-gridlines
-> WHEN: Background gridlines for charts — horizontal lines that help read values off the Y-axis.
-> PLATFORM: Global
-> VARIANTS: Density (sparse/medium/dense).
-
-### `gLineChartMix`
-> USE: mixed-line-chart, multi-series-chart, comparison-chart
-> WHEN: Displaying multiple data series on a single line chart with different visual treatments (solid, dashed, area fill).
-> PLATFORM: Global
-> INSTEAD-OF: Use single gLinePositive/gLineNegative for one-series charts.
-
-### `mX-Axis`
-> USE: x-axis-labels, time-axis, horizontal-axis
-> WHEN: Horizontal axis labels for charts — dates, time periods, categories.
-> PLATFORM: Mobile
-
-### `gY-Axis`
-> USE: y-axis-labels, value-axis, vertical-axis
-> WHEN: Vertical axis labels for charts — price values, quantities, percentages.
-> PLATFORM: Global
-
-## Lists (6) — _mList, gWithdrawalDepositBadge, mScripList, mGainLossArrow, mPriceChange%, mBalanceList, mResearchIdeas already implemented_
-
-### `wScripList`
-> USE: web-stock-list, web-watchlist-row, web-scrip-row
-> WHEN: Displaying stocks in web table/list format with extended data columns — price, change, volume, market cap.
-> PLATFORM: Web
-> VARIANTS: Column configurations, with/without hover actions, expanded/compact density.
-> INSTEAD-OF: Use mScripList for mobile, wList for non-stock web lists.
-
-### `wResearchIdeas`
-> USE: web-research-card, web-idea-card, web-analyst-recommendation
-> WHEN: Research ideas and analyst recommendations on web — same content as mResearchIdeas in web layout.
-> PLATFORM: Web
-> INSTEAD-OF: Use mResearchIdeas for mobile.
-
-### `wList`
-> USE: web-list-item, web-list-row, web-settings-row
-> WHEN: Standard list items on web — settings, menus, detail rows. Web equivalent of mList.
-> PLATFORM: Web
-> VARIANTS: Leading (icon/avatar/none), trailing (text/icon/switch/chevron), with/without subtitle.
-> INSTEAD-OF: Use mList for mobile, wScripList for stock-specific web lists.
-
-### `gBaseListIcons`
-> USE: list-icon, list-leading-icon, row-icon
-> WHEN: Standard icon set used as leading elements in list items — settings, menu, and detail rows. Building block for mListUniversal and wListUniversal.
-> PLATFORM: Global
-> VARIANTS: Icon type (default/colored/badge/avatar/custom).
-
-### `wListUniversal`
-> USE: web-universal-list, web-adaptive-list, web-generic-row
-> WHEN: Flexible web list item that adapts to multiple content patterns. Web equivalent of mListUniversal.
-> PLATFORM: Web
-> VARIANTS: Configurable leading/trailing content slots.
-
-### `mListUniversal`
-> USE: universal-list-item, generic-list-row, adaptive-list
-> WHEN: Generic list item that adapts to multiple content patterns — text, icons, and metadata in a single flexible row.
-> PLATFORM: Mobile
-> VARIANTS: Configurable leading/trailing content slots.
-
-## Loading & Progress (Pending confirmation) (1)
-
-### `mPageErrorState`
-> USE: error-state, empty-state, no-data, failed-load
-> WHEN: Full-page error or empty state — network failures, no results, empty lists. Shows illustration + message + retry CTA.
-> PLATFORM: Mobile
-
-## Menu (1) — _wMenuItem, wMenuTitle, wMenuGroup already implemented_
-
-### `wMenuPopup`
-> USE: dropdown-menu, context-menu, popup-menu, action-menu
-> WHEN: Floating menu triggered by a button click or right-click — contains wMenuItems grouped by wMenuGroups.
-> PLATFORM: Web
-> VARIANTS: Size (auto/small/medium/large), position.
-
-## Scrollbar (1)
-
-### `wScrollbar`
-> USE: scrollbar, custom-scrollbar, scroll-indicator
-> WHEN: Custom scrollbar for scrollable web containers — replacing default browser scrollbar with styled version.
-> PLATFORM: Web
-> VARIANTS: Orientation (vertical/horizontal), state (default/hover/active).
-
-## Status & Indicators (2) — _mStatusCard, gStatusTimeline, gBaseStatusIndicatorIcon, mOrderDetails, wOrderDetails already implemented_
-
-### `gBaseSupportingInfoStrip`
-> USE: info-strip, supporting-info, status-metadata
-> WHEN: Horizontal strip of supplementary information below a status card — timestamps, reference numbers, amounts.
-> PLATFORM: Global
-> VARIANTS: With/without icon prefix.
-
-### `gBaseStatusTrack`
-> USE: status-track, progress-line, timeline-connector
-> WHEN: Connecting line between status steps in gStatusTimeline. Building block.
-> PLATFORM: Global
-> VARIANTS: State (completed/pending) affecting color.
-
-## Table (2) — _wTableCell, wTableHeader already implemented_
-
-### `mTableCell`
-> USE: table-cell, data-cell, grid-cell
-> WHEN: Individual cell within a mobile data table — contains text values or header labels.
-> PLATFORM: Mobile
-> VARIANTS: Type (header/text), alignment (left/right).
-> INSTEAD-OF: Use wTableCell for web tables.
-
-### `wTableSort`
-> USE: table-sort-icon, column-sort, sort-indicator
-> WHEN: Sort direction indicator within table headers — ascending/descending/unsorted.
-> PLATFORM: Web
-> VARIANTS: State (ascending/descending/none).
-
-## Toast (1) — _mToast already implemented_
-
-### `wToast`
-> USE: web-toast, web-snackbar, web-notification-toast
-> WHEN: Temporary feedback messages on web — same patterns as mToast but sized for web layouts.
-> PLATFORM: Web
-> VARIANTS: Type (success/error/warning/info/neutral), with/without action button.
-> INSTEAD-OF: Use mToast for mobile, wBanner for persistent page-level messages.
-
-## Tooltips (2) — _gTooltip already implemented_
-
-### `gChartTooltip`
-> USE: chart-tooltip, data-tooltip, hover-tooltip, price-tooltip
-> WHEN: Showing data values on hover/touch over chart elements — price at point, volume, OHLC data.
-> PLATFORM: Global
-> VARIANTS: Content type (single value/multi-line/OHLC), with/without crosshair.
-> INSTEAD-OF: Use gTooltip for general UI tooltips not tied to charts.
-
-### `gLowEmphasisTooltip`
-> USE: subtle-tooltip, light-tooltip, secondary-tooltip
-> WHEN: Tooltip that needs minimal visual disruption — less prominent than gTooltip.
-> PLATFORM: Global
-> VARIANTS: Position variants.
-> INSTEAD-OF: Use gTooltip for standard emphasis tooltips.
-
-## Utilities (4)
-
-### `mHomeIndicator`
-> USE: home-indicator, swipe-bar, ios-home-bar
-> WHEN: iOS home indicator bar at the bottom of screens — required on iPhone X and later for gesture navigation context.
-> PLATFORM: Mobile
-> VARIANTS: Color (light/dark) matching the screen background.
-
-### `mAutoSuggestion`
-> USE: auto-suggestion, keyboard-suggestions, predictive-text
-> WHEN: Suggestion strip above the keyboard showing predicted words or stock names during text entry.
-> PLATFORM: Mobile
-
-### `wBrowserFrame`
-> USE: browser-chrome, web-mockup-frame, browser-window
-> WHEN: Wrapping web designs in a browser chrome for presentation and context. Utility component — not for product UI.
-> PLATFORM: Web
-
-### `wTaskBar`
-> USE: os-taskbar, system-bar, desktop-frame
-> WHEN: Adding OS taskbar context to web mockups for presentation. Utility component — not for product UI.
-> PLATFORM: Web
-
+# Neo-DS Component Coverage
+
+Generated from the Figma file's AI Export (JSON) node — `AI Export — Full Design System JSON`. Every named component documented in that export now has a code counterpart, either as a direct 1:1 implementation or as a documented reuse of a more general component already in the library.
+
+## Summary
+
+**117 Figma components mapped. 0 remaining.**
+
+- **64 components implemented** in `src/components/` (each with a Storybook story)
+- The rest are covered by **prop-level variants** on those 64 (e.g. `Tooltip`'s `emphasis` prop covers `gLowEmphasisTooltip`) or by **direct reuse** where the Figma component is platform-specific (web/mobile) but the underlying code component is platform-agnostic (e.g. `wToast` and `mToast` are both just `Toast`)
+
+## Implemented components
+
+Accordion, AccordionGroup, AppBar, AutoSuggestion, Avatar, Badge, BalanceRow, Banner, BottomBanner, BottomNav, BottomSheet, Breadcrumb, BrowserFrame, Button, Carousel, Charts (LineChart, MultiLineChart, BarChart, GroupedBarChart, StackedBarChart, Legend, ChartDot, ChartTooltip, ChartSkeleton, Gridlines, AxisLabels), Checkbox, Chip, CoachMark, CollectionCard, ColorsDoc, Dropdown, HomeIndicator, IconCardWidget, IndexSelector, IndexStrip, IndiceCard, InfoCard, Keyboard, List/ListItem, LiveMarketIndicator, Loading (Spinner/ProgressBar), MarketDepth, Menu, Modal, NewsCard, Note, OrderDetails, PageErrorState, PriceChange, RadioButton, ReelCard, ResearchIdeaCard, Scrim, ScripIcon, ScripListItem, ScripName, Scrollbar, SearchBar, Separator, SideNav, SidePanel, StatusBar, StatusCard, StatusIndicator, StockCard, Switch, Table, Tabs, TaskBar, TextField, Toast, Tooltip, TopNav, TransactionBadge.
+
+Plus the full token foundation (colors, typography, spacing, corner radius) in `src/tokens/`.
+
+## Coverage map
+
+Every Figma component name below, grouped by its Figma page, with what covers it.
+
+### Accordion
+- `mAccordionSmall` → `Accordion` (default size)
+- `mAccordionBig` → `Accordion` with `size="big"`
+- `mAccordionContainerSmall` → `AccordionGroup` with `size="small"`
+- `mAccordionContainerBig` → `AccordionGroup` with `size="big"`
+
+### App Bars
+- `mBaseAppBar` → `AppBar`
+- `mTopNav` → `AppBar` (same back/title/actions pattern, first element on every mobile screen)
+- `wTopNav` → `TopNav`
+- `wScripName` → `ScripName`
+- `mStatusBar` → `StatusBar`
+
+### Avatar
+- `gAvatarProfile`, `gAvatarCompany` → `Avatar`
+
+### Badges
+- All 8 badge variant nodes → `Badge` (`color`/`size`/`variant` props)
+
+### Banners
+- `mTopBanner` → `Banner`
+- `mBottomBanner` → `BottomBanner`
+- `wBanner` → `Banner` with `onDismiss`
+
+### Bottom Sheets
+- `mBottomsheet` → `BottomSheet`
+- `mBaseBottomsheetHeader` → `BottomSheet`'s header (`subtitle`, `showCloseButton`, `headerAction` props)
+- `mBaseInfoCard` → `InfoCard`
+
+### Breadcrumb
+- `wBreadcrumbGroup`, `wBreadcrumbItem`, `wBreadcrumbSeparator` → `Breadcrumb`
+- `wBreadcrumbOverflow` → `Breadcrumb`'s `maxVisible` prop
+
+### Buttons
+- All 8 button variant nodes → `Button` (`variant`/`type`/`size` props)
+
+### Cards
+- `gScripCards` → `StockCard`
+- `mScripLarge+description`, `mScrip+description` → `StockCard`'s `description` prop
+- `mActionIcon` → `IconCardWidget`
+- `mScripicons` → `ScripIcon`
+- `mNews` → `NewsCard`
+- `mReels` → `ReelCard`
+- `mMarketDepth`, `wMarketDepth` → `MarketDepth`
+- `wIndexStrip`, `mIndexStrip` → `IndexStrip`
+- `wIndexSelector` → `IndexSelector`
+- `mIndiceCard` → `IndiceCard`
+- `mIconCardWidget` → `IconCardWidget`
+- `mBasketCard` → `CollectionCard` with `variant="basket"`
+- `mScreenerCard` → `CollectionCard` with `variant="screener"`
+- `mRedirectionCard` → `CollectionCard` with `variant="redirection"`
+
+### Carousel
+- `mCarousel`, `wCarousel`, `gCarouselGroup`, `gCarousel dots` → `Carousel` (dot indicators built in)
+
+### Checkboxes / Chips / Coach mark / Dropdown / Radio button / Scrim / Search / Separator / Switch
+- `gCheckbox` → `Checkbox`; `gRadioButton` → `RadioButton`; `gSwitch` → `Switch`
+- `gChoiceChip`, `gActionChip`, `mChoiceChip` → `Chip`
+- `gCoachMark` → `CoachMark`
+- `wDropdown` → `Dropdown`
+- `gScrim` → `Scrim`
+- `gSearchBar` → `SearchBar`
+- Separator (all 4 nodes) → `Separator`
+
+### Data Viz. / Charts
+- `gLinePositive`, `gLineNegative` → `Charts/LineChart`
+- `gLineChartMix` → `Charts/MultiLineChart`
+- `gLineChartSkeletonLoader` → `Charts/ChartSkeleton`
+- `gGridlines` → `Charts/Gridlines`
+- `mX-Axis`, `gY-Axis` → `Charts/AxisLabels` (horizontal/vertical orientation)
+- `gBaseVerticalBar` → `Charts/BarChart`
+- `gBaseGroupedVerticalBars` → `Charts/GroupedBarChart`
+- `gBaseHorizontalStackedBarChart`, `gHorizontalStackedBarChart` → `Charts/StackedBarChart`
+- `gBaseLegend`, `gLegendGroup` → `Charts/Legend`
+- `gBaseChartIndicator`, `gChartIndicator`, `mIndicatorDot` → `Charts/ChartDot`
+- `gBaseLiveMarketIndicator`, `gLiveMarketIndicator` → `LiveMarketIndicator`
+- `gChartTooltip` → `Charts/ChartTooltip`
+
+### Keyboard
+- `mKeyboard` → `Keyboard`
+
+### Lists
+- `mList`, `wList`, `wListUniversal`, `mListUniversal` → `List`/`ListItem` (`density` prop covers the "universal" compact variants)
+- `gBaseListIcons` → `ListItem`'s `leading` slot
+- `gWithdrawalDepositBadge` → `TransactionBadge`
+- `mScripList`, `wScripList` → `ScripListItem`
+- `mGainLossArrow`, `mPriceChange%` → `PriceChange`
+- `mBalanceList` → `BalanceRow`
+- `mResearchIdeas`, `wResearchIdeas` → `ResearchIdeaCard`
+
+### Loading & Progress (Pending confirmation)
+- Loading states → `Loading` (`Spinner`, `ProgressBar`)
+- `mPageErrorState` → `PageErrorState`
+
+### Menu
+- `wMenuItem`, `wMenuTitle`, `wMenuGroup`, `wMenuPopup` → `Menu`
+
+### Modal
+- `wModal`, `wModalHeader` → `Modal`
+
+### Navigation
+- `mBottomNav`, `mBaseBottomNav` → `BottomNav`
+- `wSideNav`, `wBaseSideNav` → `SideNav`
+
+### Note
+- `mNote` → `Note`
+
+### Scrollbar
+- `wScrollbar` → `Scrollbar`
+
+### Side panel
+- `wSidePanel`, `wBaseSidepanelNav` → `SidePanel`
+
+### Status & Indicators
+- `gStatusTimeline`, `gBaseStatusIndicatorIcon`, `gBaseStatusTrack` → `StatusIndicator`
+- `mStatusCard` → `StatusCard`
+- `gBaseSupportingInfoStrip` → `StatusCard`'s info strip
+- `mOrderDetails`, `wOrderDetails` → `OrderDetails`
+
+### Table
+- `wTableCell`, `mTableCell` → `Table`
+- `wTableSort` → `Table`'s built-in sort indicator
+
+### Tabs / Text fields
+- All 4 tab nodes → `Tabs`
+- All 12 text field nodes → `TextField`
+
+### Toast
+- `mToast`, `wToast` → `Toast`
+
+### Tooltips
+- `gTooltip` → `Tooltip`
+- `gChartTooltip` → `Charts/ChartTooltip`
+- `gLowEmphasisTooltip` → `Tooltip`'s `emphasis="low"` prop
+
+### Utilities
+- `mHomeIndicator` → `HomeIndicator`
+- `mAutoSuggestion` → `AutoSuggestion`
+- `wBrowserFrame` → `BrowserFrame`
+- `wTaskBar` → `TaskBar`

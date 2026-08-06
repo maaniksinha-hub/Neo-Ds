@@ -74,3 +74,10 @@ export const Positive: Story = {
     direction: 'up',
   },
 };
+
+export const WithDescription: Story = {
+  args: {
+    ...Default.args,
+    description: 'India’s largest private sector bank by assets, with a strong retail deposit franchise and expanding digital lending book.',
+  },
+};

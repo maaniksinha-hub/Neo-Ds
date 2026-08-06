@@ -1,0 +1,60 @@
+.ds-marketdepth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-16px);
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 12px;
+}
+
+.ds-marketdepth__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-marketdepth__columnhead {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: var(--spacing-8px);
+  color: var(--text-neutral-tertiary);
+  font-size: 11px;
+  border-bottom: 1px solid var(--stroke-default-primary-low);
+}
+
+.ds-marketdepth__row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  overflow: hidden;
+}
+
+.ds-marketdepth__bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.ds-marketdepth__row--bid .ds-marketdepth__bar {
+  right: 0;
+  background: var(--fill-positive-tertiary);
+}
+
+.ds-marketdepth__row--ask .ds-marketdepth__bar {
+  left: 0;
+  background: var(--fill-negative-tertiary);
+}
+
+.ds-marketdepth__price,
+.ds-marketdepth__qty {
+  position: relative;
+  z-index: 1;
+}
+
+.ds-marketdepth__row--bid .ds-marketdepth__price { color: var(--text-positive-primary); }
+.ds-marketdepth__row--ask .ds-marketdepth__price { color: var(--text-negative-primary); }
+
+.ds-marketdepth__qty {
+  color: var(--text-neutral-secondary);
+}

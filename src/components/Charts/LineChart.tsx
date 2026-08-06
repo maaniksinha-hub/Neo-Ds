@@ -11,10 +11,10 @@ export interface LineChartProps {
   className?: string;
 }
 
-function buildPath(values: number[], width: number, height: number) {
+export function buildPath(values: number[], width: number, height: number, bounds?: { min: number; max: number }) {
   if (values.length < 2) return { line: '', area: '' };
-  const min = Math.min(...values);
-  const max = Math.max(...values);
+  const min = bounds?.min ?? Math.min(...values);
+  const max = bounds?.max ?? Math.max(...values);
   const range = max - min || 1;
   const stepX = width / (values.length - 1);
 

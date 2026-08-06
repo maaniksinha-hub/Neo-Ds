@@ -6,6 +6,21 @@
   font-family: var(--font-body);
 }
 
+.ds-stockcard--large {
+  width: 280px;
+}
+
+.ds-stockcard--large .ds-stockcard__body {
+  height: auto;
+}
+
+.ds-stockcard__description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-neutral-secondary);
+}
+
 .ds-stockcard__body {
   display: flex;
   flex-direction: column;

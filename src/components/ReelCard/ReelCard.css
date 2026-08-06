@@ -1,0 +1,66 @@
+.ds-reelcard {
+  position: relative;
+  display: flex;
+  width: 120px;
+  height: 200px;
+  padding: 0;
+  border: none;
+  border-radius: var(--corner-radius-12px);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--fill-neutral-secondary);
+}
+
+.ds-reelcard__thumbnail {
+  position: absolute;
+  inset: 0;
+}
+
+.ds-reelcard__thumbnail > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ds-reelcard__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8px);
+  padding: var(--spacing-12px);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.ds-reelcard__title {
+  align-self: flex-start;
+  margin-top: auto;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ds-reelcard__progresstrack {
+  position: absolute;
+  left: var(--spacing-8px);
+  right: var(--spacing-8px);
+  top: var(--spacing-8px);
+  height: 2px;
+  border-radius: var(--corner-radius-rounded);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.ds-reelcard__progressfill {
+  display: block;
+  height: 100%;
+  border-radius: var(--corner-radius-rounded);
+  background: #fff;
+}

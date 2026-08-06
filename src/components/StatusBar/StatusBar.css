@@ -1,0 +1,27 @@
+.ds-statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 var(--spacing-24px);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.ds-statusbar--neutral {
+  background: var(--fill-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.ds-statusbar--black {
+  background: #000;
+  color: #fff;
+}
+
+.ds-statusbar__icons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8px);
+}

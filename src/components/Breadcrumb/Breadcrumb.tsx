@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Breadcrumb.css';
 
 export interface BreadcrumbItem {
@@ -8,6 +9,7 @@ export interface BreadcrumbItem {
 
 export interface BreadcrumbProps {
   items: BreadcrumbItem[];
+  maxVisible?: number;
   className?: string;
 }
 
@@ -19,22 +21,41 @@ function Separator() {
   );
 }
 
-export function Breadcrumb({ items, className }: BreadcrumbProps) {
+function BreadcrumbLink({ item, isCurrent }: { item: BreadcrumbItem; isCurrent: boolean }) {
+  return isCurrent ? (
+    <span className="ds-breadcrumb__link ds-breadcrumb__link--current" aria-current="page">
+      {item.label}
+    </span>
+  ) : (
+    <a className="ds-breadcrumb__link" href={item.href ?? '#'} onClick={item.onClick}>
+      {item.label}
+    </a>
+  );
+}
+
+export function Breadcrumb({ items, maxVisible, className }: BreadcrumbProps) {
+  const [expanded, setExpanded] = useState(false);
+  const shouldCollapse = maxVisible !== undefined && !expanded && items.length > maxVisible;
+
+  const visibleItems = shouldCollapse
+    ? [items[0], { label: '…overflow…', __overflow: true } as BreadcrumbItem & { __overflow: true }, ...items.slice(-(maxVisible - 1))]
+    : items;
+
   return (
     <nav className={['ds-breadcrumb', className].filter(Boolean).join(' ')} aria-label="Breadcrumb">
       <ol className="ds-breadcrumb__list">
-        {items.map((item, index) => {
-          const isCurrent = index === items.length - 1;
+        {visibleItems.map((item, index) => {
+          const isCurrent = index === visibleItems.length - 1;
+          const isOverflow = '__overflow' in item;
+
           return (
-            <li key={item.label} className="ds-breadcrumb__item">
-              {isCurrent ? (
-                <span className="ds-breadcrumb__link ds-breadcrumb__link--current" aria-current="page">
-                  {item.label}
-                </span>
+            <li key={isOverflow ? '__overflow' : item.label} className="ds-breadcrumb__item">
+              {isOverflow ? (
+                <button type="button" className="ds-breadcrumb__overflow" onClick={() => setExpanded(true)} aria-label="Show all breadcrumb items">
+                  …
+                </button>
               ) : (
-                <a className="ds-breadcrumb__link" href={item.href ?? '#'} onClick={item.onClick}>
-                  {item.label}
-                </a>
+                <BreadcrumbLink item={item} isCurrent={isCurrent} />
               )}
               {!isCurrent && <Separator />}
             </li>

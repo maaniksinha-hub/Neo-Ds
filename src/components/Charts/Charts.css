@@ -157,3 +157,68 @@
   font-size: 12px;
   color: var(--text-neutral-secondary);
 }
+
+.ds-charttooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 120px;
+  padding: var(--spacing-8px) var(--spacing-12px);
+  border-radius: var(--corner-radius-8px);
+  background: var(--info-graphics-price-chart-tooltip-bg);
+  font-family: var(--font-body);
+}
+
+.ds-charttooltip__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-16px);
+}
+
+.ds-charttooltip__label {
+  font-size: 11px;
+  color: var(--text-neutral-tertiary);
+}
+
+.ds-charttooltip__value {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-inverse-secondary);
+}
+
+.ds-chartskeleton {
+  width: 100%;
+  border-radius: var(--corner-radius-8px);
+  background: linear-gradient(90deg, var(--fill-neutral-secondary) 25%, var(--fill-neutral-hover-primary) 37%, var(--fill-neutral-secondary) 63%);
+  background-size: 400% 100%;
+  animation: ds-chartskeleton-shimmer 1.4s ease infinite;
+}
+
+@keyframes ds-chartskeleton-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+.ds-gridlines {
+  display: block;
+}
+
+.ds-axislabels {
+  display: flex;
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-neutral-tertiary);
+}
+
+.ds-axislabels--horizontal {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ds-axislabels--vertical {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

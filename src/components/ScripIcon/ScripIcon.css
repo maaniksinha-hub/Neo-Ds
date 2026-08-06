@@ -1,0 +1,43 @@
+.ds-scripicon {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.ds-scripicon--small { width: 24px; height: 24px; }
+.ds-scripicon--medium { width: 32px; height: 32px; }
+.ds-scripicon--large { width: 40px; height: 40px; }
+
+.ds-scripicon__logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-scripicon__logo > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ds-scripicon__badge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 12px;
+  padding: 0 3px;
+  border-radius: var(--corner-radius-4px);
+  background: var(--fill-neutral-primary);
+  border: 1px solid var(--stroke-default-primary-low);
+  font-family: var(--font-body);
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--text-neutral-secondary);
+}

@@ -51,3 +51,14 @@ export const WithLeadingIcon: Story = {
     </List>
   ),
 };
+
+export const Compact: Story = {
+  args: { children: null },
+  render: () => (
+    <List>
+      <ListItem density="compact" title="Notifications" trailing={chevron} onClick={() => {}} />
+      <ListItem density="compact" title="Security" trailing={chevron} onClick={() => {}} />
+      <ListItem density="compact" title="Linked accounts" trailing={chevron} onClick={() => {}} divider={false} />
+    </List>
+  ),
+};

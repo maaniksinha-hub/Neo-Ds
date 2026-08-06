@@ -26,6 +26,20 @@
   text-decoration: underline;
 }
 
+.ds-breadcrumb__overflow {
+  padding: 0 2px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+}
+
+.ds-breadcrumb__overflow:hover {
+  color: var(--text-neutral-primary);
+}
+
 .ds-breadcrumb__link--current {
   color: var(--text-neutral-primary);
   font-weight: 500;

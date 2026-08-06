@@ -1,0 +1,64 @@
+.ds-infocard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12px);
+  width: 100%;
+  padding: var(--spacing-16px);
+  border-radius: var(--corner-radius-12px);
+  background: var(--fill-neutral-secondary);
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+.ds-infocard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ds-infocard__headertext {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-infocard__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+}
+
+.ds-infocard__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8px);
+  margin: 0;
+}
+
+.ds-infocard__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-12px);
+  margin: 0;
+}
+
+.ds-infocard__label {
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-infocard__value {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+  text-align: right;
+}

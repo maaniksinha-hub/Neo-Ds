@@ -35,7 +35,17 @@
 }
 
 .ds-bottomsheet__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-8px);
   padding: var(--spacing-16px) var(--spacing-16px) var(--spacing-8px);
+}
+
+.ds-bottomsheet__headertext {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 auto;
 }
 
 .ds-bottomsheet__title {
@@ -43,6 +53,31 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--text-neutral-primary);
+}
+
+.ds-bottomsheet__subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}
+
+.ds-bottomsheet__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--corner-radius-8px);
+  background: transparent;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+}
+
+.ds-bottomsheet__close:hover {
+  background: var(--fill-neutral-hover-primary);
 }
 
 .ds-bottomsheet__body {

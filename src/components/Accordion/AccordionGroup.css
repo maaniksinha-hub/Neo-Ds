@@ -1,0 +1,22 @@
+.ds-accordiongroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 375px;
+  border: 1px solid var(--stroke-default-primary-low);
+  border-radius: var(--corner-radius-12px);
+  overflow: hidden;
+}
+
+.ds-accordiongroup > * {
+  border-bottom: 1px solid var(--stroke-default-primary-low);
+  max-width: none;
+}
+
+.ds-accordiongroup > *:last-child {
+  border-bottom: none;
+}
+
+.ds-accordiongroup--big {
+  border-radius: var(--corner-radius-16px, 16px);
+}

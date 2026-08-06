@@ -29,3 +29,16 @@
 .ds-tooltip--top .ds-tooltip__arrow { top: -4px; left: 50%; margin-left: -4px; }
 .ds-tooltip--left .ds-tooltip__arrow { left: -4px; top: 50%; margin-top: -4px; }
 .ds-tooltip--right .ds-tooltip__arrow { right: -4px; top: 50%; margin-top: -4px; }
+
+.ds-tooltip--emphasis-low {
+  background: var(--fill-neutral-secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ds-tooltip--emphasis-low .ds-tooltip__text {
+  color: var(--text-neutral-secondary);
+}
+
+.ds-tooltip--emphasis-low .ds-tooltip__arrow {
+  background: var(--fill-neutral-secondary);
+}

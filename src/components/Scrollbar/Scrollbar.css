@@ -1,0 +1,32 @@
+.ds-scrollbar--vertical {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ds-scrollbar--horizontal {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.ds-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.ds-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ds-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--stroke-default-primary);
+  border-radius: var(--corner-radius-rounded);
+}
+
+.ds-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--stroke-default-primary-high, var(--stroke-default-primary));
+}
+
+.ds-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--stroke-default-primary) transparent;
+}

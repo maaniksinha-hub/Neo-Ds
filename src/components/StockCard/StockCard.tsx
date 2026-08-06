@@ -19,6 +19,8 @@ export interface StockCardProps {
   highlightLabel?: string;
   /** Footer note shown only in the "insights" variant, e.g. "Dividend announced" */
   insightsNote?: string;
+  /** Extended description text for the featured/large card layout (mScripLarge+description, mScrip+description) */
+  description?: string;
   className?: string;
 }
 
@@ -50,10 +52,13 @@ export function StockCard({
   highlight = false,
   highlightLabel = 'Result',
   insightsNote,
+  description,
   className,
 }: StockCardProps) {
   const isInsights = variant === 'insights';
-  const classes = ['ds-stockcard', isInsights && 'ds-stockcard--insights', className].filter(Boolean).join(' ');
+  const classes = ['ds-stockcard', isInsights && 'ds-stockcard--insights', description && 'ds-stockcard--large', className]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <div className={classes}>
@@ -80,6 +85,7 @@ export function StockCard({
             {changePercent})
           </span>
         </div>
+        {description && <p className="ds-stockcard__description">{description}</p>}
       </div>
       {isInsights && insightsNote && (
         <div className="ds-stockcard__nudge">

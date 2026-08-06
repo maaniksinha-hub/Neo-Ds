@@ -1,0 +1,30 @@
+.ds-pageerrorstate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-16px);
+  width: 100%;
+  padding: var(--spacing-24px);
+  text-align: center;
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+.ds-pageerrorstate__illustration {
+  display: flex;
+}
+
+.ds-pageerrorstate__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-pageerrorstate__message {
+  margin: 0;
+  max-width: 280px;
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}
