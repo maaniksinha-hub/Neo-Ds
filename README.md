@@ -84,6 +84,7 @@ Implemented in `src/components/`, each with a Storybook story:
 - `AutoSuggestion` — predictive-text suggestion strip above the keyboard
 - `BrowserFrame` / `TaskBar` — presentation chrome for wrapping mockups
 - `ColorsDoc` — token reference page (Foundations/Colors in Storybook)
+- `TypographyDoc` — font-family tokens plus the type scale in use across components (Foundations/Typography in Storybook)
 
 **All 117 components documented in the Figma file are now covered** — see [DS-BACKLOG.md](./DS-BACKLOG.md) for the full coverage map (64 implemented components plus prop-level variants and platform-reuse notes for the rest).
 

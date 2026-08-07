@@ -1,0 +1,96 @@
+.ds-typography-doc {
+  font-family: var(--font-body);
+  color: var(--text-neutral-primary);
+}
+
+.ds-typography-doc__section {
+  margin-bottom: var(--spacing-32px);
+}
+
+.ds-typography-doc__heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-neutral-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 var(--spacing-12px);
+}
+
+.ds-typography-doc__note {
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+  max-width: 640px;
+  margin: 0 0 var(--spacing-16px);
+}
+
+.ds-typography-doc__families {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16px);
+}
+
+.ds-typography-doc__family {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-24px);
+  padding: var(--spacing-16px);
+  border: 1px solid var(--stroke-default-primary-low);
+  border-radius: 8px;
+}
+
+.ds-typography-doc__familysample {
+  flex-shrink: 0;
+  width: 220px;
+  margin: 0;
+  font-size: 28px;
+  color: var(--text-neutral-primary);
+}
+
+.ds-typography-doc__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ds-typography-doc__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-neutral-primary);
+}
+
+.ds-typography-doc__var {
+  font-size: 12px;
+  font-family: ui-monospace, monospace;
+  color: var(--text-neutral-tertiary);
+}
+
+.ds-typography-doc__description {
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+  max-width: 480px;
+}
+
+.ds-typography-doc__scale {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-typography-doc__step {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-24px);
+  padding: var(--spacing-12px) 0;
+  border-bottom: 1px solid var(--stroke-default-primary-low);
+}
+
+.ds-typography-doc__stepsample {
+  width: 260px;
+  flex-shrink: 0;
+  color: var(--text-neutral-primary);
+}
+
+.ds-typography-doc__steplabel {
+  font-size: 12px;
+  font-family: ui-monospace, monospace;
+  color: var(--text-neutral-tertiary);
+}
