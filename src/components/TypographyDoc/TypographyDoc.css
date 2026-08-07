@@ -16,13 +16,6 @@
   margin: 0 0 var(--spacing-12px);
 }
 
-.ds-typography-doc__note {
-  font-size: 13px;
-  color: var(--text-neutral-secondary);
-  max-width: 640px;
-  margin: 0 0 var(--spacing-16px);
-}
-
 .ds-typography-doc__families {
   display: flex;
   flex-direction: column;
@@ -70,27 +63,69 @@
   max-width: 480px;
 }
 
-.ds-typography-doc__scale {
+.ds-typography-doc__table {
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--stroke-default-primary-low);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.ds-typography-doc__step {
-  display: flex;
-  align-items: baseline;
-  gap: var(--spacing-24px);
-  padding: var(--spacing-12px) 0;
+.ds-typography-doc__row {
+  display: grid;
+  grid-template-columns: 190px 64px 76px 96px 110px 1fr;
+  align-items: center;
+  gap: var(--spacing-16px);
+  padding: var(--spacing-8px) var(--spacing-12px);
   border-bottom: 1px solid var(--stroke-default-primary-low);
 }
 
-.ds-typography-doc__stepsample {
-  width: 260px;
-  flex-shrink: 0;
+.ds-typography-doc__row:last-child {
+  border-bottom: none;
+}
+
+.ds-typography-doc__row--head {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-neutral-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background: var(--fill-neutral-secondary);
+}
+
+.ds-typography-doc__token {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8px);
+  font-size: 12px;
+  font-weight: 500;
   color: var(--text-neutral-primary);
 }
 
-.ds-typography-doc__steplabel {
+.ds-typography-doc__badge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 1px 6px;
+  border-radius: var(--corner-radius-rounded);
+  background: var(--fill-accent1-tertiary);
+  color: var(--text-accent1-primary);
+  white-space: nowrap;
+}
+
+.ds-typography-doc__sample {
+  color: var(--text-neutral-primary);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ds-typography-doc__cell {
   font-size: 12px;
-  font-family: ui-monospace, monospace;
-  color: var(--text-neutral-tertiary);
+  color: var(--text-neutral-secondary);
+}
+
+.ds-typography-doc__usecase {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
 }
