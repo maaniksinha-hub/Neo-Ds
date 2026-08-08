@@ -27,14 +27,14 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 600;
-  color: var(--text-inverse-primary);
+  color: var(--text-inverse-secondary);
 }
 
 .ds-coachmark__body {
   margin: 0;
   font-size: 12px;
   line-height: 16px;
-  color: var(--text-inverse-secondary, var(--text-neutral-tertiary));
+  color: var(--text-inverse-secondary);
 }
 
 .ds-coachmark__footer {
@@ -47,7 +47,7 @@
 .ds-coachmark__step {
   font-size: 12px;
   line-height: 16px;
-  color: var(--text-inverse-secondary, var(--text-neutral-tertiary));
+  color: var(--text-inverse-secondary);
 }
 
 .ds-coachmark__actions {
@@ -69,11 +69,11 @@
 }
 
 .ds-coachmark__skip {
-  color: var(--text-inverse-secondary, var(--text-neutral-tertiary));
+  color: var(--text-inverse-secondary);
 }
 
 .ds-coachmark__next {
-  color: var(--text-inverse-primary);
+  color: var(--text-inverse-secondary);
 }
 
 .ds-coachmark__arrow {

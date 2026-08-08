@@ -49,6 +49,14 @@ These are hard constraints, not style preferences. All are already enforced in `
 5. **Every Mobile screen needs navigation chrome.** `mTopNav`/`mBaseAppBar` at the top and `mBottomNav` at the bottom (unless the screen is a modal/bottom-sheet flow layered over a screen that already has them).
 6. **Shadows come from the elevation tier.** Three steps, defined in `src/tokens/semantic.css`: `var(--elevation-raised)` (tooltips, coach marks), `var(--elevation-overlay)` (dropdowns, menus, popovers), `var(--elevation-modal)` (modals, banners, framed surfaces). Never inline an `rgba()` shadow. A surface that casts its shadow in a non-default direction (bottom sheet upward, side panel leftward) composes its own offsets from `var(--shadow-color-high)` rather than inventing a color.
 7. **A `var(--token)` reference must never carry a literal fallback.** `var(--corner-radius-16px, 16px)` silently papers over a token that doesn't exist — and `--corner-radius-16px` did not. Reference the real token bare, so a missing one fails loudly instead of quietly rendering an off-scale value.
+8. **Picking text for an inverse surface: `primary` and `secondary` do not mean what they look like.** The two inverse text tokens behave differently across themes, and choosing wrong produces text that is readable in light and nearly invisible in dark:
+
+   | token | light | dark | use it for |
+   |---|---|---|---|
+   | `--text-inverse-primary` | white | **white** (does not flip) | text on a *saturated* fill that keeps its colour in both themes — `--fill-accent1-primary`, `--fill-negative-primary`, solid buttons, selected chips |
+   | `--text-inverse-secondary` | white | **near-black** (flips) | text on a *neutral inverse surface* — anything backed by `--fill-neutral-inverse-*`, since that fill itself flips from near-black to light-grey |
+
+   The trap: `--fill-neutral-inverse-primary` flips but `--text-inverse-primary` does not, so pairing them gives 1.45:1 in dark mode. `mToast--inverse` is the reference implementation. The same split applies to `--icon-inverse-primary` / `--icon-inverse-secondary`.
 
 ## Platform rules (Mobile ↔ Web token mapping)
 
@@ -107,6 +115,12 @@ These are common screen shapes in this domain. Compose from the components above
 5. No raw `px` in `padding`/`margin`/`gap` — use `var(--spacing-Npx)`.
 6. Every `var(--…)` reference resolves to something defined in `src/tokens/`, with no literal fallback.
 7. If the change affects Storybook doc text, confirm the JSDoc block still renders correctly on the autodocs page.
+8. `npm run build-storybook && npm run audit:contrast` clean.
+
+`audit:contrast` (`scripts/contrast-audit.mjs`) renders every story in both themes and reports text failing WCAG AA. Read its output correctly — the two sections mean different things:
+
+- **Asymmetric failures (fails in one theme only) are always bugs, and the script exits non-zero on them.** A correctly mapped token pair contrasts the same way on both sides, so a one-sided failure means a token that flips has been paired with one that doesn't. This is the check that catches rule 8 violations.
+- **Symmetric failures (fails in both) are palette values, not code.** Some of the system's own colours — `--text-neutral-tertiary` most of all — sit below AA by design in both themes. Don't "fix" those in a component by substituting a different token; that breaks the semantic meaning to chase a number. Raise them as a design decision instead.
 
 The greps behind 3–6 are worth running as a set, since each one caught real violations that the others missed:
 

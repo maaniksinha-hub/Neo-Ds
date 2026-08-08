@@ -19,7 +19,7 @@
 
 .ds-statusbar--black {
   background: var(--fill-neutral-inverse-primary);
-  color: var(--text-inverse-primary);
+  color: var(--text-inverse-secondary);
 }
 
 .ds-statusbar__icons {

@@ -28,7 +28,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  color: var(--text-inverse-primary);
+  color: var(--text-inverse-secondary);
 }
 
 .ds-bottombanner__subtext {
