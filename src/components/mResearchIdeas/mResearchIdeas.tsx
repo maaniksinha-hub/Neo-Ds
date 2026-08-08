@@ -60,9 +60,13 @@ export function MResearchIdeas({
         </div>
       )}
       <div className="ds-researchidea__footer">
-        {analystName && <span className="ds-researchidea__analyst">{analystName}</span>}
-        {timeframe && <span className="ds-researchidea__timeframe">{timeframe}</span>}
-        {confidence && <span className="ds-researchidea__confidence">{CONFIDENCE_LABEL[confidence]}</span>}
+        {[analystName, timeframe, confidence && CONFIDENCE_LABEL[confidence]]
+          .filter((item): item is string => Boolean(item))
+          .map((item, index) => (
+            <span key={index} className="ds-researchidea__footeritem">
+              {item}
+            </span>
+          ))}
       </div>
     </div>
   );
