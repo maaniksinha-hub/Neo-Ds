@@ -31,13 +31,14 @@
 .ds-scriplistitem__info {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
   flex: 1 1 auto;
   min-width: 0;
 }
 
 .ds-scriplistitem__name {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
   overflow: hidden;
@@ -48,6 +49,7 @@
 .ds-scriplistitem__subtitle,
 .ds-scriplistitem__quantity {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 
@@ -59,12 +61,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 2px;
+  gap: var(--spacing-2px);
   flex-shrink: 0;
 }
 
 .ds-scriplistitem__pricevalue {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }

@@ -8,9 +8,10 @@
   width: 375px;
   max-width: 100vw;
   background: var(--fill-neutral-primary);
-  border-top-left-radius: var(--corner-radius-16px, 16px);
-  border-top-right-radius: var(--corner-radius-16px, 16px);
-  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.16);
+  border-top-left-radius: var(--corner-radius-24px);
+  border-top-right-radius: var(--corner-radius-24px);
+  /* Modal elevation, cast upward — see --elevation-modal */
+  box-shadow: 0 -8px 24px var(--shadow-color-high);
   font-family: var(--font-body);
   z-index: 101;
   box-sizing: border-box;
@@ -44,20 +45,23 @@
 .ds-bottomsheet__headertext {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
   flex: 1 1 auto;
 }
 
 .ds-bottomsheet__title {
   margin: 0;
   font-size: 16px;
+  line-height: 24px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
 
 .ds-bottomsheet__subtitle {
   margin: 0;
-  font-size: 13px;
+  /* Body/Small */
+  font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 

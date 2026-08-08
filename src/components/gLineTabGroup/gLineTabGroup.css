@@ -10,7 +10,9 @@
   border-bottom: 3px solid transparent;
   padding: var(--spacing-8px);
   font-family: var(--font-body);
-  font-size: 15px;
+  /* Body/Default High Emphasis — selected state steps up to Title/Small (600) below */
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-secondary);
   cursor: pointer;

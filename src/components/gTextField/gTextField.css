@@ -29,9 +29,11 @@
   font-family: var(--font-body);
   color: var(--text-neutral-primary);
   font-size: 16px;
+  line-height: 24px;
 }
 
-.ds-textfield--48px .ds-textfield__input { font-size: 14px; }
+.ds-textfield--48px .ds-textfield__input { font-size: 14px;
+  line-height: 20px; }
 
 .ds-textfield__label {
   position: absolute;
@@ -41,16 +43,19 @@
   color: var(--text-neutral-tertiary);
   font-family: var(--font-body);
   font-size: 16px;
+  line-height: 24px;
   pointer-events: none;
   transition: top 0.15s ease, font-size 0.15s ease, background 0.15s ease, padding 0.15s ease;
 }
 
-.ds-textfield--48px .ds-textfield__label { font-size: 14px; }
+.ds-textfield--48px .ds-textfield__label { font-size: 14px;
+  line-height: 20px; }
 
 .ds-textfield__control:focus-within .ds-textfield__label,
 .ds-textfield__input:not(:placeholder-shown) ~ .ds-textfield__label {
   top: 0;
   font-size: 12px;
+  line-height: 16px;
   background: var(--fill-neutral-primary);
   padding: 0 var(--spacing-4px);
   color: var(--text-neutral-secondary);
@@ -77,6 +82,7 @@
   padding: var(--spacing-4px) var(--spacing-16px) 0;
   font-family: var(--font-body);
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 

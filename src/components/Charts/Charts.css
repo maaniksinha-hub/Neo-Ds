@@ -33,6 +33,7 @@
 
 .ds-barchart__label {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 
@@ -63,11 +64,13 @@
 
 .ds-legend__label {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 
 .ds-legend__value {
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
@@ -138,7 +141,7 @@
 .ds-groupedbar__bars {
   display: flex;
   align-items: flex-end;
-  gap: 4px;
+  gap: var(--spacing-4px);
   height: 100%;
 }
 
@@ -155,13 +158,14 @@
 
 .ds-groupedbar__label {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 
 .ds-charttooltip {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: var(--spacing-4px);
   min-width: 120px;
   padding: var(--spacing-8px) var(--spacing-12px);
   border-radius: var(--corner-radius-8px);
@@ -178,11 +182,13 @@
 
 .ds-charttooltip__label {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-tertiary);
 }
 
 .ds-charttooltip__value {
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
   color: var(--text-inverse-secondary);
 }
@@ -208,6 +214,7 @@
   display: flex;
   font-family: var(--font-body);
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-tertiary);
 }
 

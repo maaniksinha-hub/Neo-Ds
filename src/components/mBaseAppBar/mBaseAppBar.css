@@ -40,6 +40,7 @@
 .ds-appbar__title {
   margin: 0;
   font-size: 16px;
+  line-height: 24px;
   font-weight: 500;
   color: var(--text-neutral-primary);
   white-space: nowrap;
@@ -50,6 +51,7 @@
 .ds-appbar__subtext {
   margin: 0;
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 

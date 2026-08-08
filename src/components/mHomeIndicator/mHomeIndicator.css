@@ -16,5 +16,5 @@
 }
 
 .ds-homeindicator--black .ds-homeindicator__bar {
-  background: #fff;
+  background: var(--icon-inverse-primary);
 }

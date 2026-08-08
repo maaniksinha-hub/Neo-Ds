@@ -12,8 +12,8 @@ export interface MReelsProps {
 function PlayIcon() {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <circle cx="16" cy="16" r="16" fill="rgba(0,0,0,0.4)" />
-      <path d="M13 10l9 6-9 6V10z" fill="#fff" />
+      <circle cx="16" cy="16" r="16" fill="var(--scrim-scrim-fill)" />
+      <path d="M13 10l9 6-9 6V10z" fill="var(--icon-inverse-primary)" />
     </svg>
   );
 }

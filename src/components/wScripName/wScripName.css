@@ -16,9 +16,10 @@
   text-decoration: underline;
 }
 
-.ds-scripname--small .ds-scripname__name { font-size: 13px; }
-.ds-scripname--medium .ds-scripname__name { font-size: 15px; }
-.ds-scripname--large .ds-scripname__name { font-size: 20px; }
+/* Caption/Default → Body/Default High Emphasis → Heading/Default */
+.ds-scripname--small .ds-scripname__name { font-size: 12px; line-height: 16px; }
+.ds-scripname--medium .ds-scripname__name { font-size: 14px; line-height: 20px; }
+.ds-scripname--large .ds-scripname__name { font-size: 20px; line-height: 28px; }
 
 .ds-scripname__name {
   font-weight: 500;
@@ -26,6 +27,7 @@
 
 .ds-scripname__exchange {
   font-size: 12px;
+  line-height: 16px;
   padding: var(--spacing-2px) var(--spacing-4px);
   border-radius: var(--corner-radius-4px);
   background: var(--fill-neutral-secondary);
@@ -34,5 +36,6 @@
 
 .ds-scripname__sector {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-tertiary);
 }

@@ -10,7 +10,7 @@
   max-height: calc(100vh - 64px);
   background: var(--fill-neutral-primary);
   border-radius: var(--corner-radius-12px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--elevation-modal);
   font-family: var(--font-body);
   z-index: 101;
 }
@@ -26,6 +26,7 @@
 .ds-modal__title {
   margin: 0;
   font-size: 16px;
+  line-height: 24px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }

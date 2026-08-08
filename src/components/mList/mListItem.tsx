@@ -18,6 +18,13 @@ export interface MListItemProps {
  * Individual row within mList / wList / mListUniversal / wListUniversal.
  * See mList for full usage guidance — this is the row primitive, not a standalone component.
  */
+/**
+ * USE: list-item, list-row, settings-row, detail-row
+ * WHEN: A single row inside mList — settings entries, menu rows, and key-value detail rows.
+ * PLATFORM: Mobile
+ * VARIANTS: Leading (icon/avatar/none), trailing (text/icon/switch/chevron), with/without subtitle and divider, comfortable/compact density.
+ * INSTEAD-OF: Always render inside mList, which owns the container styling. Use mScripList for stock rows and mBalanceList for balance rows — both are purpose-built and already carry their own row markup.
+ */
 export function MListItem({ leading, title, subtitle, trailing, divider = true, density = 'comfortable', onClick, className }: MListItemProps) {
   const classes = [
     'ds-list-item',

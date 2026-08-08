@@ -8,6 +8,7 @@
   padding: var(--spacing-8px) var(--spacing-12px);
   background: var(--fill-neutral-secondary);
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
   color: var(--text-neutral-secondary);
   text-align: left;
@@ -45,6 +46,7 @@
 .ds-table__cell {
   padding: var(--spacing-12px);
   font-size: 14px;
+  line-height: 20px;
   color: var(--text-neutral-primary);
   text-align: left;
 }

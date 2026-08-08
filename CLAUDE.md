@@ -38,13 +38,23 @@ These are hard constraints, not style preferences. All are already enforced in `
 
 1. **Color is semantic, never literal hex.** Use `var(--fill-positive-primary)`, `var(--text-negative-primary)`, etc. — never `#00C853` or similar. Positive/negative colors always mean gain/loss in this domain; don't repurpose them for anything else (e.g. don't use "positive green" for a generic success toast unrelated to price movement).
 2. **Spacing comes from the scale, not arbitrary pixels.** Valid steps: `0, 2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 120` (as `var(--spacing-Npx)`). No `3px`, `5px`, `6px`, `10px`, etc. If a value must sit between two steps (e.g. a small arrow offset), derive it with `calc()` against a token rather than hardcoding a new pixel value.
-3. **Font size has a floor.** Nothing below 10px (`Caption/Small`). The full type scale is documented in `TypographyDoc` (`src/components/TypographyDoc`) — treat it as the source of truth for which step a given use case (label, body, heading) should resolve to.
+3. **Font size lands on a scale step, and carries that step's line-height.** Valid sizes: `10, 12, 14, 16, 18, 20, 24, 28, 32, 40, 48, 56, 64` — nothing below 10px (`Caption/Small`), and no intermediate values (`13px`, `15px` are not steps). Weight is `400`, `500` or `600`; there is no `700`. Every `font-size` must be paired with its line-height, which is a pure function of the size:
+
+   | size | 10 | 12 | 14 | 16 | 18 | 20 | 24 | 28 | 32 | 40 | 48 | 56 | 64 |
+   |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+   | line-height | 16 | 16 | 20 | 24 | 24 | 28 | 32 | 36 | 40 | 48 | 56 | 64 | 72 |
+
+   Never use a unitless ratio (`line-height: 1.4`) — it drifts off the scale. The full scale, with the Mobile/Web use case each step was designed for, is in `TypographyDoc` (`src/components/TypographyDoc`); treat it as the source of truth for which step a given use case resolves to.
 4. **One primary CTA per screen.** Only one `gSolidButton` (filled/primary emphasis) visible per screen at a time. Secondary actions use `gOutlineButton`, tertiary use `gTextButton`.
 5. **Every Mobile screen needs navigation chrome.** `mTopNav`/`mBaseAppBar` at the top and `mBottomNav` at the bottom (unless the screen is a modal/bottom-sheet flow layered over a screen that already has them).
+6. **Shadows come from the elevation tier.** Three steps, defined in `src/tokens/semantic.css`: `var(--elevation-raised)` (tooltips, coach marks), `var(--elevation-overlay)` (dropdowns, menus, popovers), `var(--elevation-modal)` (modals, banners, framed surfaces). Never inline an `rgba()` shadow. A surface that casts its shadow in a non-default direction (bottom sheet upward, side panel leftward) composes its own offsets from `var(--shadow-color-high)` rather than inventing a color.
+7. **A `var(--token)` reference must never carry a literal fallback.** `var(--corner-radius-16px, 16px)` silently papers over a token that doesn't exist — and `--corner-radius-16px` did not. Reference the real token bare, so a missing one fails loudly instead of quietly rendering an off-scale value.
 
 ## Platform rules (Mobile ↔ Web token mapping)
 
-Some tokens resolve to different raw values per platform via `:root[data-platform="mobile"]` vs default `:root` (Web canonical) in `src/tokens/`. When building a screen, set `data-platform="mobile"` on the root only for Mobile contexts — don't hand-pick pixel values per platform, let the token do it.
+Some tokens resolve to different raw values per platform via `:root[data-platform="mobile"]` vs default `:root` (Web canonical) in `src/tokens/`. Web is the *absence* of the attribute. When building a screen, set `data-platform="mobile"` on the root only for Mobile contexts — don't hand-pick pixel values per platform, let the token do it. The dark palette works the same way, under `:root[data-theme="dark"]`.
+
+In Storybook both axes are toolbar toggles (**Platform** and **Theme**, wired up in `.storybook/preview.tsx`). Platform defaults to *Auto*, which follows the component's Figma prefix — an `m` component documents itself with Mobile token values without each story opting in. Check a change in both themes before committing; the dark palette is a full 161-token set and is easy to break without noticing.
 
 | Concern | Mobile | Web |
 |---|---|---|
@@ -91,7 +101,25 @@ These are common screen shapes in this domain. Compose from the components above
 ## Verification checklist before committing a component change
 
 1. `npx tsc -b` clean.
-2. `npx storybook build` clean (or `npm run storybook` and eyeball the changed story).
-3. No off-scale spacing/font-size values introduced (grep for raw `px` values outside the token scale).
-4. No hardcoded hex colors.
-5. If the change affects Storybook doc text, confirm the JSDoc block still renders correctly on the autodocs page.
+2. `npx storybook build` clean (or `npm run storybook` and eyeball the changed story in both themes).
+3. No off-scale font sizes, weights, or missing/mismatched line-heights.
+4. No hardcoded colors in `src/components/` — no hex, no `rgba()`, no `hsl()`. Literal color values belong in `src/tokens/` only.
+5. No raw `px` in `padding`/`margin`/`gap` — use `var(--spacing-Npx)`.
+6. Every `var(--…)` reference resolves to something defined in `src/tokens/`, with no literal fallback.
+7. If the change affects Storybook doc text, confirm the JSDoc block still renders correctly on the autodocs page.
+
+The greps behind 3–6 are worth running as a set, since each one caught real violations that the others missed:
+
+```sh
+# off-scale font sizes
+grep -rnoP "font-size:\s*\K\d+px" src/components --include=*.css \
+  | grep -vP ":(10|12|14|16|18|20|24|28|32|40|48|56|64)px$"
+# hardcoded colors (the only legitimate hit is a Figma node id in a JSDoc block)
+grep -rn "rgba\?(\|hsla\?(\|#[0-9a-fA-F]\{3,8\}\b" src/components --include=*.css --include=*.tsx
+# raw px spacing
+grep -rnP "\b(padding|margin|gap|row-gap|column-gap)[a-z-]*\s*:\s*[^;{}]*(?<![\w.-])\d+px" \
+  src/components --include=*.css
+# referenced-but-undefined tokens
+comm -23 <(grep -ohP "var\(\K--[\w-]+" -r src --include=*.css --include=*.tsx | sort -u) \
+         <(grep -ohP "^\s*\K--[\w-]+(?=\s*:)" -r src/tokens | sort -u)
+```

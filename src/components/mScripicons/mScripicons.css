@@ -37,7 +37,9 @@
   background: var(--fill-neutral-primary);
   border: 1px solid var(--stroke-default-primary-low);
   font-family: var(--font-body);
-  font-size: 8px;
+  /* Caption/Small — 10px is the system's font-size floor */
+  font-size: 10px;
+  line-height: 16px;
   font-weight: 600;
   color: var(--text-neutral-secondary);
 }

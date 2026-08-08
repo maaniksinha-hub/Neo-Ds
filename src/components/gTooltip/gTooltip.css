@@ -12,27 +12,35 @@
 
 .ds-tooltip__text {
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 16px;
   color: var(--text-inverse-secondary);
   text-align: center;
 }
 
 .ds-tooltip__arrow {
+  --ds-tooltip-arrow-size: var(--spacing-8px);
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: var(--ds-tooltip-arrow-size);
+  height: var(--ds-tooltip-arrow-size);
   background: var(--info-graphics-price-chart-tooltip-bg);
   transform: rotate(45deg);
 }
 
-.ds-tooltip--bottom .ds-tooltip__arrow { bottom: -4px; left: 50%; margin-left: -4px; }
-.ds-tooltip--top .ds-tooltip__arrow { top: -4px; left: 50%; margin-left: -4px; }
-.ds-tooltip--left .ds-tooltip__arrow { left: -4px; top: 50%; margin-top: -4px; }
-.ds-tooltip--right .ds-tooltip__arrow { right: -4px; top: 50%; margin-top: -4px; }
+/* The arrow is a rotated 8px square, so it must sit back by exactly half its own
+   size. Derived from the arrow token rather than hardcoded, so resizing the
+   arrow keeps the offsets correct. */
+.ds-tooltip__arrow {
+  --ds-tooltip-arrow-offset: calc(var(--ds-tooltip-arrow-size) / -2);
+}
+
+.ds-tooltip--bottom .ds-tooltip__arrow { bottom: var(--ds-tooltip-arrow-offset); left: 50%; margin-left: var(--ds-tooltip-arrow-offset); }
+.ds-tooltip--top .ds-tooltip__arrow { top: var(--ds-tooltip-arrow-offset); left: 50%; margin-left: var(--ds-tooltip-arrow-offset); }
+.ds-tooltip--left .ds-tooltip__arrow { left: var(--ds-tooltip-arrow-offset); top: 50%; margin-top: var(--ds-tooltip-arrow-offset); }
+.ds-tooltip--right .ds-tooltip__arrow { right: var(--ds-tooltip-arrow-offset); top: 50%; margin-top: var(--ds-tooltip-arrow-offset); }
 
 .ds-tooltip--emphasis-low {
   background: var(--fill-neutral-secondary);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--elevation-raised);
 }
 
 .ds-tooltip--emphasis-low .ds-tooltip__text {

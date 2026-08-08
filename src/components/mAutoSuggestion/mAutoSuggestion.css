@@ -14,7 +14,10 @@
   border-radius: var(--corner-radius-8px);
   border: none;
   background: var(--fill-neutral-primary);
-  font-size: 13px;
+  /* Caption/Default */
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
   color: var(--text-neutral-primary);
   cursor: pointer;
 }

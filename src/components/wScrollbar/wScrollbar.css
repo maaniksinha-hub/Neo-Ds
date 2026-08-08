@@ -23,7 +23,7 @@
 }
 
 .ds-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: var(--stroke-default-primary-high, var(--stroke-default-primary));
+  background: var(--stroke-default-secondary);
 }
 
 .ds-scrollbar {

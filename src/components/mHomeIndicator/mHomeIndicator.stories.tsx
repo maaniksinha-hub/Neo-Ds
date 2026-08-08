@@ -15,7 +15,7 @@ export const Neutral: Story = { args: { theme: 'neutral' } };
 export const Black: Story = {
   args: { theme: 'black' },
   render: (args) => (
-    <div style={{ background: '#000' }}>
+    <div style={{ background: 'var(--fill-neutral-inverse-primary)' }}>
       <MHomeIndicator {...args} />
     </div>
   ),

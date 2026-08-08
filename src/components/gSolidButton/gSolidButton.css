@@ -25,10 +25,14 @@
 }
 
 /* Sizes */
-.ds-button--32px { height: 32px; padding: var(--spacing-8px) var(--spacing-16px); font-size: 12px; }
-.ds-button--36px { height: 36px; padding: var(--spacing-8px) var(--spacing-16px); font-size: 14px; }
-.ds-button--44px { height: 44px; padding: var(--spacing-12px) var(--spacing-16px); font-size: 14px; }
-.ds-button--52px { height: 52px; padding: var(--spacing-16px); font-size: 14px; }
+.ds-button--32px { height: 32px; padding: var(--spacing-8px) var(--spacing-16px); font-size: 12px;
+  line-height: 16px; }
+.ds-button--36px { height: 36px; padding: var(--spacing-8px) var(--spacing-16px); font-size: 14px;
+  line-height: 20px; }
+.ds-button--44px { height: 44px; padding: var(--spacing-12px) var(--spacing-16px); font-size: 14px;
+  line-height: 20px; }
+.ds-button--52px { height: 52px; padding: var(--spacing-16px); font-size: 14px;
+  line-height: 20px; }
 
 /* Solid variant */
 .ds-button--solid { color: var(--text-inverse-primary); }

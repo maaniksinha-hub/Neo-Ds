@@ -16,7 +16,7 @@
   align-items: center;
   width: 36px;
   height: 20px;
-  padding: 2px;
+  padding: var(--spacing-2px);
   border-radius: var(--corner-radius-rounded);
   border: 1.5px solid var(--stroke-default-tertiary);
   background: transparent;
@@ -60,6 +60,7 @@
 
 .ds-switch__label {
   font-size: 14px;
+  line-height: 20px;
   color: var(--text-neutral-primary);
 }
 

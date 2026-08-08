@@ -16,11 +16,13 @@
 .ds-taskbar__appicon {
   width: 24px;
   height: 24px;
-  border-radius: var(--corner-radius-6px, 6px);
+  border-radius: var(--corner-radius-8px);
   background: var(--fill-neutral-inverse-secondary);
 }
 
 .ds-taskbar__time {
-  font-size: 13px;
+  /* Caption/Default Low Emphasis */
+  font-size: 12px;
+  line-height: 16px;
   color: var(--text-inverse-primary);
 }

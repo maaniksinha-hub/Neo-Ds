@@ -321,6 +321,21 @@
   --text-strike-colors-put: var(--color-orange-600);
   /* Text/Strike colors/FUT — Text color for Futures contract strike prices. */
   --text-strike-colors-fut: var(--color-yellow-700);
+
+  /* Elevation — shadow colors. Literal rgba belongs here, in the token layer;
+     components must compose shadows from the tokens below, never inline them. */
+  --shadow-color-low: rgba(14, 17, 22, 0.08);
+  --shadow-color-medium: rgba(14, 17, 22, 0.12);
+  --shadow-color-high: rgba(14, 17, 22, 0.16);
+
+  /* Elevation/Raised — Smallest lift. Use for tooltips and coach marks. */
+  --elevation-raised: 0 2px 8px var(--shadow-color-low);
+  /* Elevation/Overlay — Mid lift. Use for dropdowns, menus and popovers. */
+  --elevation-overlay: 0 4px 16px var(--shadow-color-medium);
+  /* Elevation/Modal — Highest lift. Use for modals, banners and framed surfaces.
+     Surfaces that cast their shadow in a non-default direction (bottom sheet,
+     side panel) compose their own offsets from --shadow-color-high. */
+  --elevation-modal: 0 8px 24px var(--shadow-color-high);
 }
 
 :root[data-theme="dark"] {
@@ -485,4 +500,10 @@
   --text-strike-colors-call: var(--color-blue-500);
   --text-strike-colors-put: var(--color-orange-500);
   --text-strike-colors-fut: var(--color-yellow-400);
+
+  /* Shadows read as weaker against dark surfaces, so each step gains alpha.
+     The composed --elevation-* tokens pick these up automatically. */
+  --shadow-color-low: rgba(0, 0, 0, 0.24);
+  --shadow-color-medium: rgba(0, 0, 0, 0.32);
+  --shadow-color-high: rgba(0, 0, 0, 0.44);
 }

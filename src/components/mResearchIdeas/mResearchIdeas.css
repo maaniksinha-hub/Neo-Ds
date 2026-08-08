@@ -19,6 +19,7 @@
 
 .ds-researchidea__name {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
@@ -31,16 +32,18 @@
 .ds-researchidea__pricegroup {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
 }
 
 .ds-researchidea__pricelabel {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-tertiary);
 }
 
 .ds-researchidea__pricevalue {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
@@ -50,6 +53,7 @@
   flex-wrap: wrap;
   gap: var(--spacing-8px);
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 

@@ -18,5 +18,5 @@
 }
 
 .ds-accordiongroup--big {
-  border-radius: var(--corner-radius-16px, 16px);
+  border-radius: var(--corner-radius-24px);
 }

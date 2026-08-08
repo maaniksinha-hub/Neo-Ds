@@ -108,6 +108,12 @@ const fontVar: Record<TypeStyle['font'], string> = {
 /**
  * INTERNAL: Storybook-only documentation page (Foundations/Typography). Renders the full Display/Highlight/Heading/Title/Body/Caption type scale transcribed from Figma's Typography page. Not a Figma component — not for use in product screens.
  */
+/**
+ * USE: type-scale, typography-reference, font-reference
+ * WHEN: INTERNAL documentation page. Read it to pick the correct type step for a given use case — it lists every size/weight/line-height in the scale alongside the Mobile and Web use cases each step was designed for.
+ * PLATFORM: Global (documentation only — never compose this into a product screen)
+ * INSTEAD-OF: This page is the source of truth for the type scale. Nothing may render below 10px, and font-size must always land on a listed step and carry that step's line-height — do not pick an intermediate value.
+ */
 export function TypographyDoc() {
   return (
     <div className="ds-typography-doc">

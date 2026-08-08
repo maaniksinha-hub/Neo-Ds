@@ -5,7 +5,9 @@
   height: 44px;
   padding: 0 var(--spacing-24px);
   font-family: var(--font-body);
-  font-size: 15px;
+  /* Title/Small */
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 600;
   box-sizing: border-box;
 }
@@ -16,8 +18,8 @@
 }
 
 .ds-statusbar--black {
-  background: #000;
-  color: #fff;
+  background: var(--fill-neutral-inverse-primary);
+  color: var(--text-inverse-primary);
 }
 
 .ds-statusbar__icons {

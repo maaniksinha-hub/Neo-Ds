@@ -12,7 +12,7 @@
 .ds-coachmark__image {
   width: 100%;
   height: 150px;
-  background: var(--fill-neutral-inverse-secondary, rgba(255, 255, 255, 0.08));
+  background: var(--fill-neutral-inverse-secondary);
 }
 
 .ds-coachmark__content {
@@ -25,6 +25,7 @@
 .ds-coachmark__title {
   margin: 0;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 600;
   color: var(--text-inverse-primary);
 }
@@ -32,7 +33,7 @@
 .ds-coachmark__body {
   margin: 0;
   font-size: 12px;
-  line-height: 1.4;
+  line-height: 16px;
   color: var(--text-inverse-secondary, var(--text-neutral-tertiary));
 }
 
@@ -45,6 +46,7 @@
 
 .ds-coachmark__step {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-inverse-secondary, var(--text-neutral-tertiary));
 }
 
@@ -60,6 +62,7 @@
   border: none;
   padding: 0;
   font-size: 12px;
+  line-height: 16px;
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;

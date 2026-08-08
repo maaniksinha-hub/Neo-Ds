@@ -16,9 +16,12 @@
 }
 
 /* Sizes */
-.ds-badge--standard { padding: var(--spacing-2px) var(--spacing-8px); font-size: 12px; font-weight: 500; }
-.ds-badge--small { padding: var(--spacing-2px) var(--spacing-8px); font-size: 10px; font-weight: 600; }
-.ds-badge--small-caps { padding: var(--spacing-0px) var(--spacing-8px); font-size: 10px; font-weight: 500; text-transform: uppercase; }
+.ds-badge--standard { padding: var(--spacing-2px) var(--spacing-8px); font-size: 12px;
+  line-height: 16px; font-weight: 500; }
+.ds-badge--small { padding: var(--spacing-2px) var(--spacing-8px); font-size: 10px;
+  line-height: 16px; font-weight: 600; }
+.ds-badge--small-caps { padding: var(--spacing-0px) var(--spacing-8px); font-size: 10px;
+  line-height: 16px; font-weight: 500; text-transform: uppercase; }
 
 /* Outline shares a neutral surface + low-emphasis border across all colors */
 .ds-badge--outline { background: var(--fill-neutral-primary); border-color: var(--stroke-default-primary-low); }

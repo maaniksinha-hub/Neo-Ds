@@ -9,6 +9,7 @@
 
 .ds-typography-doc__heading {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 600;
   color: var(--text-neutral-secondary);
   text-transform: uppercase;
@@ -36,29 +37,34 @@
   width: 220px;
   margin: 0;
   font-size: 28px;
+  line-height: 36px;
   color: var(--text-neutral-primary);
 }
 
 .ds-typography-doc__meta {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
 }
 
 .ds-typography-doc__name {
-  font-size: 13px;
+  /* Body/Default High Emphasis */
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
 
 .ds-typography-doc__var {
   font-size: 12px;
+  line-height: 16px;
   font-family: ui-monospace, monospace;
   color: var(--text-neutral-tertiary);
 }
 
 .ds-typography-doc__description {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
   max-width: 480px;
 }
@@ -86,6 +92,7 @@
 
 .ds-typography-doc__row--head {
   font-size: 12px;
+  line-height: 16px;
   font-weight: 600;
   color: var(--text-neutral-tertiary);
   text-transform: uppercase;
@@ -98,12 +105,14 @@
   align-items: center;
   gap: var(--spacing-8px);
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
 
 .ds-typography-doc__badge {
   font-size: 10px;
+  line-height: 16px;
   font-weight: 500;
   padding: var(--spacing-2px) var(--spacing-8px);
   border-radius: var(--corner-radius-rounded);
@@ -120,6 +129,7 @@
 
 .ds-typography-doc__cell {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 
@@ -128,4 +138,5 @@
   flex-direction: column;
   gap: var(--spacing-2px);
   font-size: 12px;
+  line-height: 16px;
 }

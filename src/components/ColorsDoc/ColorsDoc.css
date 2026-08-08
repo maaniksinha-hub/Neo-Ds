@@ -8,6 +8,7 @@
 
 .ds-colors-doc__heading {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 600;
   color: var(--text-neutral-secondary);
   text-transform: uppercase;
@@ -37,18 +38,20 @@
 .ds-colors-doc__meta {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
   padding: var(--spacing-8px);
 }
 
 .ds-colors-doc__name {
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
 
 .ds-colors-doc__var {
   font-size: 12px;
+  line-height: 16px;
   font-family: ui-monospace, monospace;
   color: var(--text-neutral-tertiary);
 }

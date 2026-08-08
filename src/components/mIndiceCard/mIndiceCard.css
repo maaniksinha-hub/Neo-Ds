@@ -15,16 +15,18 @@
 .ds-indicecard__info {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
 }
 
 .ds-indicecard__name {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 
 .ds-indicecard__value {
   font-size: 16px;
+  line-height: 24px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }

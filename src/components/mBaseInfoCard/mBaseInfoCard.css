@@ -17,7 +17,9 @@
 }
 
 .ds-infocard__headertext {
-  font-size: 13px;
+  /* Body/Default High Emphasis */
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
@@ -52,12 +54,15 @@
 
 .ds-infocard__label {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 
 .ds-infocard__value {
   margin: 0;
-  font-size: 13px;
+  /* Caption/Default */
+  font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
   color: var(--text-neutral-primary);
   text-align: right;

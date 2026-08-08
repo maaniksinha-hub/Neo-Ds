@@ -4,6 +4,12 @@ import './ColorsDoc.css';
 /**
  * INTERNAL: Storybook-only documentation page (Foundations/Colors). Renders every semantic color token as a live swatch. Not a Figma component — not for use in product screens.
  */
+/**
+ * USE: color-reference, token-reference, palette
+ * WHEN: INTERNAL documentation page. Read it to find the right semantic color token before styling anything — it renders every fill/text/icon/stroke token in the system with its resolved value.
+ * PLATFORM: Global (documentation only — never compose this into a product screen)
+ * INSTEAD-OF: This page is the source of truth for *which* token to use. Never hardcode a hex value found here; reference the token name instead, so light and dark themes both resolve correctly.
+ */
 export function ColorsDoc() {
   const categories = Array.from(new Set(colorTokens.map((t) => t.category)));
 

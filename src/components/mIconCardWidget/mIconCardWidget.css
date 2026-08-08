@@ -28,6 +28,7 @@
 
 .ds-iconcardwidget__label {
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
   color: var(--text-neutral-primary);
   text-align: center;

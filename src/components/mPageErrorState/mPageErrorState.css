@@ -18,6 +18,7 @@
 .ds-pageerrorstate__title {
   margin: 0;
   font-size: 16px;
+  line-height: 24px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
@@ -25,6 +26,8 @@
 .ds-pageerrorstate__message {
   margin: 0;
   max-width: 280px;
-  font-size: 13px;
+  /* Body/Default */
+  font-size: 14px;
+  line-height: 20px;
   color: var(--text-neutral-secondary);
 }

@@ -42,6 +42,7 @@
 .ds-toast__heading {
   margin: 0;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
@@ -51,6 +52,7 @@
 .ds-toast__subtext {
   margin: 0;
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary-high);
 }
 

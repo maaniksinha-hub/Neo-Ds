@@ -8,7 +8,7 @@
   border-radius: var(--corner-radius-8px);
   font-family: var(--font-body);
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 16px;
   box-sizing: border-box;
 }
 

@@ -27,17 +27,20 @@
 .ds-accordion__title {
   flex: 1 0 0;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
 
 .ds-accordion--big .ds-accordion__title {
   font-size: 16px;
+  line-height: 24px;
   font-weight: 600;
 }
 
 .ds-accordion--big .ds-accordion__content {
   font-size: 14px;
+  line-height: 20px;
 }
 
 .ds-accordion__chevron {
@@ -57,5 +60,6 @@
 .ds-accordion__content {
   padding: 0 var(--spacing-16px) var(--spacing-16px);
   font-size: 14px;
+  line-height: 20px;
   color: var(--text-neutral-secondary);
 }

@@ -7,7 +7,9 @@
 }
 
 .ds-balancerow__label {
-  font-size: 13px;
+  /* Caption/Default Low Emphasis */
+  font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 
@@ -19,6 +21,7 @@
 
 .ds-balancerow__value {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }

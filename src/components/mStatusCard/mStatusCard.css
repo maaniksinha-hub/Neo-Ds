@@ -20,18 +20,20 @@
 .ds-statuscard__headertext {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
   flex: 1 1 auto;
 }
 
 .ds-statuscard__title {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
 
 .ds-statuscard__subtitle {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 
@@ -40,6 +42,7 @@
   padding: var(--spacing-2px) var(--spacing-8px);
   border-radius: var(--corner-radius-rounded);
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
 }
 
@@ -59,16 +62,19 @@
 .ds-statuscard__infoitem {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
 }
 
 .ds-statuscard__infolabel {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-tertiary);
 }
 
 .ds-statuscard__infovalue {
-  font-size: 13px;
+  /* Caption/Default */
+  font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }

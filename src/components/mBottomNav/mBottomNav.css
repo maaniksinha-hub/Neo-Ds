@@ -34,5 +34,6 @@
 
 .ds-bottomnav__label {
   font-size: 10px;
+  line-height: 16px;
   font-weight: 600;
 }

@@ -30,6 +30,7 @@
 .ds-newscard__headline {
   margin: 0;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
   display: -webkit-box;
@@ -40,6 +41,7 @@
 
 .ds-newscard__meta {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-tertiary);
 }
 

@@ -9,7 +9,7 @@
   padding: var(--spacing-16px);
   border-radius: var(--corner-radius-12px);
   background: var(--fill-neutral-inverse-primary);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--elevation-modal);
   font-family: var(--font-body);
   box-sizing: border-box;
   z-index: 50;
@@ -18,7 +18,7 @@
 .ds-bottombanner__content {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
   flex: 1 1 auto;
   min-width: 0;
 }
@@ -26,6 +26,7 @@
 .ds-bottombanner__title {
   margin: 0;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-inverse-primary);
 }
@@ -33,6 +34,7 @@
 .ds-bottombanner__subtext {
   margin: 0;
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-inverse-secondary);
 }
 

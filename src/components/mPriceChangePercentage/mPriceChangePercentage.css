@@ -1,9 +1,11 @@
 .ds-pricechange {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: var(--spacing-2px);
   font-family: var(--font-body);
-  font-size: 13px;
+  /* Caption/Default — the scale's designated "% chg text, price change text" step */
+  font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
 }
 
@@ -25,5 +27,5 @@
 
 .ds-pricechange__value,
 .ds-pricechange__percent {
-  line-height: 1;
+  line-height: 16px;
 }

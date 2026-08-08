@@ -1,7 +1,7 @@
 .ds-sidenav {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-2px);
   width: 240px;
   padding: var(--spacing-12px);
   background: var(--fill-neutral-primary);
@@ -25,6 +25,7 @@
   background: transparent;
   font-family: var(--font-body);
   font-size: 14px;
+  line-height: 20px;
   color: var(--text-neutral-secondary);
   cursor: pointer;
   width: 100%;
@@ -76,8 +77,9 @@
   padding: 0 var(--spacing-4px);
   border-radius: var(--corner-radius-rounded);
   background: var(--fill-negative-primary);
-  color: #fff;
+  color: var(--text-inverse-primary);
   font-size: 10px;
+  line-height: 16px;
   font-weight: 600;
   display: flex;
   align-items: center;

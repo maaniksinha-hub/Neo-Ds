@@ -31,7 +31,7 @@
   justify-content: center;
   gap: var(--spacing-8px);
   padding: var(--spacing-12px);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(180deg, var(--fill-neutral-transparent-primary) 50%, var(--scrim-scrim-fill) 100%);
 }
 
 .ds-reelcard__title {
@@ -39,8 +39,9 @@
   margin-top: auto;
   font-family: var(--font-body);
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
-  color: #fff;
+  color: var(--text-inverse-primary);
   text-align: left;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -55,12 +56,12 @@
   top: var(--spacing-8px);
   height: 2px;
   border-radius: var(--corner-radius-rounded);
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--fill-neutral-transparent-secondary);
 }
 
 .ds-reelcard__progressfill {
   display: block;
   height: 100%;
   border-radius: var(--corner-radius-rounded);
-  background: #fff;
+  background: var(--icon-inverse-primary);
 }

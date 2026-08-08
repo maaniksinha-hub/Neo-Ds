@@ -53,6 +53,7 @@
 
 .ds-list-item__title {
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
   white-space: nowrap;
@@ -62,6 +63,7 @@
 
 .ds-list-item__subtitle {
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
   white-space: nowrap;
   overflow: hidden;

@@ -34,6 +34,7 @@
 .ds-banner__title {
   margin: 0;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: var(--text-neutral-primary);
 }
@@ -45,6 +46,7 @@
 .ds-banner__subtext {
   margin: 0;
   font-size: 12px;
+  line-height: 16px;
   color: var(--text-neutral-secondary);
 }
 

@@ -17,6 +17,7 @@
 
 .ds-breadcrumb__link {
   font-size: 14px;
+  line-height: 20px;
   color: var(--text-neutral-secondary);
   text-decoration: none;
 }
@@ -27,11 +28,13 @@
 }
 
 .ds-breadcrumb__overflow {
-  padding: 0 2px;
+  padding: 0 var(--spacing-2px);
   border: none;
   background: transparent;
+  /* Title/Small — 600 is the heaviest weight in the scale */
   font-size: 14px;
-  font-weight: 700;
+  line-height: 20px;
+  font-weight: 600;
   color: var(--text-neutral-secondary);
   cursor: pointer;
 }
