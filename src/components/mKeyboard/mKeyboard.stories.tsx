@@ -1,0 +1,25 @@
+import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { MKeyboard } from './mKeyboard';
+
+const meta = {
+  title: 'Components/mKeyboard',
+  component: MKeyboard,
+  tags: ['autodocs'],
+} satisfies Meta<typeof MKeyboard>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Numeric: Story = {
+  args: { onKeyPress: () => {}, onBackspace: () => {} },
+  render: () => {
+    const [value, setValue] = useState('');
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <p style={{ fontFamily: 'var(--font-body)', fontSize: 24 }}>{value || '0'}</p>
+        <MKeyboard onKeyPress={(k) => setValue((v) => v + k)} onBackspace={() => setValue((v) => v.slice(0, -1))} />
+      </div>
+    );
+  },
+};

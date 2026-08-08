@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { Button } from './components/Button/Button';
-import { Badge } from './components/Badge/Badge';
-import { Tabs } from './components/Tabs/Tabs';
-import { TextField } from './components/TextField/TextField';
-import { Separator } from './components/Separator/Separator';
+import { GSolidButton } from './components/gSolidButton/gSolidButton';
+import { GBadge } from './components/gBadge/gBadge';
+import { GLineTabGroup } from './components/gLineTabGroup/gLineTabGroup';
+import { GTextField } from './components/gTextField/gTextField';
+import { GSeparator } from './components/gSeparator/gSeparator';
 import { ColorsDoc } from './components/ColorsDoc/ColorsDoc';
-import { StockCard } from './components/StockCard/StockCard';
-import { List } from './components/List/List';
-import { ListItem } from './components/List/ListItem';
+import { GScripCards } from './components/gScripCards/gScripCards';
+import { MList } from './components/mList/mList';
+import { MListItem } from './components/mList/mListItem';
 import { LineChart } from './components/Charts/LineChart';
 import { BarChart } from './components/Charts/BarChart';
 import { Legend } from './components/Charts/Legend';
@@ -29,47 +29,47 @@ function App() {
       <section>
         <h2>Buttons</h2>
         <div style={{ display: 'flex', gap: 12 }}>
-          <Button variant="solid" type="primary">
+          <GSolidButton variant="solid" type="primary">
             Primary
-          </Button>
-          <Button variant="outline" type="primary">
+          </GSolidButton>
+          <GSolidButton variant="outline" type="primary">
             Outline
-          </Button>
-          <Button variant="text" type="primary">
+          </GSolidButton>
+          <GSolidButton variant="text" type="primary">
             Text
-          </Button>
+          </GSolidButton>
         </div>
       </section>
 
-      <Separator />
+      <GSeparator />
 
       <section>
         <h2>Badges</h2>
         <div style={{ display: 'flex', gap: 8 }}>
-          <Badge color="brand">New</Badge>
-          <Badge color="positive">IPO</Badge>
-          <Badge color="negative" variant="outline">
+          <GBadge color="brand">New</GBadge>
+          <GBadge color="positive">IPO</GBadge>
+          <GBadge color="negative" variant="outline">
             Alert
-          </Badge>
+          </GBadge>
         </div>
       </section>
 
-      <Separator emphasis="low-emp" />
+      <GSeparator emphasis="low-emp" />
 
       <section>
         <h2>Tabs</h2>
-        <Tabs items={tabItems} value={tab} onChange={setTab} />
+        <GLineTabGroup items={tabItems} value={tab} onChange={setTab} />
       </section>
 
       <section>
         <h2>Text field</h2>
-        <TextField label="Search" supportingText="Try a stock symbol" />
+        <GTextField label="Search" supportingText="Try a stock symbol" />
       </section>
 
       <section>
         <h2>Stock cards</h2>
         <div style={{ display: 'flex', gap: 12 }}>
-          <StockCard
+          <GScripCards
             logo={<div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--fill-accent1-tertiary)' }} />}
             name="HDFC Bank"
             price="1,487"
@@ -79,7 +79,7 @@ function App() {
             direction="down"
             highlight
           />
-          <StockCard
+          <GScripCards
             logo={<div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--fill-accent1-tertiary)' }} />}
             name="Reliance"
             price="2,940"
@@ -90,7 +90,7 @@ function App() {
             variant="with-badge"
             badgeLabel="F&O"
           />
-          <StockCard
+          <GScripCards
             logo={<div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--fill-accent1-tertiary)' }} />}
             name="TCS"
             price="3,820"
@@ -106,10 +106,10 @@ function App() {
 
       <section>
         <h2>List</h2>
-        <List>
-          <ListItem title="Notifications" trailing="›" onClick={() => {}} />
-          <ListItem title="Two-factor authentication" subtitle="Add an extra layer of security" trailing="›" onClick={() => {}} divider={false} />
-        </List>
+        <MList>
+          <MListItem title="Notifications" trailing="›" onClick={() => {}} />
+          <MListItem title="Two-factor authentication" subtitle="Add an extra layer of security" trailing="›" onClick={() => {}} divider={false} />
+        </MList>
       </section>
 
       <section>
