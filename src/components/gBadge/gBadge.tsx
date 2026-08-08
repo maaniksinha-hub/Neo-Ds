@@ -15,6 +15,12 @@ export interface GBadgeProps {
   className?: string;
 }
 
+/**
+ * USE: badge, label, tag, status-badge, pill-label
+ * WHEN: Categorizing, labeling, or flagging content — &quot;New&quot;, &quot;IPO&quot;, &quot;F&amp;O&quot;, status indicators on cards and lists.
+ * PLATFORM: Global
+ * VARIANTS: Color (accent/positive/negative/warning/neutral), Size (S/M), with/without icon and dot.
+ */
 export function GBadge({
   color = 'neutral',
   size = 'standard',

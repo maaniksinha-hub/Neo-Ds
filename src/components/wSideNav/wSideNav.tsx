@@ -17,6 +17,13 @@ export interface WSideNavProps {
   className?: string;
 }
 
+/**
+ * USE: side-navigation, left-nav, web-nav-menu
+ * WHEN: Primary navigation on web. Always visible on the left side of the layout.
+ * PLATFORM: Web
+ * VARIANTS: Expanded/collapsed states, active section highlighting.
+ * INSTEAD-OF: Use mBottomNav for mobile navigation.
+ */
 export function WSideNav({ items, activeKey, onChange, collapsed = false, className }: WSideNavProps) {
   const classes = ['ds-sidenav', collapsed && 'ds-sidenav--collapsed', className].filter(Boolean).join(' ');
 

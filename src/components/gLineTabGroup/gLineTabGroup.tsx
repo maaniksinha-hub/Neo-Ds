@@ -13,6 +13,13 @@ export interface GLineTabGroupProps {
   className?: string;
 }
 
+/**
+ * USE: line-tab-bar, underline-tabs, tab-navigation
+ * WHEN: Switching between content sections with underline indicator — typically used within page content, not top-level navigation.
+ * PLATFORM: Global
+ * VARIANTS: Tab count (2/3/4+), with/without scrolling.
+ * INSTEAD-OF: Use gPillTabGroup for contained/pill-style tabs.
+ */
 export function GLineTabGroup({ items, value, onChange, className }: GLineTabGroupProps) {
   return (
     <div className={['ds-tabs', className].filter(Boolean).join(' ')} role="tablist">

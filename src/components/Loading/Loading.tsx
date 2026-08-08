@@ -7,6 +7,11 @@ export interface SpinnerProps {
   className?: string;
 }
 
+/**
+ * USE: spinner, progress-bar, loading-indicator
+ * WHEN: Indicating an in-progress async operation. Spinner for indeterminate waits, ProgressBar for operations with known completion percentage.
+ * PLATFORM: Global
+ */
 export function Spinner({ size = 'medium', className }: SpinnerProps) {
   return (
     <svg

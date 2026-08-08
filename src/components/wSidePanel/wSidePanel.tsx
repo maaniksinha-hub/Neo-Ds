@@ -18,6 +18,13 @@ function CloseIcon() {
   );
 }
 
+/**
+ * USE: side-panel, detail-panel, slide-over, inspector-panel
+ * WHEN: Right-side panel for detail views, settings, and contextual information on web — stock details, order entry, filters.
+ * PLATFORM: Web
+ * VARIANTS: Width, with/without header.
+ * INSTEAD-OF: Use mBottomsheet for mobile overlay patterns, wModal for centered dialogs.
+ */
 export function WSidePanel({ title, children, footer, onClose, className }: WSidePanelProps) {
   return (
     <>

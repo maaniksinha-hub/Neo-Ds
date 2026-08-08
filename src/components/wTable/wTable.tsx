@@ -30,6 +30,33 @@ function SortIcon({ direction }: { direction: SortDirection }) {
   );
 }
 
+/**
+ * Figma: mTableCell
+ * USE: table-cell, data-cell, grid-cell
+ * WHEN: Individual cell within a mobile data table — contains text values or header labels.
+ * PLATFORM: Mobile
+ * VARIANTS: Type (header/text), alignment (left/right).
+ * INSTEAD-OF: Use wTableCell for web tables.
+ *
+ * Figma: wTableCell
+ * USE: web-table-cell, web-data-cell, web-grid-cell
+ * WHEN: Individual cell within a web data table — text, numbers, status indicators.
+ * PLATFORM: Web
+ * VARIANTS: Type (header/text/status), alignment (left/right/center), with/without sort indicator.
+ * INSTEAD-OF: Use mTableCell for mobile tables.
+ *
+ * Figma: wTableHeader
+ * USE: web-table-header, column-header, table-heading
+ * WHEN: Header row cell for web data tables — column labels with optional sort controls.
+ * PLATFORM: Web
+ * VARIANTS: With/without sort indicator.
+ *
+ * Figma: wTableSort
+ * USE: table-sort-icon, column-sort, sort-indicator
+ * WHEN: Sort direction indicator within table headers — ascending/descending/unsorted.
+ * PLATFORM: Web
+ * VARIANTS: State (ascending/descending/none).
+ */
 export function WTable<T>({ columns, rows, sortKey, sortDirection = 'none', onSort, rowKey, className }: WTableProps<T>) {
   return (
     <table className={['ds-table', className].filter(Boolean).join(' ')}>

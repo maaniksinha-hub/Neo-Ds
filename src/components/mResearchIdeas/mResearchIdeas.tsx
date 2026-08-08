@@ -21,6 +21,12 @@ const CONFIDENCE_LABEL: Record<ResearchIdeaConfidence, string> = {
   high: 'High confidence',
 };
 
+/**
+ * USE: research-card, idea-card, analyst-recommendation, trade-idea
+ * WHEN: Displaying research ideas, analyst calls, and trade recommendations with target price and timeframe.
+ * PLATFORM: Mobile
+ * VARIANTS: With/without analyst info, target price, confidence level.
+ */
 export function MResearchIdeas({
   scripName,
   call,

@@ -18,6 +18,13 @@ function ChevronDown() {
   );
 }
 
+/**
+ * USE: dropdown, select, dropdown-field, combo-box
+ * WHEN: Selection from a predefined list of options — form selects, filter dropdowns, sort-by controls.
+ * PLATFORM: Web
+ * VARIANTS: State (default/open/selected/disabled), with/without search.
+ * INSTEAD-OF: Use gRadioButton for inline visible single-select.
+ */
 export function WDropdown({ options, disabled, className, ...rest }: WDropdownProps) {
   const classes = ['ds-dropdown', disabled && 'ds-dropdown--disabled', className].filter(Boolean).join(' ');
 

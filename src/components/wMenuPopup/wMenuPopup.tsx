@@ -29,6 +29,12 @@ export function WMenuPopupItem({ label, onClick, leadingIcon, destructive, disab
   );
 }
 
+/**
+ * USE: dropdown-menu, context-menu, popup-menu, action-menu
+ * WHEN: Floating menu triggered by a button click or right-click — contains wMenuItems grouped by wMenuGroups.
+ * PLATFORM: Web
+ * VARIANTS: Size (auto/small/medium/large), position.
+ */
 export function WMenuPopup({ groups, className }: WMenuPopupProps) {
   return (
     <div className={['ds-menu', className].filter(Boolean).join(' ')} role="menu">

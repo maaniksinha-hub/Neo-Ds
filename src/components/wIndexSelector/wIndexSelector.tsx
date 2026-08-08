@@ -28,6 +28,12 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
+/**
+ * USE: web-index-selector, index-dropdown, market-index-picker
+ * WHEN: Dropdown selector for choosing which market index to display — NIFTY 50, SENSEX, NIFTY Bank etc.
+ * PLATFORM: Web
+ * VARIANTS: State (default/open/selected), item count.
+ */
 export function WIndexSelector({ options, value, onChange, className }: WIndexSelectorProps) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);

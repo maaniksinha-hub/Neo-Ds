@@ -16,6 +16,12 @@ function SearchIcon() {
   );
 }
 
+/**
+ * USE: search-input, search-bar, search-field, global-search
+ * WHEN: Search entry point — top of lists, watchlists, and discovery screens.
+ * PLATFORM: Global
+ * VARIANTS: State (default/focused/filled), with/without filter icon, voice search, cancel button.
+ */
 export function GSearchBar({ size = '44px', disabled, className, ...rest }: GSearchBarProps) {
   const classes = ['ds-searchbar', `ds-searchbar--${size}`, disabled && 'ds-searchbar--disabled', className]
     .filter(Boolean)

@@ -18,6 +18,12 @@ function StatusDot({ status }: { status: GStatusTimelineStatus }) {
   return <span className={`ds-status-indicator__dot ds-status-indicator__dot--${status}`} />;
 }
 
+/**
+ * USE: status-timeline, progress-steps, order-progress, step-tracker
+ * WHEN: Multi-step progress visualization — order lifecycle (placed → confirmed → executed), KYC steps.
+ * PLATFORM: Global
+ * VARIANTS: Step count, completed/active/pending step states.
+ */
 export function GStatusTimeline({ steps, className }: GStatusTimelineProps) {
   return (
     <ol className={['ds-status-indicator', className].filter(Boolean).join(' ')}>
@@ -37,6 +43,12 @@ export function GStatusTimeline({ steps, className }: GStatusTimelineProps) {
   );
 }
 
+/**
+ * USE: status-icon, step-indicator, progress-dot
+ * WHEN: Individual status step icon within gStatusTimeline — checkmark, dot, or error icon per step.
+ * PLATFORM: Global
+ * VARIANTS: State (completed/active/pending/error).
+ */
 export function GBaseStatusIndicatorIcon({ status, children }: { status: GStatusTimelineStatus; children?: ReactNode }): ReactNode {
   return <span className={`ds-status-icon ds-status-icon--${status}`}>{children ?? <StatusDot status={status} />}</span>;
 }

@@ -38,6 +38,13 @@ function DepthColumn({ title, levels, side }: { title: string; levels: MMarketDe
   );
 }
 
+/**
+ * USE: market-depth, order-book, bid-ask-table, level2-data
+ * WHEN: Market depth visualization showing bid and ask price levels with quantities — stock detail screens.
+ * PLATFORM: Mobile
+ * VARIANTS: Display style (table/chart).
+ * INSTEAD-OF: Use wMarketDepth for web.
+ */
 export function MMarketDepth({ bids, asks, className }: MMarketDepthProps) {
   return (
     <div className={['ds-marketdepth', className].filter(Boolean).join(' ')}>

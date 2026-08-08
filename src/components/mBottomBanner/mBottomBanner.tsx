@@ -8,6 +8,13 @@ export interface MBottomBannerProps {
   className?: string;
 }
 
+/**
+ * USE: bottom-banner, sticky-banner, bottom-promo
+ * WHEN: Persistent promotional or action banner anchored to the bottom of mobile screens.
+ * PLATFORM: Mobile
+ * VARIANTS: With/without CTA button.
+ * INSTEAD-OF: Use mTopBanner for top-positioned banners.
+ */
 export function MBottomBanner({ title, subtext, cta, className }: MBottomBannerProps) {
   return (
     <div className={['ds-bottombanner', className].filter(Boolean).join(' ')}>

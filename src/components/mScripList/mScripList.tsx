@@ -16,6 +16,13 @@ export interface MScripListProps {
   className?: string;
 }
 
+/**
+ * USE: stock-list-item, watchlist-row, scrip-row, ticker-list
+ * WHEN: Displaying stocks in a vertical list with name, price, and change — watchlists, search results, portfolio holdings.
+ * PLATFORM: Mobile
+ * VARIANTS: Content density, with/without chart, with/without quantity.
+ * INSTEAD-OF: Use wScripList for web, mList for non-stock list items.
+ */
 export function MScripList({
   logo,
   name,

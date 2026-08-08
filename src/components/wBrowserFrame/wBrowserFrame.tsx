@@ -7,6 +7,11 @@ export interface WBrowserFrameProps {
   className?: string;
 }
 
+/**
+ * USE: browser-chrome, web-mockup-frame, browser-window
+ * WHEN: Wrapping web designs in a browser chrome for presentation and context. Utility component — not for product UI.
+ * PLATFORM: Web
+ */
 export function WBrowserFrame({ url = 'app.neo.com', children, className }: WBrowserFrameProps) {
   return (
     <div className={['ds-browserframe', className].filter(Boolean).join(' ')}>

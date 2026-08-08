@@ -10,6 +10,13 @@ export interface ChartTooltipProps {
   className?: string;
 }
 
+/**
+ * USE: chart-tooltip, data-tooltip, hover-tooltip, price-tooltip
+ * WHEN: Showing data values on hover/touch over chart elements — price at point, volume, OHLC data.
+ * PLATFORM: Global
+ * VARIANTS: Content type (single value/multi-line/OHLC), with/without crosshair.
+ * INSTEAD-OF: Use gTooltip for general UI tooltips not tied to charts.
+ */
 export function ChartTooltip({ rows, className }: ChartTooltipProps) {
   return (
     <div className={['ds-charttooltip', className].filter(Boolean).join(' ')} role="tooltip">

@@ -13,6 +13,12 @@ export interface GAvatarProfileProps {
   className?: string;
 }
 
+/**
+ * USE: user-avatar, profile-picture, initials-circle, account-avatar
+ * WHEN: Displaying user identity — profile photo or initials fallback. Used in navigation, account sections, and social features.
+ * PLATFORM: Global
+ * VARIANTS: Type (photo/initials), Size (S/M/L/XL).
+ */
 export function GAvatarProfile({ initials = 'NR', imageSrc, alt = '', size = '40px', shape = 'circle', className }: GAvatarProfileProps) {
   const classes = ['ds-avatar', `ds-avatar--${size}`, `ds-avatar--${shape}`, className].filter(Boolean).join(' ');
 

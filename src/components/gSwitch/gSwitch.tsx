@@ -5,6 +5,13 @@ export interface GSwitchProps extends Omit<InputHTMLAttributes<HTMLInputElement>
   label?: string;
 }
 
+/**
+ * USE: toggle-switch, on-off-toggle, boolean-toggle
+ * WHEN: Toggling a setting or preference on/off with immediate effect.
+ * PLATFORM: Global
+ * VARIANTS: State (off/on), disabled variants.
+ * INSTEAD-OF: Use gCheckbox for form-based boolean fields that submit with a button.
+ */
 export function GSwitch({ label, disabled, id, className, ...rest }: GSwitchProps) {
   const generatedId = useId();
   const inputId = id ?? generatedId;

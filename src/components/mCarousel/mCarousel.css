@@ -22,22 +22,3 @@
   flex: 0 0 100%;
   scroll-snap-align: start;
 }
-
-.ds-carousel__dots {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-4px);
-}
-
-.ds-carousel__dot {
-  width: 12px;
-  height: 4px;
-  border-radius: var(--corner-radius-rounded);
-  background: var(--stroke-default-primary);
-  transition: width 0.15s ease, background 0.15s ease;
-}
-
-.ds-carousel__dot--selected {
-  width: 32px;
-  background: var(--fill-accent1-primary);
-}

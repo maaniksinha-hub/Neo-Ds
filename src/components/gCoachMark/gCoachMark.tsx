@@ -16,6 +16,13 @@ export interface GCoachMarkProps {
   className?: string;
 }
 
+/**
+ * USE: coach-mark, onboarding-tooltip, feature-callout, spotlight
+ * WHEN: Highlighting a UI element during onboarding or feature introduction — &quot;Tap here to add stocks&quot;.
+ * PLATFORM: Global
+ * VARIANTS: Arrow position (top/bottom/left/right), with/without step indicator, with/without dismiss.
+ * INSTEAD-OF: Use gTooltip for contextual info tooltips, not onboarding.
+ */
 export function GCoachMark({ title, body, image, arrow = 'bottom', align = 'center', step, onNext, onSkip, className }: GCoachMarkProps) {
   const classes = ['ds-coachmark', `ds-coachmark--arrow-${arrow}`, `ds-coachmark--align-${align}`, className]
     .filter(Boolean)

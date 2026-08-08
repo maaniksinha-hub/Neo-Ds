@@ -1,6 +1,9 @@
 import { colorTokens } from './tokens.generated';
 import './ColorsDoc.css';
 
+/**
+ * INTERNAL: Storybook-only documentation page (Foundations/Colors). Renders every semantic color token as a live swatch. Not a Figma component — not for use in product screens.
+ */
 export function ColorsDoc() {
   const categories = Array.from(new Set(colorTokens.map((t) => t.category)));
 

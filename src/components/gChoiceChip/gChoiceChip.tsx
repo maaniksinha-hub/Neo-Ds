@@ -16,6 +16,13 @@ export interface GChoiceChipProps {
   className?: string;
 }
 
+/**
+ * USE: choice-chip, filter-chip, selection-chip, tag-selector
+ * WHEN: Selecting one or more options from a horizontal set — filters, categories, time ranges.
+ * PLATFORM: Global
+ * VARIANTS: State (default/selected/disabled), Size, with/without icon.
+ * INSTEAD-OF: Use gRadioButton for vertical single-select lists, gPillTabGroup for navigation-style tabs.
+ */
 export function GChoiceChip({
   variant = 'choice',
   type = 'default',

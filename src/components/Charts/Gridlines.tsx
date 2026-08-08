@@ -11,6 +11,12 @@ export interface GridlinesProps {
 
 const LINE_COUNT: Record<GridlinesDensity, number> = { sparse: 3, medium: 5, dense: 8 };
 
+/**
+ * USE: chart-gridlines, chart-grid, axis-gridlines
+ * WHEN: Background gridlines for charts — horizontal lines that help read values off the Y-axis.
+ * PLATFORM: Global
+ * VARIANTS: Density (sparse/medium/dense).
+ */
 export function Gridlines({ density = 'medium', width = 343, height = 160, className }: GridlinesProps) {
   const count = LINE_COUNT[density];
   const lines = Array.from({ length: count }, (_, i) => (height / (count - 1)) * i);

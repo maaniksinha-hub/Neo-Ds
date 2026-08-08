@@ -17,7 +17,7 @@
   justify-content: space-between;
   padding-bottom: var(--spacing-8px);
   color: var(--text-neutral-tertiary);
-  font-size: 11px;
+  font-size: 12px;
   border-bottom: 1px solid var(--stroke-default-primary-low);
 }
 

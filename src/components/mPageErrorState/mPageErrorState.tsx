@@ -20,6 +20,11 @@ function DefaultIllustration() {
   );
 }
 
+/**
+ * USE: error-state, empty-state, no-data, failed-load
+ * WHEN: Full-page error or empty state — network failures, no results, empty lists. Shows illustration + message + retry CTA.
+ * PLATFORM: Mobile
+ */
 export function MPageErrorState({ illustration, title, message, retryLabel = 'Retry', onRetry, className }: MPageErrorStateProps) {
   return (
     <div className={['ds-pageerrorstate', className].filter(Boolean).join(' ')}>

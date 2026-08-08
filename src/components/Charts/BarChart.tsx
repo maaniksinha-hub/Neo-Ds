@@ -13,6 +13,11 @@ export interface BarChartProps {
   className?: string;
 }
 
+/**
+ * USE: bar-chart-bar, vertical-bar, column-bar
+ * WHEN: Single vertical bar in a bar chart. Building block for grouped and stacked bar charts.
+ * PLATFORM: Global
+ */
 export function BarChart({ bars, height = 200, className }: BarChartProps) {
   const max = Math.max(...bars.map((b) => Math.abs(b.value)), 1);
 

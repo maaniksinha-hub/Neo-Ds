@@ -14,6 +14,10 @@ export interface MListItemProps {
   className?: string;
 }
 
+/**
+ * Individual row within mList / wList / mListUniversal / wListUniversal.
+ * See mList for full usage guidance — this is the row primitive, not a standalone component.
+ */
 export function MListItem({ leading, title, subtitle, trailing, divider = true, density = 'comfortable', onClick, className }: MListItemProps) {
   const classes = [
     'ds-list-item',

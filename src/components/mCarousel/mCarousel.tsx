@@ -1,4 +1,5 @@
 import { useState, type ReactNode } from 'react';
+import { GCarouselDots } from '../gCarouselDots/gCarouselDots';
 import './mCarousel.css';
 
 export interface MCarouselProps {
@@ -6,6 +7,13 @@ export interface MCarouselProps {
   className?: string;
 }
 
+/**
+ * USE: mobile-carousel, swipeable-cards, card-slider
+ * WHEN: Horizontally swipeable card carousel — promotions, onboarding slides, feature highlights.
+ * PLATFORM: Mobile
+ * VARIANTS: Card count indicator, with/without auto-play.
+ * INSTEAD-OF: Use wCarousel for web.
+ */
 export function MCarousel({ children, className }: MCarouselProps) {
   const [active, setActive] = useState(0);
 
@@ -22,11 +30,7 @@ export function MCarousel({ children, className }: MCarouselProps) {
           </div>
         ))}
       </div>
-      <div className="ds-carousel__dots">
-        {children.map((_, index) => (
-          <span key={index} className={['ds-carousel__dot', index === active && 'ds-carousel__dot--selected'].filter(Boolean).join(' ')} />
-        ))}
-      </div>
+      <GCarouselDots count={children.length} active={active} />
     </div>
   );
 }

@@ -45,6 +45,13 @@ const icons: Record<MToastState, ReactNode> = {
   ),
 };
 
+/**
+ * USE: toast, snackbar, notification-toast, feedback-message
+ * WHEN: Temporary feedback messages — success, error, info, warning notifications that auto-dismiss.
+ * PLATFORM: Mobile
+ * VARIANTS: Type (success/error/warning/info/neutral), with/without action button and icon.
+ * INSTEAD-OF: Use wToast for web, mNote for persistent inline messages.
+ */
 export function MToast({ state = 'notification', heading, subtext, action, onDismiss, className }: MToastProps) {
   const classes = ['ds-toast', `ds-toast--${state}`, className].filter(Boolean).join(' ');
 

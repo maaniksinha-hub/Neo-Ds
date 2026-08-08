@@ -85,7 +85,7 @@
 }
 
 .ds-typography-doc__row--head {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--text-neutral-tertiary);
   text-transform: uppercase;
@@ -105,7 +105,7 @@
 .ds-typography-doc__badge {
   font-size: 10px;
   font-weight: 500;
-  padding: 1px 6px;
+  padding: var(--spacing-2px) var(--spacing-8px);
   border-radius: var(--corner-radius-rounded);
   background: var(--fill-accent1-tertiary);
   color: var(--text-accent1-primary);
@@ -126,6 +126,6 @@
 .ds-typography-doc__usecase {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  font-size: 11px;
+  gap: var(--spacing-2px);
+  font-size: 12px;
 }

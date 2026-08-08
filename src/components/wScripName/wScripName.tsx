@@ -11,6 +11,12 @@ export interface WScripNameProps {
   className?: string;
 }
 
+/**
+ * USE: web-scrip-name, clickable-stock-name, stock-link
+ * WHEN: Clickable stock/scrip name that navigates to stock detail page. Supports hover and active states for web interaction.
+ * PLATFORM: Web
+ * VARIANTS: Size, with/without exchange tag, with/without sector label.
+ */
 export function WScripName({ name, exchange, sector, size = 'medium', onClick, className }: WScripNameProps) {
   const classes = ['ds-scripname', `ds-scripname--${size}`, className].filter(Boolean).join(' ');
 

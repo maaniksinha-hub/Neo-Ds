@@ -21,6 +21,12 @@ function Arrow({ direction }: { direction: MPriceChangePercentageDirection }) {
   );
 }
 
+/**
+ * USE: price-change-percent, change-display, gain-loss-value
+ * WHEN: Displaying price change as both absolute value and percentage with positive/negative color coding.
+ * PLATFORM: Mobile
+ * VARIANTS: Display format (percent only, absolute only, both), positive/negative/neutral states.
+ */
 export function MPriceChangePercentage({ value, percent, direction, format = 'both', showArrow = true, className }: MPriceChangePercentageProps) {
   const classes = ['ds-pricechange', `ds-pricechange--${direction}`, className].filter(Boolean).join(' ');
 

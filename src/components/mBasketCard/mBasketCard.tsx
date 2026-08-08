@@ -21,6 +21,11 @@ function ArrowIcon() {
   );
 }
 
+/**
+ * USE: basket-card, stock-basket, portfolio-basket, curated-list
+ * WHEN: Displaying curated stock baskets or thematic portfolios — &quot;Tech Giants&quot;, &quot;Dividend Picks&quot;.
+ * PLATFORM: Mobile
+ */
 export function MBasketCard({ variant = 'basket', title, subtitle, media, tags, onClick, className }: MBasketCardProps) {
   const classes = ['ds-collectioncard', `ds-collectioncard--${variant}`, className].filter(Boolean).join(' ');
 

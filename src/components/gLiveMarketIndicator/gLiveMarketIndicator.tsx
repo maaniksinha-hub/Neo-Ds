@@ -14,6 +14,12 @@ const DEFAULT_LABEL: Record<MarketState, string> = {
   'pre-market': 'Pre-market',
 };
 
+/**
+ * USE: live-market-indicator, market-status-bar, trading-status
+ * WHEN: Showing current market status with label (e.g. &quot;Market Open&quot;, &quot;Market Closed&quot;) — typically in top nav or index strip.
+ * PLATFORM: Global
+ * VARIANTS: State (live/closed/pre-market).
+ */
 export function GLiveMarketIndicator({ state, label, className }: GLiveMarketIndicatorProps) {
   const classes = ['ds-livemarket', `ds-livemarket--${state}`, className].filter(Boolean).join(' ');
 

@@ -75,16 +75,16 @@
 
 .ds-coachmark__arrow {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: var(--spacing-12px);
+  height: var(--spacing-12px);
   background: var(--fill-neutral-inverse-primary);
   transform: rotate(45deg);
 }
 
-.ds-coachmark--arrow-bottom .ds-coachmark__arrow { bottom: -6px; left: 50%; margin-left: -6px; }
-.ds-coachmark--arrow-top .ds-coachmark__arrow { top: -6px; left: 50%; margin-left: -6px; }
-.ds-coachmark--arrow-left .ds-coachmark__arrow { left: -6px; top: 50%; margin-top: -6px; }
-.ds-coachmark--arrow-right .ds-coachmark__arrow { right: -6px; top: 50%; margin-top: -6px; }
+.ds-coachmark--arrow-bottom .ds-coachmark__arrow { bottom: calc(var(--spacing-12px) / -2); left: 50%; margin-left: calc(var(--spacing-12px) / -2); }
+.ds-coachmark--arrow-top .ds-coachmark__arrow { top: calc(var(--spacing-12px) / -2); left: 50%; margin-left: calc(var(--spacing-12px) / -2); }
+.ds-coachmark--arrow-left .ds-coachmark__arrow { left: calc(var(--spacing-12px) / -2); top: 50%; margin-top: calc(var(--spacing-12px) / -2); }
+.ds-coachmark--arrow-right .ds-coachmark__arrow { right: calc(var(--spacing-12px) / -2); top: 50%; margin-top: calc(var(--spacing-12px) / -2); }
 
 .ds-coachmark--align-start.ds-coachmark--arrow-top .ds-coachmark__arrow,
 .ds-coachmark--align-start.ds-coachmark--arrow-bottom .ds-coachmark__arrow { left: 24px; margin-left: 0; }

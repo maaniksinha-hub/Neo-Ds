@@ -18,6 +18,12 @@ function PlayIcon() {
   );
 }
 
+/**
+ * USE: reels-card, video-card, short-video-card
+ * WHEN: Vertical video/reels content cards for financial education or market commentary.
+ * PLATFORM: Mobile
+ * VARIANTS: With/without progress indicator.
+ */
 export function MReels({ thumbnail, title, progress, onClick, className }: MReelsProps) {
   const classes = ['ds-reelcard', className].filter(Boolean).join(' ');
 

@@ -18,6 +18,13 @@ function CloseIcon() {
   );
 }
 
+/**
+ * USE: web-modal, dialog, popup, confirmation-dialog
+ * WHEN: Centered overlay dialog on web — confirmations, alerts, forms, and critical actions requiring user decision.
+ * PLATFORM: Web
+ * VARIANTS: Size, with/without footer actions.
+ * INSTEAD-OF: Use mBottomsheet for mobile overlays, wSidePanel for non-blocking side panels.
+ */
 export function WModal({ title, children, footer, onClose, className }: WModalProps) {
   return (
     <>

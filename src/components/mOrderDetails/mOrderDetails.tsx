@@ -15,6 +15,12 @@ export interface MOrderDetailsProps {
   className?: string;
 }
 
+/**
+ * USE: order-detail-view, trade-confirmation, order-summary
+ * WHEN: Full order details screen — showing order status, price, quantity, timestamps, and supporting information.
+ * PLATFORM: Mobile
+ * INSTEAD-OF: Use wOrderDetails for web.
+ */
 export function MOrderDetails({ scripName, orderType, status, statusLabel, rows, className }: MOrderDetailsProps) {
   return (
     <div className={['ds-orderdetails', className].filter(Boolean).join(' ')}>

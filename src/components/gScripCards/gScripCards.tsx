@@ -39,6 +39,12 @@ function GainLossArrow({ direction }: { direction: GScripCardsDirection }) {
   );
 }
 
+/**
+ * USE: stock-card, scrip-card, instrument-card, ticker-card
+ * WHEN: Displaying a stock/instrument as a card with name, price, change, and mini chart — used in horizontal scrollable lists, watchlist grids.
+ * PLATFORM: Global
+ * VARIANTS: Size, with/without chart, with/without description.
+ */
 export function GScripCards({
   logo,
   name,

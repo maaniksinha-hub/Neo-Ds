@@ -23,6 +23,13 @@ function CloseIcon() {
   );
 }
 
+/**
+ * USE: bottom-sheet, modal-sheet, action-sheet, drawer
+ * WHEN: Overlay panel sliding up from the bottom — confirmations, options, detail views, forms.
+ * PLATFORM: Mobile
+ * VARIANTS: Height (half/full screen), with/without handle.
+ * INSTEAD-OF: Use wModal for web overlay patterns, wSidePanel for web side drawers.
+ */
 export function MBottomsheet({
   title,
   subtitle,

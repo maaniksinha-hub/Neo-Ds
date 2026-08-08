@@ -21,6 +21,13 @@ function DismissIcon() {
   );
 }
 
+/**
+ * USE: top-banner, promo-banner, announcement-banner, alert-banner
+ * WHEN: Page-level announcements, promotions, or alerts at the top of mobile screens — dismissible.
+ * PLATFORM: Mobile
+ * VARIANTS: Type (info/promo/warning), with/without CTA and dismiss.
+ * INSTEAD-OF: Use mToast for temporary feedback, mBottomBanner for bottom-positioned banners.
+ */
 export function MTopBanner({ type = 'default', title, subtext, media, actions, onDismiss, className }: MTopBannerProps) {
   const classes = ['ds-banner', `ds-banner--${type}`, className].filter(Boolean).join(' ');
 

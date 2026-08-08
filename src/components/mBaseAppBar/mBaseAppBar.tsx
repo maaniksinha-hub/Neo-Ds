@@ -18,6 +18,13 @@ function BackArrow() {
   );
 }
 
+/**
+ * USE: page-title-bar, screen-header, stock-detail-bar
+ * WHEN: Page needs a dedicated title bar separate from mTopNav (detail screens, titled pages)
+ * INSTEAD OF: Frame + back button + title text + action icons
+ * VARIANTS: Type: &quot;Homepage&quot;|&quot;Title+CTA&quot;|&quot;Title+icons&quot;|&quot;Title+subtext &amp; CTA&quot;|&quot;with LTP&quot;
+ * PROPS: Title#200:143
+ */
 export function MBaseAppBar({ title, subtext, onBack, actions, cta, className }: MBaseAppBarProps) {
   return (
     <header className={['ds-appbar', className].filter(Boolean).join(' ')}>

@@ -14,6 +14,12 @@ export interface MIndexStripProps {
   className?: string;
 }
 
+/**
+ * USE: index-ticker, market-index-strip, index-bar
+ * WHEN: Horizontal strip showing major market indices (NIFTY, SENSEX) with live prices and change.
+ * PLATFORM: Mobile
+ * INSTEAD-OF: Use wIndexStrip for the web variant.
+ */
 export function MIndexStrip({ items, className }: MIndexStripProps) {
   return (
     <div className={['ds-indexstrip', className].filter(Boolean).join(' ')}>

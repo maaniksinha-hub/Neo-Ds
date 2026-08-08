@@ -17,6 +17,13 @@ export interface GSolidButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonE
   children: ReactNode;
 }
 
+/**
+ * USE: primary-button, cta-button, filled-button, submit-button
+ * WHEN: Primary actions that need maximum visual emphasis — form submissions, confirmations, primary CTAs.
+ * PLATFORM: Global
+ * VARIANTS: Size (S/M/L), State (default/hover/pressed/disabled/loading), Color (accent/positive/negative), with/without icon.
+ * INSTEAD-OF: Use gOutlineButton for secondary actions, gTextButton for tertiary actions.
+ */
 export function GSolidButton({
   variant = 'solid',
   type = 'primary',

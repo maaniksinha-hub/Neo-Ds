@@ -17,6 +17,12 @@ export interface GroupedBarChartProps {
   className?: string;
 }
 
+/**
+ * USE: grouped-bar-chart, multi-bar, comparison-bars
+ * WHEN: Grouped vertical bars comparing multiple data series side by side at each data point.
+ * PLATFORM: Global
+ * VARIANTS: Bar count (2/3/4), with/without labels.
+ */
 export function GroupedBarChart({ groups, height = 200, className }: GroupedBarChartProps) {
   const max = Math.max(...groups.flatMap((g) => g.bars.map((b) => Math.abs(b.value))), 1);
 

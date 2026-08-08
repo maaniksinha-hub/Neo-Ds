@@ -10,6 +10,13 @@ export interface MNoteProps {
   className?: string;
 }
 
+/**
+ * USE: inline-note, info-note, contextual-message, inline-alert
+ * WHEN: Persistent inline messages providing context, tips, or warnings within content — not dismissible like toasts.
+ * PLATFORM: Mobile
+ * VARIANTS: Type (info/warning/success/error/neutral), with/without icon and CTA.
+ * INSTEAD-OF: Use mToast for temporary dismissible feedback.
+ */
 export function MNote({ type = 'neutral', children, onDismiss, className }: MNoteProps) {
   const classes = ['ds-note', `ds-note--${type}`, className].filter(Boolean).join(' ');
   return (

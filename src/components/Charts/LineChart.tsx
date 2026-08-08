@@ -29,6 +29,21 @@ export function buildPath(values: number[], width: number, height: number, bound
   return { line, area };
 }
 
+/**
+ * Figma: gLinePositive
+ * USE: positive-line-chart, gain-line, green-line-chart
+ * WHEN: Line chart segment showing positive/gain price movement — colored green.
+ * PLATFORM: Global
+ * VARIANTS: With/without area fill.
+ * INSTEAD-OF: Use gLineNegative for negative/loss segments.
+ *
+ * Figma: gLineNegative
+ * USE: negative-line-chart, loss-line, red-line-chart
+ * WHEN: Line chart segment showing negative/loss price movement — colored red.
+ * PLATFORM: Global
+ * VARIANTS: With/without area fill.
+ * INSTEAD-OF: Use gLinePositive for positive/gain segments.
+ */
 export function LineChart({ values, direction = 'positive', width = 343, height = 120, filled = true, className }: LineChartProps) {
   const { line, area } = buildPath(values, width, height);
   const colorVar = direction === 'positive' ? 'var(--fill-positive-primary)' : 'var(--fill-negative-primary)';

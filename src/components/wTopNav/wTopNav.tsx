@@ -17,6 +17,12 @@ export interface WTopNavProps {
   className?: string;
 }
 
+/**
+ * USE: web-top-navigation, web-header, web-page-bar
+ * WHEN: Top of every web page. Provides page context, navigation, search, market information, and primary actions.
+ * PLATFORM: Web
+ * VARIANTS: State controls search/default modes, market strip visibility.
+ */
 export function WTopNav({ logo, links, onLinkClick, search, marketStrip, actions, className }: WTopNavProps) {
   return (
     <header className={['ds-topnav', className].filter(Boolean).join(' ')}>

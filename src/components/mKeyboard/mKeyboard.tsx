@@ -22,6 +22,11 @@ function BackspaceIcon() {
   );
 }
 
+/**
+ * USE: numeric-keyboard, input-keyboard, pin-entry-keyboard
+ * WHEN: Custom keyboard overlay for amount/PIN entry
+ * VARIANTS: Type: &quot;Numeric&quot;|&quot;Alphabetic&quot;|&quot;with OTP band&quot;|&quot;with button&quot;
+ */
 export function MKeyboard({ onKeyPress, onBackspace, className }: MKeyboardProps) {
   return (
     <div className={['ds-keyboard', className].filter(Boolean).join(' ')}>

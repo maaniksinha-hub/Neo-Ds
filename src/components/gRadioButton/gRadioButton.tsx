@@ -8,6 +8,13 @@ export interface GRadioButtonProps extends Omit<InputHTMLAttributes<HTMLInputEle
   size?: GRadioButtonSize;
 }
 
+/**
+ * USE: radio-button, radio-select, single-choice
+ * WHEN: Single selection from a mutually exclusive set of options.
+ * PLATFORM: Global
+ * VARIANTS: State (unselected/selected), Size (S/M), disabled variants.
+ * INSTEAD-OF: Use gCheckbox for multi-selection, gChoiceChip for inline choice groups.
+ */
 export function GRadioButton({ label, size = 'default', disabled, id, className, ...rest }: GRadioButtonProps) {
   const generatedId = useId();
   const inputId = id ?? generatedId;

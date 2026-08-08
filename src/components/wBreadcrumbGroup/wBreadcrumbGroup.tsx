@@ -33,6 +33,11 @@ function WBreadcrumbGroupLink({ item, isCurrent }: { item: WBreadcrumbGroupItem;
   );
 }
 
+/**
+ * USE: breadcrumb-trail, breadcrumb-nav, navigation-path
+ * WHEN: Full breadcrumb navigation showing the current page location within the site hierarchy.
+ * PLATFORM: Web
+ */
 export function WBreadcrumbGroup({ items, maxVisible, className }: WBreadcrumbGroupProps) {
   const [expanded, setExpanded] = useState(false);
   const shouldCollapse = maxVisible !== undefined && !expanded && items.length > maxVisible;

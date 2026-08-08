@@ -10,7 +10,7 @@
 
 .ds-autosuggestion__item {
   flex-shrink: 0;
-  padding: 6px var(--spacing-12px);
+  padding: var(--spacing-8px) var(--spacing-12px);
   border-radius: var(--corner-radius-8px);
   border: none;
   background: var(--fill-neutral-primary);

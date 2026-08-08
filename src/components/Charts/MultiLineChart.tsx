@@ -15,6 +15,12 @@ export interface MultiLineChartProps {
   className?: string;
 }
 
+/**
+ * USE: mixed-line-chart, multi-series-chart, comparison-chart
+ * WHEN: Displaying multiple data series on a single line chart with different visual treatments (solid, dashed, area fill).
+ * PLATFORM: Global
+ * INSTEAD-OF: Use single gLinePositive/gLineNegative for one-series charts.
+ */
 export function MultiLineChart({ series, width = 343, height = 120, className }: MultiLineChartProps) {
   const allValues = series.flatMap((s) => s.values);
   const bounds = { min: Math.min(...allValues), max: Math.max(...allValues) };

@@ -8,6 +8,11 @@ export interface MIconCardWidgetProps {
   className?: string;
 }
 
+/**
+ * USE: icon-card-widget, feature-card, shortcut-card
+ * WHEN: Feature entry points displayed as icon+label cards — home screen widgets and quick-access grids.
+ * PLATFORM: Mobile
+ */
 export function MIconCardWidget({ icon, label, onClick, className }: MIconCardWidgetProps) {
   const classes = ['ds-iconcardwidget', className].filter(Boolean).join(' ');
   return (

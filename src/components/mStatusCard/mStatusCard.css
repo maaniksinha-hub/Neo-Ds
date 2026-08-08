@@ -37,9 +37,9 @@
 
 .ds-statuscard__badge {
   flex-shrink: 0;
-  padding: 2px var(--spacing-8px);
+  padding: var(--spacing-2px) var(--spacing-8px);
   border-radius: var(--corner-radius-rounded);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .ds-statuscard__infolabel {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-neutral-tertiary);
 }
 

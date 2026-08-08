@@ -14,6 +14,13 @@ export interface MBottomNavProps {
   className?: string;
 }
 
+/**
+ * USE: bottom-navigation, tab-bar, main-nav
+ * WHEN: Primary navigation at bottom of mobile screens. Always present on main app screens.
+ * PLATFORM: Mobile
+ * VARIANTS: Active tab selection (Home, Search, Portfolio, Orders, More).
+ * INSTEAD-OF: Use wSideNav for web navigation.
+ */
 export function MBottomNav({ items, value, onChange, className }: MBottomNavProps) {
   return (
     <nav className={['ds-bottomnav', className].filter(Boolean).join(' ')}>

@@ -10,6 +10,7 @@ import { ChartTooltip } from './ChartTooltip';
 import { ChartSkeleton } from './ChartSkeleton';
 import { Gridlines } from './Gridlines';
 import { AxisLabels } from './AxisLabels';
+import { MXAxis, GYAxis } from '../../ds';
 
 const meta = {
   title: 'Components/Charts',
@@ -125,6 +126,22 @@ export const Axis: Story = {
   render: () => (
     <div style={{ width: 300 }}>
       <AxisLabels labels={['Jan', 'Feb', 'Mar', 'Apr', 'May']} orientation="horizontal" />
+    </div>
+  ),
+};
+
+export const XAxis: Story = {
+  render: () => (
+    <div style={{ width: 300 }}>
+      <MXAxis labels={['Jan', 'Feb', 'Mar', 'Apr', 'May']} />
+    </div>
+  ),
+};
+
+export const YAxis: Story = {
+  render: () => (
+    <div style={{ height: 140 }}>
+      <GYAxis labels={['100', '75', '50', '25', '0']} />
     </div>
   ),
 };

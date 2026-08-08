@@ -64,8 +64,8 @@
 }
 
 .ds-collectioncard__tag {
-  font-size: 11px;
-  padding: 1px 6px;
+  font-size: 12px;
+  padding: var(--spacing-2px) var(--spacing-8px);
   border-radius: var(--corner-radius-4px);
   background: var(--fill-neutral-secondary);
   color: var(--text-neutral-secondary);

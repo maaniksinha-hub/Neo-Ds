@@ -42,6 +42,11 @@ function BatteryIcon() {
   );
 }
 
+/**
+ * USE: status-bar, system-bar, ios-status-bar
+ * WHEN: Top of every mobile screen to show system status (time, battery, signal). Base layer only — always used within mTopNav.
+ * PLATFORM: Mobile
+ */
 export function MStatusBar({ time = '9:41', theme = 'neutral', className }: MStatusBarProps) {
   return (
     <div className={['ds-statusbar', `ds-statusbar--${theme}`, className].filter(Boolean).join(' ')}>

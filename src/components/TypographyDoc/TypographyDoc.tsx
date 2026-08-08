@@ -105,6 +105,9 @@ const fontVar: Record<TypeStyle['font'], string> = {
   'Crimson Pro': 'var(--font-hero-text)',
 };
 
+/**
+ * INTERNAL: Storybook-only documentation page (Foundations/Typography). Renders the full Display/Highlight/Heading/Title/Body/Caption type scale transcribed from Figma's Typography page. Not a Figma component — not for use in product screens.
+ */
 export function TypographyDoc() {
   return (
     <div className="ds-typography-doc">

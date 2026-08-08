@@ -29,6 +29,12 @@ function ChevronIcon({ expanded }: { expanded: boolean }) {
   );
 }
 
+/**
+ * USE: info-card, detail-card, key-value-card
+ * WHEN: Card displaying structured key-value information — order details, transaction summaries.
+ * PLATFORM: Mobile
+ * VARIANTS: With/without header, expandable/static.
+ */
 export function MBaseInfoCard({ header, rows, expandable = false, defaultExpanded = true, className }: MBaseInfoCardProps) {
   const [expanded, setExpanded] = useState(defaultExpanded);
   const visibleRows = expandable && !expanded ? rows.slice(0, 1) : rows;

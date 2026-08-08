@@ -12,6 +12,13 @@ export interface GTextFieldProps extends Omit<InputHTMLAttributes<HTMLInputEleme
   trailingIcon?: ReactNode;
 }
 
+/**
+ * USE: text-input, input-field, form-field, text-box
+ * WHEN: User text entry — name, email, search query, or any single-line input.
+ * PLATFORM: Global
+ * VARIANTS: State (default/focused/filled/error/disabled), with/without label, helper text, leading/trailing icons.
+ * INSTEAD-OF: Use gDescription field for multi-line input, mAmountTextField for currency amounts.
+ */
 export function GTextField({
   label,
   size = '56px',

@@ -32,6 +32,12 @@ const STATUS_LABEL: Record<MStatusCardStatus, string> = {
   partial: 'Partially executed',
 };
 
+/**
+ * USE: status-card, order-status, transaction-status, progress-card
+ * WHEN: Displaying status of orders, transactions, or processes — &quot;Pending&quot;, &quot;Executed&quot;, &quot;Failed&quot; with timeline.
+ * PLATFORM: Mobile
+ * VARIANTS: Status type (success/pending/failed/partial), with/without timeline and details.
+ */
 export function MStatusCard({ status, title, subtitle, timeline, info, className }: MStatusCardProps): ReactNode {
   return (
     <div className={['ds-statuscard', className].filter(Boolean).join(' ')}>

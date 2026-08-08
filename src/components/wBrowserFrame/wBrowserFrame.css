@@ -19,7 +19,7 @@
 
 .ds-browserframe__dots {
   display: flex;
-  gap: 6px;
+  gap: var(--spacing-8px);
 }
 
 .ds-browserframe__dots span {

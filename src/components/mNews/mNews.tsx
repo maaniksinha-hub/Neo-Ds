@@ -10,6 +10,12 @@ export interface MNewsProps {
   className?: string;
 }
 
+/**
+ * USE: news-card, article-card, news-item, headline-card
+ * WHEN: Displaying news articles and headlines — news feed, stock-specific news sections.
+ * PLATFORM: Mobile
+ * VARIANTS: With/without thumbnail image.
+ */
 export function MNews({ headline, source, timestamp, thumbnail, onClick, className }: MNewsProps) {
   const classes = ['ds-newscard', onClick && 'ds-newscard--clickable', className].filter(Boolean).join(' ');
   const Tag = onClick ? 'button' : 'div';

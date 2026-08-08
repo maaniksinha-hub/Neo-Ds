@@ -9,6 +9,13 @@ export interface GCheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElemen
   indeterminate?: boolean;
 }
 
+/**
+ * USE: checkbox, check-box, multi-select, toggle-check
+ * WHEN: Multiple selection from a list of options, or toggling a single boolean preference.
+ * PLATFORM: Global
+ * VARIANTS: State (unchecked/checked/indeterminate), Size (S/M), disabled variants.
+ * INSTEAD-OF: Use gRadioButton for single-selection from options, gSwitch for on/off toggles.
+ */
 export function GCheckbox({ label, size = 'default', indeterminate = false, disabled, id, className, ...rest }: GCheckboxProps) {
   const generatedId = useId();
   const inputId = id ?? generatedId;

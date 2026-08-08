@@ -12,6 +12,11 @@ export interface MIndiceCardProps {
   className?: string;
 }
 
+/**
+ * USE: index-card, market-index-card, benchmark-card
+ * WHEN: Individual market index displayed as a card with price, change, and mini chart.
+ * PLATFORM: Mobile
+ */
 export function MIndiceCard({ name, value, changeValue, changePercent, direction, chartValues, className }: MIndiceCardProps) {
   return (
     <div className={['ds-indicecard', className].filter(Boolean).join(' ')}>

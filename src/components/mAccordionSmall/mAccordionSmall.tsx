@@ -22,6 +22,12 @@ function ChevronDown() {
   );
 }
 
+/**
+ * USE: collapsible-section, expandable-details, FAQ-item
+ * WHEN: Content that can be expanded/collapsed to save vertical space
+ * VARIANTS: State: &quot;Collapsed&quot;|&quot;Expanded&quot;
+ * TEXT: Title via child text nodes
+ */
 export function MAccordionSmall({ title, children, defaultExpanded = false, emphasis = 'plain', size = 'small', className }: MAccordionSmallProps) {
   const [expanded, setExpanded] = useState(defaultExpanded);
 
