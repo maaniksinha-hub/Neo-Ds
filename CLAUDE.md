@@ -75,7 +75,7 @@ If you're unsure which value a token resolves to on a given platform, check `src
 
 ## Component decision tree
 
-Pick the *most specific* component that matches; fall back to a more general one only if nothing specific exists in our 65-component set (Figma's full system has ~159; not everything has been ported yet — if you need something not listed, check Figma before building from primitives).
+Pick the *most specific* component that matches; fall back to a more general one only if nothing specific exists. Coverage is complete: `DS-BACKLOG.md` maps all 117 named Figma components onto the 64 implemented here, either 1:1 or as a documented prop variant (eight Figma button nodes are all `Button`; `wToast` and `mToast` are both `Toast`). If a Figma name is not in `src/ds.tsx`, look it up in `DS-BACKLOG.md` before assuming it needs building — it almost certainly already exists under a prop.
 
 - **Need the user to take an action?**
   → Primary emphasis: `gSolidButton` · Secondary: `gOutlineButton` · Tertiary/inline: `gTextButton` · Selectable filter/tag: `gChoiceChip`
@@ -122,18 +122,43 @@ These are common screen shapes in this domain. Compose from the components above
 - **Asymmetric failures (fails in one theme only) are always bugs, and the script exits non-zero on them.** A correctly mapped token pair contrasts the same way on both sides, so a one-sided failure means a token that flips has been paired with one that doesn't. This is the check that catches rule 8 violations.
 - **Symmetric failures (fails in both) are palette values, not code.** Some of the system's own colours — `--text-neutral-tertiary` most of all — sit below AA by design in both themes. Don't "fix" those in a component by substituting a different token; that breaks the semantic meaning to chase a number. Raise them as a design decision instead.
 
-The greps behind 3–6 are worth running as a set, since each one caught real violations that the others missed:
+Checks 3–6 are no longer greps you have to remember. They are `npm run check`:
 
 ```sh
-# off-scale font sizes
-grep -rnoP "font-size:\s*\K\d+px" src/components --include=*.css \
-  | grep -vP ":(10|12|14|16|18|20|24|28|32|40|48|56|64)px$"
-# hardcoded colors (the only legitimate hit is a Figma node id in a JSDoc block)
-grep -rn "rgba\?(\|hsla\?(\|#[0-9a-fA-F]\{3,8\}\b" src/components --include=*.css --include=*.tsx
-# raw px spacing
-grep -rnP "\b(padding|margin|gap|row-gap|column-gap)[a-z-]*\s*:\s*[^;{}]*(?<![\w.-])\d+px" \
-  src/components --include=*.css
-# referenced-but-undefined tokens
-comm -23 <(grep -ohP "var\(\K--[\w-]+" -r src --include=*.css --include=*.tsx | sort -u) \
-         <(grep -ohP "^\s*\K--[\w-]+(?=\s*:)" -r src/tokens | sort -u)
+npm run check                      # all of 3-6, plus more, in under a second
+npm run check src/components/gBadge  # scope it while iterating
+npm run check -- --json            # machine-readable, for CI or an agent
 ```
+
+`tools/neo-check.mjs` is one file, no dependencies, and every rule in it is a
+rule stated above in prose. It exits 2 on findings. Twelve rules today:
+
+| rule | catches |
+|---|---|
+| `off-scale-spacing` | a px value that is not a spacing step |
+| `raw-spacing-px` | an on-scale px literal that should be `var(--spacing-Npx)` |
+| `off-scale-font-size` | a size off the 13-step ramp |
+| `line-height-missing` / `line-height-mismatch` | a size without its paired line-height, or the wrong pair |
+| `unitless-line-height` | `line-height: 1.4` — a ratio drifts off the scale |
+| `banned-weight` | any weight other than 400/500/600 |
+| `raw-color` | hex/rgb/hsl/oklch outside `src/tokens/` |
+| `inline-shadow` | a literal colour in a shadow instead of an elevation token |
+| `token-fallback` | `var(--x, 16px)` — rule 7 |
+| `undefined-token` | a `var()` that resolves nowhere |
+| `inverse-text-pairing` | the rule-8 dark-mode trap, mechanically |
+
+Waiving one line, when the value genuinely is not what the rule thinks it is
+(a 1px hairline is a border role, not spacing), takes a comment naming the
+rule and the reason. There is no file-wide mute on purpose — that is how a
+checker quietly stops checking:
+
+```css
+/* Hairline, not spacing — the gap shows the background as a key divider.
+   neo-check-disable-next-line off-scale-spacing */
+gap: 1px;
+```
+
+`npm run check:test` seeds one violation per rule and asserts each still
+fires. Run it before trusting a clean report; "clean" and "broken" look
+identical from the outside. `npm run check:all` chains the fast pass, a
+Storybook build, and the contrast audit.

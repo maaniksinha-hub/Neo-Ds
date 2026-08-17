@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* Hairline, not spacing — the grid gap lets the background through as the
-     1px key divider, the same role a 1px border plays elsewhere. */
+     1px key divider, the same role a 1px border plays elsewhere.
+     neo-check-disable-next-line off-scale-spacing */
   gap: 1px;
   width: 375px;
   max-width: 100%;

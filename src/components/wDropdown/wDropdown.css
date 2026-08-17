@@ -9,7 +9,7 @@
   appearance: none;
   height: 32px;
   padding: var(--spacing-4px) var(--spacing-32px) var(--spacing-4px) var(--spacing-12px);
-  background: var(--fill-neutral-transparent-primary, transparent);
+  background: var(--fill-neutral-transparent-primary);
   border: 1px solid var(--stroke-default-primary);
   border-radius: var(--corner-radius-8px);
   color: var(--text-neutral-primary);

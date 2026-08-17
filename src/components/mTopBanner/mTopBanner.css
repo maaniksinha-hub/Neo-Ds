@@ -15,12 +15,12 @@
 
 .ds-banner--default {
   background: var(--fill-accent1-tertiary);
-  border-color: var(--stroke-accent1-tertiary, var(--stroke-accent1-primary));
+  border-color: var(--stroke-accent1-tertiary);
 }
 
 .ds-banner--negative {
   background: var(--fill-negative-tertiary);
-  border-color: var(--stroke-negative-tertiary, var(--stroke-negative-primary));
+  border-color: var(--stroke-negative-tertiary);
 }
 
 .ds-banner__content {

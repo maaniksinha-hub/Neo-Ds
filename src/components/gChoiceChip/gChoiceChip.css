@@ -7,7 +7,7 @@
   padding: var(--spacing-8px) var(--spacing-16px);
   border-radius: var(--corner-radius-rounded);
   border: 1px solid var(--stroke-default-primary);
-  background: var(--fill-neutral-transparent-primary, transparent);
+  background: var(--fill-neutral-transparent-primary);
   color: var(--text-neutral-secondary-high);
   font-family: var(--font-body);
   font-size: 12px;
