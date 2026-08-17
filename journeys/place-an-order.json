@@ -1,0 +1,33 @@
+{
+  "journey": "place-an-order",
+  "platform": "mobile",
+  "states": ["loading", "empty", "error", "success"],
+  "steps": [
+    {
+      "screen": "watchlist",
+      "pattern": "Watchlist",
+      "components": ["mTopNav", "gSearchBar", "gChoiceChip", "mScripList", "mBottomNav"],
+      "states": ["loading", "empty", "error"]
+    },
+    {
+      "screen": "scrip-detail",
+      "pattern": "Scrip detail",
+      "components": ["mBaseAppBar", "gLineTabGroup", "mMarketDepth", "gSolidButton", "gOutlineButton", "mBottomNav"],
+      "states": ["loading", "error"]
+    },
+    {
+      "screen": "order-entry",
+      "pattern": "Order entry",
+      "overlay": true,
+      "components": ["gScrim", "mBottomsheet", "gTextField", "gChoiceChip", "gSolidButton", "mHomeIndicator"],
+      "states": ["loading", "error", "success"]
+    },
+    {
+      "screen": "order-confirmed",
+      "pattern": "Order entry",
+      "overlay": true,
+      "components": ["mBottomsheet", "mStatusCard", "mOrderDetails", "gTextButton", "mHomeIndicator"],
+      "states": ["success"]
+    }
+  ]
+}

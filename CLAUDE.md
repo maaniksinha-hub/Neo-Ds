@@ -101,9 +101,28 @@ npm run map                    # summary, and what is not yet resolvable
   → Mobile sheet: `mBottomsheet` · Scrim/backdrop: `gScrim` · Web frame chrome: `wBrowserFrame`
 - **Nothing above fits** → check Figma for the real component name before building from primitives. Recreating a component from raw tokens when a named one exists is a compliance violation, not a shortcut.
 
+## Journeys
+
+A screen is not a deliverable; a flow is. `journeys/*.json` names the steps of a
+flow, the components each screen composes from, and the states each screen owes.
+`npm run journey` checks them, and it enforces the two rules below that live
+above CSS where `npm run check` cannot see them — rule 4 (one primary CTA per
+screen) and rule 5 (mobile nav chrome), plus that every component named actually
+resolves and matches the journey's platform.
+
+```sh
+npm run journey                  # check every journey
+npm run journey place-an-order   # check one
+npm run journey -- --matrix      # screens × states, and what is not designed yet
+```
+
+A step marked `"overlay": true` is exempt from rule 5: a bottom sheet layers over
+a screen that already carries the chrome. `journeys/place-an-order.json` is the
+worked example — copy its shape rather than inventing one.
+
 ## Screen pattern recipes (condensed)
 
-These are common screen shapes in this domain. Compose from the components above; don't rebuild the shell each time.
+These are common screen shapes in this domain. Compose from the components above; don't rebuild the shell each time. A journey file turns a sequence of these into something checkable.
 
 - **Watchlist** — `mTopNav` → search/filter row (`gSearchBar`, `gChoiceChip`) → `mScripList` (repeating scrip rows with live price + change) → `mBottomNav`.
 - **Home / Discovery** — `mTopNav` → hero/summary card → horizontally scrolling `mCarousel` of `gScripCards` or `mResearchIdeas` → sectioned lists → `mBottomNav`.
