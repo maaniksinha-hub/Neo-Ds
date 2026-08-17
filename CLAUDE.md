@@ -75,7 +75,15 @@ If you're unsure which value a token resolves to on a given platform, check `src
 
 ## Component decision tree
 
-Pick the *most specific* component that matches; fall back to a more general one only if nothing specific exists. Coverage is complete: `DS-BACKLOG.md` maps all 117 named Figma components onto the 64 implemented here, either 1:1 or as a documented prop variant (eight Figma button nodes are all `Button`; `wToast` and `mToast` are both `Toast`). If a Figma name is not in `src/ds.tsx`, look it up in `DS-BACKLOG.md` before assuming it needs building — it almost certainly already exists under a prop.
+Pick the *most specific* component that matches; fall back to a more general one only if nothing specific exists. Coverage is complete: `DS-BACKLOG.md` maps every named Figma component onto the ones implemented here, either 1:1 or as a documented prop variant (eight Figma button nodes are all `Button`; `wToast` and `mToast` are both `Toast`). If a Figma name is not in `src/ds.tsx`, do not assume it needs building — look it up:
+
+```sh
+npm run map gOutlineButton     # → <Button variant="outline">
+npm run map Toast -- --reverse # → every Figma name that resolves here
+npm run map                    # summary, and what is not yet resolvable
+```
+
+`tools/neo-map.mjs` reads `src/ds.tsx` and `DS-BACKLOG.md` on every run rather than keeping a generated copy, so there is nothing to fall out of date. The barrel is the stronger source — TypeScript checks it, and it names the variants the backlog only tallies. 130 Figma names resolve, 86 of them importable directly. Six groups the backlog records as counts ("All 8 text field nodes") cannot resolve until those nodes are named individually.
 
 - **Need the user to take an action?**
   → Primary emphasis: `gSolidButton` · Secondary: `gOutlineButton` · Tertiary/inline: `gTextButton` · Selectable filter/tag: `gChoiceChip`

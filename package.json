@@ -12,7 +12,8 @@
     "build-storybook": "storybook build",
     "audit:contrast": "node scripts/contrast-audit.mjs",
     "check": "node tools/neo-check.mjs",
-    "check:test": "node tools/neo-check.test.mjs",
+    "check:test": "node tools/neo-check.test.mjs && node tools/neo-map.mjs --check",
+    "map": "node tools/neo-map.mjs",
     "check:all": "npm run check && npm run build-storybook && npm run audit:contrast"
   },
   "dependencies": {
